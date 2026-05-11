@@ -51,7 +51,7 @@ MonoBehaviour:
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
     - line: '|   companyName: pigbrain.io'
-    - line: '|   productName: Boxhead'
+    - line: '|   productName: Boxhead Dungeon'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
     - line: '|   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b:
@@ -182,7 +182,7 @@ MonoBehaviour:
     - line: '|   loadStoreDebugModeEnabled: 0'
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
-    - line: '|   bundleVersion: 0.3.11'
+    - line: '|   bundleVersion: 0.3.14'
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: -944628639613478452, guid: daaa2d149b8a74ddf913e39d6806fc84,
         type: 3}'
