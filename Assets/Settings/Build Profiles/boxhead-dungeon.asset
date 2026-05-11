@@ -182,7 +182,7 @@ MonoBehaviour:
     - line: '|   loadStoreDebugModeEnabled: 0'
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
-    - line: '|   bundleVersion: 0.3.14'
+    - line: '|   bundleVersion: 0.3.16'
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: -944628639613478452, guid: daaa2d149b8a74ddf913e39d6806fc84,
         type: 3}'
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     - rid: 9037943255171596595
       type: {class: WebGLPlatformSettings, ns: UnityEditor.WebGL, asm: UnityEditor.WebGL.Extensions}
       data:
-        m_Development: 1
+        m_Development: 0
         m_ConnectProfiler: 0
         m_BuildWithDeepProfilingSupport: 0
         m_AllowDebugging: 0

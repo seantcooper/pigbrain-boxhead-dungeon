@@ -34,6 +34,15 @@ MonoBehaviour:
   - name: Upgrade Character sound
     duration: 1
     status: 1
+  - name: To many explode models
+    duration: 1
+    status: 1
+  - name: Pooling reset not working correctly - trails on fireballs?
+    duration: 1
+    status: 1
+  - name: Stripper not putting images back after build? (Cancel? or just Post build)
+    duration: 1
+    status: 1
   - name: Regions break on endgame 1
     duration: 1
     status: 2
