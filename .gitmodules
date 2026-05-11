@@ -1,0 +1,3 @@
+[submodule "Assets/pigbrain.core"]
+	path = Assets/pigbrain.core
+	url = git@github.com:seantcooper/pigbrain.core.git
