@@ -1,0 +1,613 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0728ace9f9d1e42ab8beba2a05e94156, type: 3}
+  m_Name: Dynamic 02
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Environment.LevelData
+  reader:
+    id: 1AiekKnu9m267sDB_FpEZ0J-lMQ6pVLji01cnLwKB2oo
+    sheet: 57405012
+    lines: []
+  title: Dynamic 02
+  seed: 57405012
+  money: 800
+  startWeapons:
+  - Shotgun
+  - AK47
+  - Rockets
+  - Railgun
+  soldiers: 6
+  roomSize:
+    min: 6
+    max: 20
+  roomCount: 25
+  levels:
+  - name: 'The Beginning [1]'
+    levelid: 1
+    title: The Beginning
+    description: 
+    items:
+    - type: 0
+      count: 10
+      total: 20
+      level: 1
+      interval: 1.3
+    loot:
+    - Uzi
+    - Turret
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 0
+  - name: 'Warm Up [2]'
+    levelid: 2
+    title: Warm Up
+    description: 
+    items:
+    - type: 0
+      count: 25
+      total: 50
+      level: 1
+      interval: 1.3
+    - type: 1
+      count: 5
+      total: 10
+      level: 1
+      interval: 2.6
+    loot:
+    - Uzi
+    - Barrel
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 0
+  - name: 'Run [3]'
+    levelid: 3
+    title: Run
+    description: 
+    items:
+    - type: 0
+      count: 25
+      total: 50
+      level: 2
+      interval: 1.3
+    - type: 1
+      count: 10
+      total: 20
+      level: 1
+      interval: 2.4
+    loot:
+    - Uzi
+    - Barrier
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 0
+  - name: 'Haunted [4]'
+    levelid: 4
+    title: Haunted
+    description: 
+    items:
+    - type: 0
+      count: 30
+      total: 60
+      level: 2
+      interval: 1.3
+    - type: 1
+      count: 10
+      total: 20
+      level: 2
+      interval: 2.2
+    - type: 4
+      count: 3
+      total: 6
+      level: 1
+      interval: 3.2
+    loot:
+    - Uzi
+    - Turret
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 1
+  - name: 'Duel [5]'
+    levelid: 5
+    title: Duel
+    description: 
+    items:
+    - type: 2
+      count: 12
+      total: 24
+      level: 1
+      interval: 2.4
+    loot:
+    - AK47
+    - Grenade
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 1
+  - name: 'Pressure [6]'
+    levelid: 6
+    title: Pressure
+    description: 
+    items:
+    - type: 0
+      count: 40
+      total: 80
+      level: 2
+      interval: 1.2
+    - type: 2
+      count: 5
+      total: 10
+      level: 1
+      interval: 2.8
+    loot:
+    - Uzi
+    - AK47
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 1
+  - name: 'Control [7]'
+    levelid: 7
+    title: Control
+    description: 
+    items:
+    - type: 1
+      count: 25
+      total: 50
+      level: 2
+      interval: 1.9
+    - type: 4
+      count: 4
+      total: 8
+      level: 2
+      interval: 2.8
+    loot:
+    - Shotgun
+    - Shield
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 1
+  - name: 'Terrors [8]'
+    levelid: 8
+    title: Terrors
+    description: 
+    items:
+    - type: 3
+      count: 30
+      total: 60
+      level: 1
+      interval: 2.1
+    loot:
+    - Grenade
+    - Shotgun
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 0
+  - name: 'Mixed [9]'
+    levelid: 9
+    title: Mixed
+    description: 
+    items:
+    - type: 0
+      count: 45
+      total: 90
+      level: 2
+      interval: 1.2
+    - type: 1
+      count: 20
+      total: 40
+      level: 2
+      interval: 2
+    loot:
+    - Shield
+    - Railgun
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 0
+  - name: 'Devil Wave [10]'
+    levelid: 10
+    title: Devil Wave
+    description: 
+    items:
+    - type: 2
+      count: 8
+      total: 16
+      level: 2
+      interval: 2.2
+    - type: 3
+      count: 5
+      total: 10
+      level: 1
+      interval: 2.2
+    loot:
+    - Railgun
+    - Uzi
+    - Coin100
+    - Health
+    - Soldier
+    lockDoor: 1
+  - name: 'Relentless [11]'
+    levelid: 11
+    title: Relentless
+    description: 
+    items:
+    - type: 0
+      count: 70
+      total: 140
+      level: 3
+      interval: 1
+    loot:
+    - AK47
+    - Shotgun
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 0
+  - name: 'Fast [12]'
+    levelid: 12
+    title: Fast
+    description: 
+    items:
+    - type: 1
+      count: 40
+      total: 80
+      level: 3
+      interval: 1.7
+    loot:
+    - Uzi
+    - Grenade
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 0
+  - name: 'Control II [13]'
+    levelid: 13
+    title: Control II
+    description: 
+    items:
+    - type: 3
+      count: 30
+      total: 60
+      level: 2
+      interval: 1.9
+    - type: 4
+      count: 4
+      total: 8
+      level: 2
+      interval: 2.4
+    loot:
+    - Shield
+    - Railgun
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 1
+  - name: 'Break [14]'
+    levelid: 14
+    title: Break
+    description: 
+    items:
+    - type: 0
+      count: 90
+      total: 180
+      level: 3
+      interval: 0.95
+    - type: 2
+      count: 8
+      total: 16
+      level: 2
+      interval: 2.4
+    loot:
+    - AK47
+    - Uzi
+    - Health
+    - Coin
+    - Soldier
+    lockDoor: 1
+  - name: 'Overrun [15]'
+    levelid: 15
+    title: Overrun
+    description: 
+    items:
+    - type: 0
+      count: 90
+      total: 180
+      level: 3
+      interval: 0.85
+    - type: 1
+      count: 40
+      total: 80
+      level: 3
+      interval: 1.6
+    - type: 2
+      count: 5
+      total: 10
+      level: 2
+      interval: 2.4
+    loot:
+    - Turret
+    - Railgun
+    - Health
+    - Coin50
+    - Soldier
+    lockDoor: 1
+  - name: 'Duel II [16]'
+    levelid: 16
+    title: Duel II
+    description: 
+    items:
+    - type: 2
+      count: 12
+      total: 24
+      level: 3
+      interval: 1.8
+    - type: 3
+      count: 60
+      total: 120
+      level: 2
+      interval: 2
+    loot:
+    - Rockets
+    - Shotgun
+    - Health
+    - Coin50
+    - Soldier
+    lockDoor: 1
+  - name: 'Swarm II [17]'
+    levelid: 17
+    title: Swarm II
+    description: 
+    items:
+    - type: 1
+      count: 80
+      total: 160
+      level: 3
+      interval: 1.5
+    - type: 3
+      count: 80
+      total: 160
+      level: 2
+      interval: 2
+    loot:
+    - Grenade
+    - Railgun
+    - Health
+    - Coin50
+    - Soldier
+    lockDoor: 0
+  - name: 'Haunted II [18]'
+    levelid: 18
+    title: Haunted II
+    description: 
+    items:
+    - type: 0
+      count: 120
+      total: 240
+      level: 3
+      interval: 0.85
+    - type: 4
+      count: 10
+      total: 20
+      level: 2
+      interval: 2.1
+    - type: 3
+      count: 80
+      total: 160
+      level: 2
+      interval: 1.9
+    loot:
+    - Rockets
+    - AK47
+    - Health
+    - Coin50
+    - Soldier
+    lockDoor: 1
+  - name: 'No Escape [19]'
+    levelid: 19
+    title: No Escape
+    description: 
+    items:
+    - type: 1
+      count: 90
+      total: 180
+      level: 3
+      interval: 1.3
+    - type: 2
+      count: 15
+      total: 30
+      level: 3
+      interval: 1.9
+    - type: 3
+      count: 50
+      total: 100
+      level: 2
+      interval: 1.8
+    loot:
+    - Shotgun
+    - Railgun
+    - Health
+    - Coin50
+    - Soldier
+    lockDoor: 1
+  - name: 'Final Push [20]'
+    levelid: 20
+    title: Final Push
+    description: 
+    items:
+    - type: 3
+      count: 90
+      total: 180
+      level: 3
+      interval: 1.6
+    - type: 2
+      count: 20
+      total: 40
+      level: 3
+      interval: 2
+    loot:
+    - Rockets
+    - Grenade
+    - Health
+    - Coin100
+    - Soldier
+    lockDoor: 1
+  - name: 'Endgame I [21]'
+    levelid: 21
+    title: Endgame I
+    description: 
+    items:
+    - type: 0
+      count: 140
+      total: 280
+      level: 3
+      interval: 0.75
+    - type: 1
+      count: 110
+      total: 220
+      level: 3
+      interval: 1.25
+    - type: 2
+      count: 20
+      total: 40
+      level: 3
+      interval: 1.9
+    loot:
+    - Rockets
+    - Railgun
+    - Health
+    - Coin100
+    - Soldier
+    lockDoor: 1
+  - name: 'Endgame II [22]'
+    levelid: 22
+    title: Endgame II
+    description: 
+    items:
+    - type: 1
+      count: 130
+      total: 260
+      level: 3
+      interval: 1.2
+    - type: 2
+      count: 20
+      total: 40
+      level: 3
+      interval: 1.8
+    - type: 3
+      count: 70
+      total: 140
+      level: 3
+      interval: 1.6
+    loot:
+    - Shotgun
+    - Railgun
+    - Health
+    - Coin100
+    - Soldier
+    lockDoor: 1
+  - name: 'Endgame III [23]'
+    levelid: 23
+    title: Endgame III
+    description: 
+    items:
+    - type: 3
+      count: 100
+      total: 200
+      level: 3
+      interval: 1.5
+    - type: 4
+      count: 10
+      total: 20
+      level: 3
+      interval: 2
+    - type: 1
+      count: 130
+      total: 260
+      level: 3
+      interval: 1.2
+    loot:
+    - Rockets
+    - Shotgun
+    - Health
+    - Coin100
+    - Soldier
+    lockDoor: 1
+  - name: 'Endgame IV [24]'
+    levelid: 24
+    title: Endgame IV
+    description: 
+    items:
+    - type: 0
+      count: 160
+      total: 320
+      level: 3
+      interval: 0.65
+    - type: 1
+      count: 150
+      total: 300
+      level: 3
+      interval: 1
+    - type: 3
+      count: 90
+      total: 180
+      level: 3
+      interval: 1.4
+    - type: 2
+      count: 20
+      total: 40
+      level: 3
+      interval: 1.7
+    loot:
+    - Rockets
+    - Rockets
+    - Health
+    - Coin200
+    - Soldier
+    lockDoor: 1
+  - name: 'Last Stand [25]'
+    levelid: 25
+    title: Last Stand
+    description: 
+    items:
+    - type: 0
+      count: 180
+      total: 360
+      level: 3
+      interval: 0.5
+    - type: 1
+      count: 160
+      total: 320
+      level: 3
+      interval: 0.9
+    - type: 3
+      count: 100
+      total: 200
+      level: 3
+      interval: 1.4
+    - type: 2
+      count: 20
+      total: 40
+      level: 3
+      interval: 1.6
+    loot:
+    - Rockets
+    - Railgun
+    - Shotgun
+    - Health
+    - Coin200
+    - Soldier
+    lockDoor: 1

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Terror Levels
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: f8fa6240c9efb471092b042dc124d4fe
+  stats:
+  - {fileID: 11400000, guid: 01f58d0e1262447379cb57bd0183f366, type: 2}
+  - {fileID: 11400000, guid: 61bcf8fe1a92f43809a39927a615f6e3, type: 2}
+  - {fileID: 11400000, guid: f16adff66e5a6467c9ff1d9755883fa4, type: 2}

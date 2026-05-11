@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e5844444c28bb1847a36ce598d00c5f6
+timeCreated: 1477530228
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_WeaponRack_04.prefab
+  uploadId: 572781

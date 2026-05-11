@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0884236a20f5a204d8844843d88978bc
+timeCreated: 1477889387
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_BloodSplat_02.prefab
+  uploadId: 572781

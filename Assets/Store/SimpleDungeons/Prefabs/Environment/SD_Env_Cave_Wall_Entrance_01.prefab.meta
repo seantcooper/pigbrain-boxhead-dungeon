@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e4ef91e2d35876d4b89b158e13f33e84
+timeCreated: 1477614729
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Cave_Wall_Entrance_01.prefab
+  uploadId: 572781

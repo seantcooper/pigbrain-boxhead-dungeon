@@ -1,0 +1,736 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d71d5a49e94c4a72a9fc56e96d7d218, type: 3}
+  m_Name: $Clips
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.Audio.AudioClips
+  clips:
+    items:
+    - name: AirStrike_Plane
+      traits: 0
+      clip: {fileID: 8300000, guid: 1142abdbee5904f8a82202aaa769dc5c, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: AK47_Shot1
+      traits: 0
+      clip: {fileID: 8300000, guid: f1078848f278b470db30e70ee2cc91d0, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Barrel_Place
+      traits: 0
+      clip: {fileID: 8300000, guid: 1e664cd767b4848f2986e7582f71c75a, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: BaseballBat_Hit
+      traits: 0
+      clip: {fileID: 8300000, guid: 79e59aeee2b6f4029a93822037efa677, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: BaseballBat_Swipe
+      traits: 0
+      clip: {fileID: 8300000, guid: e156db0f236db4b6d81f104d71c22142, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Bat_Swipe
+      traits: 0
+      clip: {fileID: 8300000, guid: a6150ca6fb36e4397aef9e3f9fad491e, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: ClickShort
+      traits: 0
+      clip: {fileID: 8300000, guid: a04ee619891314e77b2e21afcd649ccd, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Creature.Zombie.Ambience.1
+      traits: 0
+      clip: {fileID: 8300000, guid: fb91ae1cffa0f4960b8da43cdf7f0deb, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.7
+        max: 1.2
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Creature.Zombie.Ambience.2
+      traits: 0
+      clip: {fileID: 8300000, guid: a540824c32664405dac7bf27c6cf526c, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.7
+        max: 1.2
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Creature.Zombie.Ambience.3
+      traits: 0
+      clip: {fileID: 8300000, guid: 8bc6bb1c495574c389f3b045778f4b68, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.7
+        max: 1.2
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Creature.Zombie.Ambience.4
+      traits: 0
+      clip: {fileID: 8300000, guid: e92d42bbe4dc54db4b8f1af3e6361841, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.7
+        max: 1.2
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Devil_Attack
+      traits: 0
+      clip: {fileID: 8300000, guid: ebc978622c90a4240a788e3d70c9f2f0, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Door Land
+      traits: 0
+      clip: {fileID: 8300000, guid: fef8048f64ab047a5880a5983446d14d, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.55268705
+        max: 0.75268716
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Enemy Hurt
+      traits: 0
+      clip: {fileID: 8300000, guid: ec468013853a94090a1a097fee1be7e6, type: 3}
+      volume:
+        min: 0.8436355
+        max: 1.0436355
+      pitch:
+        min: 0.61817753
+        max: 0.8181775
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Explosion_0
+      traits: 0
+      clip: {fileID: 8300000, guid: 18c04ff15227e43d8868f4e43b0f817d, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.84084785
+        max: 1.2774565
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Fire_0
+      traits: 0
+      clip: {fileID: 8300000, guid: e23e6e9ab5133466abee86ceb55c9688, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Ghost Train
+      traits: 0
+      clip: {fileID: 8300000, guid: 2db2c9ac8dfde4d5bb6c6cf87590fdb3, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.7218528
+        max: 0.9218528
+      delay: 0.2
+      spatial: 1
+      count: 1
+    - name: GONG
+      traits: 0
+      clip: {fileID: 8300000, guid: e275779b7538140b1a25ab73b0adb6cb, type: 3}
+      volume:
+        min: 0.5
+        max: 0.5
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 0.5
+      count: 1
+    - name: Grenade_Bounce
+      traits: 0
+      clip: {fileID: 8300000, guid: 993547f2481994292aca13eebc497ff8, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: IngameTrack_1_0
+      traits: 1
+      clip: {fileID: 8300000, guid: 593061cf6ac1b49d4904537b371bda68, type: 3}
+      volume:
+        min: 1
+        max: 1
+      pitch:
+        min: 1
+        max: 1
+      delay: 0
+      spatial: 0.5
+      count: 1
+    - name: IngameTrack_1_1
+      traits: 1
+      clip: {fileID: 8300000, guid: 9dd04555512b544369045fcfe81f3ae9, type: 3}
+      volume:
+        min: 1
+        max: 1
+      pitch:
+        min: 1
+        max: 1
+      delay: 0
+      spatial: 0.5
+      count: 1
+    - name: IngameTrack_1_2
+      traits: 1
+      clip: {fileID: 8300000, guid: 0e98efe4066984b2f9c99ca278d11882, type: 3}
+      volume:
+        min: 1
+        max: 1
+      pitch:
+        min: 1
+        max: 1
+      delay: 0
+      spatial: 0.5
+      count: 1
+    - name: M16_Shot1
+      traits: 0
+      clip: {fileID: 8300000, guid: 1f09fa7569bd246bda699f3a5e97e0d6, type: 3}
+      volume:
+        min: 0.6
+        max: 0.9
+      pitch:
+        min: 1.3038476
+        max: 1.5771224
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Mine_Detonate
+      traits: 0
+      clip: {fileID: 8300000, guid: c85c4a915910a4798b137a75659779ab, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Mine_Place
+      traits: 0
+      clip: {fileID: 8300000, guid: e1a7c1a8dea00404791de11dddb9f13c, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Minigun_Active
+      traits: 0
+      clip: {fileID: 8300000, guid: 6b54a452b446f42e58c3d7736da0b564, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Minigun_Shot1
+      traits: 0
+      clip: {fileID: 8300000, guid: b76dc1a55e9644b039176463772d56e6, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Minigun_Shot2
+      traits: 0
+      clip: {fileID: 8300000, guid: 91fb240c9395c40dd97bc2c2b1a17f07, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Minigun_Shot3
+      traits: 0
+      clip: {fileID: 8300000, guid: 72b1c0e91f16b4856ac14fc2a07b37c5, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Minigun_Start
+      traits: 0
+      clip: {fileID: 8300000, guid: 2a3f0fcd7ace34a689dda29f8c311537, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Minigun_Stop
+      traits: 0
+      clip: {fileID: 8300000, guid: 6a12717f706c34d00965b714768e1cef, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Peep_HitFloor
+      traits: 0
+      clip: {fileID: 8300000, guid: ca2c85a4ca494477284e02804bce0cd5, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Pickup box
+      traits: 0
+      clip: {fileID: 8300000, guid: 93fd110e3f61e45eca50912862b397bd, type: 3}
+      volume:
+        min: 0.60763085
+        max: 0.71224165
+      pitch:
+        min: 0.8
+        max: 1.2
+      delay: 0
+      spatial: 0.88
+      count: 1
+    - name: Pickup Land
+      traits: 0
+      clip: {fileID: 8300000, guid: 2f5fd810239f243d3b4941759b454e3e, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.70616335
+        max: 0.9061634
+      delay: 0.2
+      spatial: 1
+      count: 1
+    - name: Pickup_Ammo
+      traits: 0
+      clip: {fileID: 8300000, guid: c9d62d03c5172463583b67b54dece699, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Pickup_Powerup
+      traits: 0
+      clip: {fileID: 8300000, guid: 38b91581691424036ad83ca9eb8feb3f, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Pistol_Shot
+      traits: 0
+      clip: {fileID: 8300000, guid: bbb1adda18bc0407eaf7f9393e4d3877, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Player Death 1
+      traits: 0
+      clip: {fileID: 8300000, guid: eb9527ca038d7488cbce544f5f49d191, type: 3}
+      volume:
+        min: 0.9
+        max: 1.0999999
+      pitch:
+        min: 0.81878173
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Player Death 2
+      traits: 0
+      clip: {fileID: 8300000, guid: 0057962e8a2f44f46bfa6399226ead25, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Player Hurt
+      traits: 0
+      clip: {fileID: 8300000, guid: 8c278548cc04a42878200b344255af63, type: 3}
+      volume:
+        min: 0.8483311
+        max: 1.048331
+      pitch:
+        min: 0.84176624
+        max: 1.0417665
+      delay: 0
+      spatial: 0.747
+      count: 1
+    - name: Rage Gong
+      traits: 0
+      clip: {fileID: 8300000, guid: 1f8e53d84ba7f439a9bbd14f9e5c5e4a, type: 3}
+      volume:
+        min: 0.5
+        max: 0.5
+      pitch:
+        min: 0.5
+        max: 0.70000005
+      delay: 0
+      spatial: 0.607
+      count: 1
+    - name: Rage Tick
+      traits: 3
+      clip: {fileID: 8300000, guid: b44f564bfb3d9484285c4574bcc32e8d, type: 3}
+      volume:
+        min: 0.1
+        max: 0.1
+      pitch:
+        min: 1
+        max: 1
+      delay: 0
+      spatial: 0.358
+      count: 1
+    - name: Railgun Shot
+      traits: 0
+      clip: {fileID: 8300000, guid: 3b87c5855e61748bc84448bb8a57e8c7, type: 3}
+      volume:
+        min: 0.70611477
+        max: 0.9061148
+      pitch:
+        min: 1.635108
+        max: 1.8351082
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Railgun Zap
+      traits: 0
+      clip: {fileID: 8300000, guid: 2731024d3b256447c95b0f5cc9ef61cb, type: 3}
+      volume:
+        min: 0.84294766
+        max: 1.0429475
+      pitch:
+        min: 1.1117102
+        max: 1.2736754
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Reload
+      traits: 0
+      clip: {fileID: 8300000, guid: 233fc72707bce4c1f8c425d6306db41b, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Ricochet_Metal_0
+      traits: 0
+      clip: {fileID: 8300000, guid: 299fcc64bc7be4599be9faec33bbcae7, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Ricochet_Metal_1
+      traits: 0
+      clip: {fileID: 8300000, guid: 187aa2bbb2a72439b94c59a848fece75, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Ricochet_Metal_2
+      traits: 0
+      clip: {fileID: 8300000, guid: 37ef623dc8c5d4217ac8b7c8407823fa, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.951381
+        max: 1.1513808
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Rocket_Shot1
+      traits: 0
+      clip: {fileID: 8300000, guid: 8bb55042396974658bf44dcceca2e940, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: SeanCooper.Logo.2
+      traits: 0
+      clip: {fileID: 8300000, guid: 044ca091e2c524c4dad7daa8c45a2e6b, type: 3}
+      volume:
+        min: 1.2543002
+        max: 1.4543005
+      pitch:
+        min: 1.7421288
+        max: 1.9421289
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: SeanCooper.Logo.2a
+      traits: 0
+      clip: {fileID: 8300000, guid: ef41e4d2113ec422d973c2b1826a078b, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Shotgun_Shot1
+      traits: 0
+      clip: {fileID: 8300000, guid: 2c10e502880dc4926886fd178064f6a8, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Turret_MG_Shot_1
+      traits: 0
+      clip: {fileID: 8300000, guid: 8228f7b1ed5584679975643be00da6e6, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Turret_MG_Shot_2
+      traits: 0
+      clip: {fileID: 8300000, guid: 0670d379124484ae2bbfd25b13d1c85e, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Turret_MG_Shot_3
+      traits: 0
+      clip: {fileID: 8300000, guid: e786140121fa04188941781e9382cc7f, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Turret_Mortor_Shot
+      traits: 0
+      clip: {fileID: 8300000, guid: 9923b2cc39f8941aab0e98a40e4959e3, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Turret_Place
+      traits: 0
+      clip: {fileID: 8300000, guid: 25025d380375746e790d60a7d2ec6eaa, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: UZI_Shot_0
+      traits: 0
+      clip: {fileID: 8300000, guid: 8c9a6a4181b0842f8a39eb0293735dcf, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Vampire_Disappear
+      traits: 0
+      clip: {fileID: 8300000, guid: 0778398643ba7421a9f265defa368248, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1
+    - name: Zombie_Attack
+      traits: 0
+      clip: {fileID: 8300000, guid: 4545f11d1f95f445fb2850ecc945de72, type: 3}
+      volume:
+        min: 0.9
+        max: 1.1
+      pitch:
+        min: 0.9
+        max: 1.1
+      delay: 0
+      spatial: 1
+      count: 1

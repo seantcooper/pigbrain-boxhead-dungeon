@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e9f0db9ec9f43b48be4e019a749f8be
+timeCreated: 1439074398
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43486
+  packageName: Low poly styled rocks
+  packageVersion: 1.1
+  assetPath: Assets/Low_poly_styled_rocks/Examples/Materials/ground.mat
+  uploadId: 80037

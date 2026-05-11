@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d96150f6ff88feb4ab579c1de88f9acd
+timeCreated: 1477530229
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Trap/SD_Trap_SpikeBlock_02.prefab
+  uploadId: 572781

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6bd90c5ed0899a544a4095f0a052825c
+timeCreated: 1477530232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Vase_01.prefab
+  uploadId: 572781

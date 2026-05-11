@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a3293876809887745903c3d9393a9dd3
+timeCreated: 1477530239
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Goblin_Platform_Large_02.prefab
+  uploadId: 572781

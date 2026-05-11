@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4f526ece9a611f4438575edfab301879
+timeCreated: 1477530232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Floor_Dark_01.prefab
+  uploadId: 572781

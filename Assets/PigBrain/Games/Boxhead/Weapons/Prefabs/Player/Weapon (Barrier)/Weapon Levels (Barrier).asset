@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Weapon Levels (Barrier)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: bb56f781c79b54b188ea01e213d8a294
+  stats:
+  - {fileID: 11400000, guid: 33ecac83f134d4c8eb297a81370d52c6, type: 2}
+  - {fileID: 11400000, guid: 900bee03a22a04696bfb2af5677b9c8c, type: 2}
+  - {fileID: 11400000, guid: 432f1a68d8c324bf4a461e68c7b0c8b7, type: 2}
+  - {fileID: 11400000, guid: 0da503f21baf145cc8de015dc21f6305, type: 2}
+  - {fileID: 11400000, guid: b03044b97e7bc4013988c0b446909637, type: 2}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d038d166340e4514c92b68abb1268ed1
+timeCreated: 1477530241
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_StoneCircle_01.prefab
+  uploadId: 572781

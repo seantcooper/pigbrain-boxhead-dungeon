@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc01676a2a3ad2f4a8fd668528c68131
+timeCreated: 1477530234
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Trap/SD_Trap_SwingingAxe_01.prefab
+  uploadId: 572781

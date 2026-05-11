@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d0d6dcb7d415413188fb2713508320c, type: 3}
+  m_Name: $Weapons
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Environment.ObjectList
+  objects:
+  - {fileID: 8558357041853406381, guid: 8662095d91f784eb0922a2e7bfa9ee4a, type: 3}
+  - {fileID: 8558357041853406381, guid: 622653f96f39a4c268d1987404027a61, type: 3}
+  - {fileID: 8558357041853406381, guid: a6fc46f189cb34a33b1bd66854d84aa3, type: 3}
+  - {fileID: 8558357041853406381, guid: 9d58a3479e6f24cff804664c6af16b74, type: 3}
+  - {fileID: 8558357041853406381, guid: 14fb297221e724255a95a64690e60660, type: 3}
+  - {fileID: 8558357041853406381, guid: 7bcae5370d53d4d89a946fca113436d2, type: 3}
+  - {fileID: 8558357041853406381, guid: 300123e4716854d57bedc26b0a5bd126, type: 3}
+  - {fileID: 8558357041853406381, guid: 51783bbf9465a4c0b8ec3fedaf16f465, type: 3}
+  - {fileID: 8558357041853406381, guid: 3ccc54ca3ffbd4cff901114888435551, type: 3}
+  - {fileID: 8558357041853406381, guid: 440eafa73fe3b494bbb04f31b5026f9e, type: 3}
+  - {fileID: 8558357041853406381, guid: 194d732c95d014a20ad8f3c16ca56c25, type: 3}

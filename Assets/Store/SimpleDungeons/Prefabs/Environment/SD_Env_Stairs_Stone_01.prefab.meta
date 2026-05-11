@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 10c188c55f489c641b5b069e669d223a
+timeCreated: 1477537412
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Stairs_Stone_01.prefab
+  uploadId: 572781

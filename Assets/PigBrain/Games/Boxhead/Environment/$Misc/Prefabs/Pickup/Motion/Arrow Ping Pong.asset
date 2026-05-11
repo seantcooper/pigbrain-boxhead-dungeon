@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdec4de0b4a5c48528029070ba7adfff, type: 3}
+  m_Name: Arrow Ping Pong
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.core.Motion.MotionAxisMove
+  traits: 1
+  easeIn: 1
+  easeOut: 1
+  duration: 0.5
+  repeat: 0
+  axis: 2
+  minDistance: -1
+  maxDistance: 0

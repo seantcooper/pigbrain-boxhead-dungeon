@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c9afb3cf828d63440bca7320c95c1648
+timeCreated: 1477530233
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Tool_Saw_01.prefab
+  uploadId: 572781

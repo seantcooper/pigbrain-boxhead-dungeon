@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a33b976bec48cc34298f8b604c0ef013
+timeCreated: 1477530239
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_ChairStraps_01.prefab
+  uploadId: 572781

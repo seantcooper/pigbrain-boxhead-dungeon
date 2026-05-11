@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Weapon Levels (Barrel)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: 848eb7628cd0e4734bffd167fdd84c2d
+  stats:
+  - {fileID: 11400000, guid: 07115914020b345a493a44c90bd64c2a, type: 2}
+  - {fileID: 11400000, guid: 975a819b1f7fd404f821dfd65732aed1, type: 2}
+  - {fileID: 11400000, guid: 5b5eb10e28d044c91892246d070ccf2e, type: 2}
+  - {fileID: 11400000, guid: 5911d2db0e2a0461e93d9c41925b8b58, type: 2}
+  - {fileID: 11400000, guid: fb1ef35a70fcb49249f1f0fd740c016b, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db35d2f1c93c4a1bb70f2b6f2f0faa0, type: 3}
+  m_Name: Random Level2 (Kill)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.CommandRnd
+  sound:
+    target: {fileID: 0}
+    id: 
+  message: {fileID: 0}
+  filters: []
+  seed: 1680653441
+  commands:
+    items:
+    - command: {fileID: 11400000, guid: 270949c556d964a0e8fd43e8ca787d58, type: 2}
+      weight: 50
+    - command: {fileID: 11400000, guid: 84243dbb1a6364a8bad8719608484526, type: 2}
+      weight: 10
+    - command: {fileID: 11400000, guid: 41fa7f111a1cf48699b34c7c065b74ed, type: 2}
+      weight: 2

@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7279266406660759121
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8429447863288695481, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 072f43d51f4fd478a903ce16d47bcca4, type: 2}
+    - target: {fileID: -6696960522274440449, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 7786420091658408926, guid: 11ff9bbe8165943caa264f6c9cb31291, type: 3}
+    - target: {fileID: -6696960522274440449, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 8677465392586646702, guid: eed9c2b5c6f16499fb9620f77ef47f17, type: 3}
+    - target: {fileID: -6696960522274440449, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: cardData
+      value: 
+      objectReference: {fileID: 11400000, guid: ea7913519565948649bb60fcaff10d0d, type: 2}
+    - target: {fileID: -4317337978507342672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: guid
+      value: 440eafa73fe3b494bbb04f31b5026f9e
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423210429698556668, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_Name
+      value: Weapon (Turret)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277104564773228580, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 8677465392586646702, guid: eed9c2b5c6f16499fb9620f77ef47f17, type: 3}
+    - target: {fileID: 2277104564773228580, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: shot
+      value: 
+      objectReference: {fileID: 6360129658236270662, guid: 847efb8a083364f34a02b53d6763321e, type: 3}
+    - target: {fileID: 2277104564773228580, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277104564773228580, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: displayName
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277104564773228580, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: carry.trigger
+      value: NoWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277104564773228580, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: carry.priority
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277104564773228580, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: carry.container
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622880555233355672, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6de6e5776c9fe419491c662920444a06, type: 2}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: levels
+      value: 
+      objectReference: {fileID: 11400000, guid: 819684352effd477798f2135544f380b, type: 2}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: levels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: 'levels.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 92d81d904887446e2ae157705f68f249, type: 2}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: 'levels.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 02b75fe21f22c4663bbd721912d70c06, type: 2}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: 'levels.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3394ba2cc62974718b69137fbce9ae97, type: 2}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: properties.Array.data[0].memberName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179376598718346337, guid: 323c559f82f924055a10cc3badda7d00, type: 3}
+      propertyPath: properties.Array.data[4].memberName
+      value: ammo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 323c559f82f924055a10cc3badda7d00, type: 3}

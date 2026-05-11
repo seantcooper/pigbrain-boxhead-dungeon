@@ -1,0 +1,7 @@
+<linker>
+  <assembly fullname="Unity.RenderPipelines.Core.Runtime">
+    <type fullname="UnityEngine.Rendering.DebugManager" preserve="nothing"/>
+    <type fullname="UnityEngine.Rendering.DebugUI" preserve="nothing"/>
+    <type fullname="UnityEngine.Rendering.DebugUIHandlerWidget" preserve="nothing"/>
+  </assembly>
+</linker>

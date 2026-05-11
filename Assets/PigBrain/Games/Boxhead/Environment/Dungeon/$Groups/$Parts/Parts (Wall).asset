@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd33046632364203961f8f8b2a97b39, type: 3}
+  m_Name: Parts (Wall)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.PrefabList
+  prefabs:
+    items:
+    - prefab: {fileID: 404998474, guid: f87285e2f00713c4ea55142d0b475c31, type: 3}
+      weight: 4
+    - prefab: {fileID: 1285216984, guid: 8ab0d05ceccffa2469d030535e60f0d2, type: 3}
+      weight: 4
+    - prefab: {fileID: 179595149, guid: c499bed2f737c0e488efed8069326c49, type: 3}
+      weight: 4
+    - prefab: {fileID: 1697938312, guid: ea6792f0a8ddde24cacc1a0e006c4bb6, type: 3}
+      weight: 1
+    - prefab: {fileID: 1710729510, guid: 48fb1ecb128bba648b5a4da29606f7c4, type: 3}
+      weight: 1

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd33046632364203961f8f8b2a97b39, type: 3}
+  m_Name: Parts (Corner)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.PrefabList
+  prefabs:
+    items:
+    - prefab: {fileID: 636090987590329137, guid: e2a85919981d503409e8ed76f2a7aeba, type: 3}
+      weight: 1
+    - prefab: {fileID: 1947999867988441871, guid: fce50451b3b14cb4e8d48f23dc6a3ceb, type: 3}
+      weight: 1
+    - prefab: {fileID: 3108770229487502319, guid: 5786d4bfb892efa4f86569b64683ad2b, type: 3}
+      weight: 0
+    - prefab: {fileID: 5022559612894249952, guid: 413fa6f9b7d355443a955edd94bc850d, type: 3}
+      weight: 0

@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/CrazyGames/Games/Chickens/Scenes/Rendertest.unity
+    guid: 7b00440cd431845eebbb77c12b3d7b41
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: b4d5d44e6285b4224b991b2a6eeef72f, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: a6e1e491bbb124ea4a69b532760a7f65, type: 2}

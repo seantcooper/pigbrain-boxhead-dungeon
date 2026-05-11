@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 702ad16423cea4d499b479998f268d17
+timeCreated: 1477530235
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_HangingChain_02.prefab
+  uploadId: 572781

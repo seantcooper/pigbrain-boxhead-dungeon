@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Zombie Levels
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: 8588ccd8cb884436a96f71aeda70ab88
+  stats:
+  - {fileID: 11400000, guid: 97ae9810127f74094be6f17f05c73b66, type: 2}
+  - {fileID: 11400000, guid: 1d9a66dd802c945c58623d3730ce6f78, type: 2}
+  - {fileID: 11400000, guid: adc5f1b0fef7247628015937cda74fc5, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Devil Levels
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: 33cbbe9af38f24c29ba4b7a07e5317c2
+  stats:
+  - {fileID: 11400000, guid: db2854e9fa30a4f1c94ab8c347cbfb25, type: 2}
+  - {fileID: 11400000, guid: b6009b25ee02f4be18a44d1c7de10c76, type: 2}
+  - {fileID: 11400000, guid: 5260212e2d977420e92e85e9ba69606a, type: 2}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ba235f36e55369c4f80b44fa49b8fa89
+timeCreated: 1477880030
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Lava_Flow_01.prefab
+  uploadId: 572781

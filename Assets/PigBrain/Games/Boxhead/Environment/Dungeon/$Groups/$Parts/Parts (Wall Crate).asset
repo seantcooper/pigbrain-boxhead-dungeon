@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd33046632364203961f8f8b2a97b39, type: 3}
+  m_Name: Parts (Wall Crate)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.PrefabList
+  prefabs:
+    items:
+    - prefab: {fileID: 0}
+      weight: 1
+    - prefab: {fileID: 3745778965607210444, guid: 09e3299bb2f269e4bbd8946247308a73, type: 3}
+      weight: 1
+    - prefab: {fileID: 2850703386101473707, guid: 2d20d9641b8a80644bc1077baf22af02, type: 3}
+      weight: 1
+    - prefab: {fileID: 4943347296118668506, guid: be4194a890f7a7d429276714603e5a58, type: 3}
+      weight: 1
+    - prefab: {fileID: 6742914832390919494, guid: dfb383dabccdc2f4da2c3db0cf7acfe3, type: 3}
+      weight: 1
+    - prefab: {fileID: 7733616489326405140, guid: e57c4d1aa39fe05418b2309fed797cf9, type: 3}
+      weight: 1
+    - prefab: {fileID: 8837694006211629010, guid: ddabe4f409d94f34ab08c38352c073f1, type: 3}
+      weight: 1
+    - prefab: {fileID: 1313783319754763808, guid: 714a01a37c57c71479c42f7471472216, type: 3}
+      weight: 1
+    - prefab: {fileID: 2182185726371965972, guid: 6d306b8a63b773047bb3f47d4edeeaf3, type: 3}
+      weight: 1

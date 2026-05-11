@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 69a98a36840466d4f93b3535a0d6cfa1
+timeCreated: 1477530232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_PotionBrew_03.prefab
+  uploadId: 572781

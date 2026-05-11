@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Granny (Levels)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Statistic.StatsCollection
+  guid: 7d3aca5d728c44fc5be9a6ded207eea6
+  stats:
+  - {fileID: 11400000, guid: 77d95a6cdf35f4be1b7f718aeb6efd39, type: 2}
+  - {fileID: 11400000, guid: 7536eaba3c3e943909d1ec37f7f9ad2e, type: 2}
+  - {fileID: 11400000, guid: 37de4c99baf3f431daa5ea0d72e0cae2, type: 2}
+  - {fileID: 11400000, guid: 3bf54488f6c5840c0b9ec5a22939306d, type: 2}
+  - {fileID: 11400000, guid: e914c76847e33471b9f245264b0ed4e9, type: 2}
+  - {fileID: 11400000, guid: fae98ad604dc44bb5a509ce61079d6ec, type: 2}

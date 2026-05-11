@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc7aa073bf36421e9c5f6d7d8f7a297, type: 3}
+  m_Name: Group (Loot)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.RoomPrefabs
+  set: 1
+  weight: 1
+  doorSpawner: {fileID: 7568940251059464290, guid: 2fb3467bc9d18423e8bf60d4cd216cce, type: 3}
+  voidBlock: {fileID: 143359021992324680, guid: 9b85333fa9fca46b489f2a169fe9e9b2, type: 3}
+  doorLabelExit: {fileID: 7100612693297723793, guid: 96d53c09b7b424a1cbbb19e978f11378, type: 3}
+  doorLabelLoot: {fileID: 7100612693297723793, guid: 89197981ebb8943a2b19aea110bf9033, type: 3}
+  doorLabelEntrance: {fileID: 7100612693297723793, guid: 69f7f4996c30e4b82be30a341a5fd3fa, type: 3}
+  floor: {fileID: 11400000, guid: 585cc140402ac4c4196bc0edc7c03812, type: 2}
+  floorFurniture: {fileID: 0}
+  wall: {fileID: 11400000, guid: 7e7ee031af9f249a09d5e884119d5532, type: 2}
+  wallInterior: {fileID: 0}
+  wallDecoration: {fileID: 11400000, guid: d0377d2b0914949289f8dff4e6fe0cf8, type: 2}
+  wallFurniture: {fileID: 0}
+  corner: {fileID: 11400000, guid: 85c4f5eedbf06431380f1eaa797b907c, type: 2}
+  door: {fileID: 11400000, guid: 5796d490456bc485a8cf22e723511e9b, type: 2}
+  spawn: {fileID: 0}
+  trap: {fileID: 0}
+  loot: {fileID: 11400000, guid: ef5fbb5af660045d3873ef5b54ae5410, type: 2}

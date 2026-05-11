@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8510ab189db0e1540899381375761818
+timeCreated: 1477974369
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Goblin_Hut_01.prefab
+  uploadId: 572781

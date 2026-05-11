@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0f552a84cd84121bf38bab11211fa5, type: 3}
+  m_Name: Create Player Soldier
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.CommandCreate
+  sound:
+    target: {fileID: 8300000, guid: 233fc72707bce4c1f8c425d6306db41b, type: 3}
+    id: Reload
+  message: {fileID: 11400000, guid: efb11717400c847c2a55dd8f0dfa2bd3, type: 2}
+  filters: []
+  prefab: {fileID: 3633253301172464602, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+  count: 1
+  baseOffset: 1
+  frequency: 0
+  burst: 1
+  spread:
+    enabled: 0
+    radius: 0
+  force:
+    enabled: 0
+    force: 1

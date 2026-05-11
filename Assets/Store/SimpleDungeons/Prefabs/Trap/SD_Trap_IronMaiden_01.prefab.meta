@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 54ff9c8cb334e0640b7011311db044f6
+timeCreated: 1477530228
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Trap/SD_Trap_IronMaiden_01.prefab
+  uploadId: 572781

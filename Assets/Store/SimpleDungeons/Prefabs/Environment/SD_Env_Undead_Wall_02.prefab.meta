@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44cb508f9183cc148844499a64b64ba1
+timeCreated: 1477530936
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Undead_Wall_02.prefab
+  uploadId: 572781

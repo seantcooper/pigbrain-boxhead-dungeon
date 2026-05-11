@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c1dcb0322b539634fb85bcb9550da087
+timeCreated: 1477530231
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Undead_Floor_03.prefab
+  uploadId: 572781

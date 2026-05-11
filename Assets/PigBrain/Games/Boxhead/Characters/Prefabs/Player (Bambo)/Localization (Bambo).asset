@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb694690fd70042c1811c625e906fa69, type: 3}
+  m_Name: Localization (Bambo)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.UI.LocalizationData
+  language: 0
+  keyValues:
+  - key: type
+    value: Player
+  - key: tutorial
+    value: Bambo
+  - key: title
+    value: Bambo
+  - key: description
+    value: Fast, agile fighter who can push enemies back. Fires multiple weapons
+      at once, scaling damage with your loadout.
+  - key: tagline
+    value: Ultimate fighting machine

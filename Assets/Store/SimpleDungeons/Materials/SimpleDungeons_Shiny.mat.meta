@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eead5ed36336d0e41a1c49dd995a7fbd
+timeCreated: 1477629875
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Materials/SimpleDungeons_Shiny.mat
+  uploadId: 572781

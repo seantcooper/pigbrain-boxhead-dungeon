@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e48e29ed31a89bc45a47e31ea282be74
+timeCreated: 1477530231
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Cauldron_01.prefab
+  uploadId: 572781

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4ccdc236c6280334298827e2f576556b
+timeCreated: 1477530232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Trap/SD_Trap_FloorGrinder_01.prefab
+  uploadId: 572781

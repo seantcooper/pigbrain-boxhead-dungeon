@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ff4ee1cb12a4821b785929a55b44e4, type: 3}
+  m_Name: Kill Devils
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.CommandSetValue
+  sound:
+    target: {fileID: 8300000, guid: 38b91581691424036ad83ca9eb8feb3f, type: 3}
+    id: Pickup_Powerup
+  message: {fileID: 11400000, guid: 37f5f797d611d4b44ad215e242838d2e, type: 2}
+  propertyType:
+    componentType: pigbrain.game.Boxhead.Enemy, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    filterName: Devil
+    propertyName: applyDamage
+    op: 4
+    value: 10000
+  assignment: 1
+  assignEffect: {fileID: 0}

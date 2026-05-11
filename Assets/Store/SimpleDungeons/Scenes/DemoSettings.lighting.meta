@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8fb017763a6cbe34caddbb2f097def2d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Scenes/DemoSettings.lighting
+  uploadId: 572781

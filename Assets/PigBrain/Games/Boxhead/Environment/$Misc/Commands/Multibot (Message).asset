@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7490a7d17b56d4fabb67109809acd28e, type: 3}
+  m_Name: Multibot (Message)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.UI.MessageTickerData
+  text: Multi Bots
+  icon: {fileID: 0}
+  color: {r: 0.44334164, g: 0.9056604, b: 0.44001427, a: 1}
+  priority: 3
+  prefab: {fileID: 0}

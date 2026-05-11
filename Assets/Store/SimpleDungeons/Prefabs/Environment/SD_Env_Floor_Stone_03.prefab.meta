@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8e49cba06dcdfc3439b1507dde6d28c0
+timeCreated: 1477530228
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Floor_Stone_03.prefab
+  uploadId: 572781

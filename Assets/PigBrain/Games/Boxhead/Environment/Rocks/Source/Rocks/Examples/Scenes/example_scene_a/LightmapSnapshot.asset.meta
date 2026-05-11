@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b27a1670a4b5cdc4e9ceee504d149bac
+timeCreated: 1441407778
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43486
+  packageName: Low poly styled rocks
+  packageVersion: 1.1
+  assetPath: Assets/Low_poly_styled_rocks/Examples/Scenes/example_scene_a/LightmapSnapshot.asset
+  uploadId: 80037

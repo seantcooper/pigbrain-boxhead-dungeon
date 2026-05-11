@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5718553295777847561
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -372496348772392248, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288313867983069995, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.36063
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.6159
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569567348285820029, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107123461847748972, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3493214169627066338, guid: 966fc30db69b6447db6ebbb5716e6451, type: 3}
+    - target: {fileID: 7265621239175908774, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039551170983065434, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: guid
+      value: ca59a3a455f36496387eb904679e55f5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156063514686789181, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: m_Name
+      value: Pickup Box (Health)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952040642367363590, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: ea3fdcdf055a04d67a15d45a365bd439, type: 2}
+    - target: {fileID: 9066773559603110212, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9cf8e420e305947e4805406a91a9d0e9, type: 2}
+    m_RemovedComponents:
+    - {fileID: 7925694771542568261, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+    - {fileID: 2511351430128009593, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+    - {fileID: -372496348772392248, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+    - {fileID: 4288313867983069995, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8156063514686789181, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2247974488409590892}
+  m_SourcePrefab: {fileID: 100100000, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+--- !u!1 &4498050810165612340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8156063514686789181, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+  m_PrefabInstance: {fileID: 5718553295777847561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2247974488409590892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498050810165612340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff

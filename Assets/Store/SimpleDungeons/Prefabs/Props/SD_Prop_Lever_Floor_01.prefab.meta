@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 50f315b818ee102489edc51e8657621c
+timeCreated: 1477626473
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Lever_Floor_01.prefab
+  uploadId: 572781

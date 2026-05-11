@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6905407040223653027
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_Name
+      value: Rockets
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+--- !u!1 &6905407040223619585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+  m_PrefabInstance: {fileID: 6905407040223653027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6905407040223786535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+  m_PrefabInstance: {fileID: 6905407040223653027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6905407040223786533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+  m_PrefabInstance: {fileID: 6905407040223653027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6905407040223786539 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400008, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+  m_PrefabInstance: {fileID: 6905407040223653027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6905407040223786537 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400010, guid: 41cd71ac9c9074185901aa28a79b5bf1, type: 3}
+  m_PrefabInstance: {fileID: 6905407040223653027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7424147726078556293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905407040223619585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d7038c3b20f44ec8b3aba4787bc5ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodes:
+  - {fileID: 6905407040223786535}
+  - {fileID: 6905407040223786533}
+  - {fileID: 6905407040223786539}
+  - {fileID: 6905407040223786537}
+  muzzleFlash: {fileID: 1937925971034920, guid: fef6088e78eb348e7a036549109f459e, type: 3}
+  payload: {fileID: 1061702561109781724, guid: 1558e7967d8ee47daa6b2024672786f9, type: 3}
+  _ammo: 1000
+  frequency: 0.001

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bac19cf49c124754196012f08c123f34
+timeCreated: 1439074398
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43486
+  packageName: Low poly styled rocks
+  packageVersion: 1.1
+  assetPath: Assets/Low_poly_styled_rocks/Examples/Materials/environment_map.mat
+  uploadId: 80037

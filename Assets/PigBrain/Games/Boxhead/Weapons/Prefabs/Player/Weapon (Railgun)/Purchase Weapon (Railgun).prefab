@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5962257723958175365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 125348361209120626, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: -461760155, guid: 3228941ab5c574070a6d3c8b6f0a0af4, type: 3}
+    - target: {fileID: 198072826212572285, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: fd7077793d10b44c28cccf873c0433eb, type: 2}
+    - target: {fileID: 198072826212572285, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: levels
+      value: 
+      objectReference: {fileID: 11400000, guid: f1fd9c994b09b474e8c2e8a42f7d487f, type: 2}
+    - target: {fileID: 4753936282588742969, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_text
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753936282588742969, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092405958019777117, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_text
+      value: RAILGUN
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092405958019777117, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_fontSize
+      value: 7.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230729143314300459, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: price
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230729143314300459, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: title
+      value: Railgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230729143314300459, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: 'commands.commands.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e18b5237c7c80425c9e3680be9aeb985, type: 2}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968852967471065544, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191444474864014129, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: m_Name
+      value: Purchase Weapon (Railgun)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456062760120589257, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 20a6a78b5557e487fa05f7f68fb8d825, type: 2}
+    - target: {fileID: 7456062760120589257, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}
+      propertyPath: levels
+      value: 
+      objectReference: {fileID: 11400000, guid: f1fd9c994b09b474e8c2e8a42f7d487f, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b90a3759dc4446f383b5d24f8895e9d, type: 3}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121724aa508cc418db55d5e665c4f154, type: 3}
+  m_Name: Atmosphere
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.Audio.Sequencer
+  sequences:
+  - clip: {fileID: 8300000, guid: fb91ae1cffa0f4960b8da43cdf7f0deb, type: 3}
+    startDuration: 1
+    repeatDuration: 4
+    clipLength: 1.4508843
+  - clip: {fileID: 8300000, guid: a540824c32664405dac7bf27c6cf526c, type: 3}
+    startDuration: 1
+    repeatDuration: 6
+    clipLength: 5.7592516
+  - clip: {fileID: 8300000, guid: 8bc6bb1c495574c389f3b045778f4b68, type: 3}
+    startDuration: 7.09
+    repeatDuration: 8.21
+    clipLength: 2.9187303
+  - clip: {fileID: 8300000, guid: e92d42bbe4dc54db4b8f1af3e6361841, type: 3}
+    startDuration: 6.97
+    repeatDuration: 7.97
+    clipLength: 2.4777098

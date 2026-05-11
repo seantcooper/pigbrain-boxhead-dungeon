@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Weapon Levels (Pistol)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: 9d2f4e2cd425c40e987641d88087baad
+  stats:
+  - {fileID: 11400000, guid: 80690ab48d2b84d5aaa3be407f0cd91c, type: 2}
+  - {fileID: 11400000, guid: c69676b63745c41318620ac43fa59d02, type: 2}
+  - {fileID: 11400000, guid: 6d488f44b81ae4ba6bc044145d1f33f4, type: 2}
+  - {fileID: 11400000, guid: 6012b9a2e26ae4418b2cd8b5e4044e8f, type: 2}
+  - {fileID: 11400000, guid: e29f34b384ed94c39911a58b9e7e90a7, type: 2}

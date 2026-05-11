@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2907f82560f3b3945829bbb91ed8bb41
+timeCreated: 1477530237
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Crate_02.prefab
+  uploadId: 572781

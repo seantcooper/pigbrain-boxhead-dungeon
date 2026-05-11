@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: df48b1142e5337548bb806b365ccc846
+timeCreated: 1477619871
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Goblin_Ladder_02.prefab
+  uploadId: 572781

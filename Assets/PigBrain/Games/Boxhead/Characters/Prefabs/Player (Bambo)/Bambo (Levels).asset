@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Bambo (Levels)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Statistic.StatsCollection
+  guid: 179f2b025ae754ca685fbb078654a225
+  stats:
+  - {fileID: 11400000, guid: 9e312ba255e524e0a90b304e9046bdfe, type: 2}
+  - {fileID: 11400000, guid: c104ad8b342204a949d205999586f087, type: 2}
+  - {fileID: 11400000, guid: 35a5bcb1938fd450ebe0a235aa6a4a05, type: 2}
+  - {fileID: 11400000, guid: 7172689c79f24472e85e3258fd5d0779, type: 2}
+  - {fileID: 11400000, guid: 89cf1600d303a4183bbb087ab729a90a, type: 2}
+  - {fileID: 11400000, guid: 41f8f548fe4ba4a2a8df87502d5515f7, type: 2}

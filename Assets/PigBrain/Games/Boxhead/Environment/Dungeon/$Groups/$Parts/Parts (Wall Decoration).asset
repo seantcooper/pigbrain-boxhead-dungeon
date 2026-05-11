@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd33046632364203961f8f8b2a97b39, type: 3}
+  m_Name: Parts (Wall Decoration)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.PrefabList
+  prefabs:
+    items:
+    - prefab: {fileID: 0}
+      weight: 20
+    - prefab: {fileID: 2020358127116279593, guid: 55abbcd45ab99da4abc3511b268df2f7, type: 3}
+      weight: 1
+    - prefab: {fileID: 3631734277929631697, guid: 028cfadc4908bac4bbd084671773a984, type: 3}
+      weight: 1
+    - prefab: {fileID: 7880899299968662322, guid: 30030efaf3f7fc84eb295fe3f1079c1f, type: 3}
+      weight: 1
+    - prefab: {fileID: 1420780923733159195, guid: e60fc98bd6a86fb468039f8b6788bf7c, type: 3}
+      weight: 1
+    - prefab: {fileID: 2324832263612421673, guid: 62beeee3cc165eb42a2b74f68c34160c, type: 3}
+      weight: 1
+    - prefab: {fileID: 7020710991121295662, guid: aed11cde79d793c41b78480cb1b2334b, type: 3}
+      weight: 1
+    - prefab: {fileID: 1209729949806665661, guid: 3c8dde0c0d4ae5d4a9db4109fb29c5ea, type: 3}
+      weight: 1
+    - prefab: {fileID: 1867575707724726141, guid: 4f6d9a70336c7504d8db52eccc2f4a0b, type: 3}
+      weight: 1
+    - prefab: {fileID: 7931665307649555391, guid: a80eff1c238a69e49ae7fdc811d3d1b1, type: 3}
+      weight: 1
+    - prefab: {fileID: 5626451150660231305, guid: 64ee7e7a230931c48bc28495b59db2ba, type: 3}
+      weight: 1
+    - prefab: {fileID: 1327696678499921792, guid: 529e7322fb16cf04d8c1ad17c7cf0dc4, type: 3}
+      weight: 1
+    - prefab: {fileID: 5793338494820416431, guid: c373777744b1c564fa9f70fd7716b818, type: 3}
+      weight: 1
+    - prefab: {fileID: 3539724703426742405, guid: 5e4c0fb0c4c12714e80f324f55d51ddf, type: 3}
+      weight: 1

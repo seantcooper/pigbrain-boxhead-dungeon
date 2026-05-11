@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9202bdb4570ff3349b62e61a906398a7
+timeCreated: 1477623282
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Materials/SimpleDungeons_Glow.mat
+  uploadId: 572781

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf74c2107a4974d3790c9819698f3431, type: 3}
+  m_Name: Music
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.Audio.Music
+  stats:
+    target: {fileID: 11400000, guid: 0587e0b78cd704129be3e48e0ede54bb, type: 2}
+    id: Session
+  stat: 105
+  mixDuration: 1
+  tracks:
+  - name: IngameTrack_1_0
+    audioClip: {fileID: 8300000, guid: 593061cf6ac1b49d4904537b371bda68, type: 3}
+    value: 1
+  - name: IngameTrack_1_1
+    audioClip: {fileID: 8300000, guid: 9dd04555512b544369045fcfe81f3ae9, type: 3}
+    value: 75
+  - name: IngameTrack_1_2
+    audioClip: {fileID: 8300000, guid: 0e98efe4066984b2f9c99ca278d11882, type: 3}
+    value: 150

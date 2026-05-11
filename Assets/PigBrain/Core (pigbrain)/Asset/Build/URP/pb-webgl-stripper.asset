@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3efdd41947995b14ea6378b017ee4784, type: 3}
+  m_Name: pb-webgl-stripper
+  m_EditorClassIdentifier: 
+  OptimizeCodeAfterStripping: 1
+  RemoveEmbeddedDebugSymbols: 1
+  MissingSubmoduleErrorHandling: 2
+  SubmodulesToStrip:
+  - 2D Rendering
+  - Advanced Text Generator Support
+  - IMGUI
+  - Mesh Blend Shapes
+  - Mesh Combiner
+  - Mesh Optimizer
+  - Mesh Skinning
+  - Newtonsoft Json.NET
+  - System.Data
+  - TetGen
+  - Text Rendering
+  - Texture Decompression ASTC
+  - Texture Decompression BC
+  - Texture Decompression DXT
+  - UI Toolkit Framework
+  - WebGPU Support

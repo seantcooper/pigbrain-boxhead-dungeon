@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db35d2f1c93c4a1bb70f2b6f2f0faa0, type: 3}
+  m_Name: Add Weapon (Random)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.CommandRnd
+  sound:
+    target: {fileID: 0}
+    id: 
+  seed: 3404831983
+  commands:
+    items:
+    - command: {fileID: 11400000, guid: 9edde87e353164dad8e5e5d40535f403, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 7f4353188b2f84cd0bb432d015556a26, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: c6a5862c99c0647588a70312f307c5bf, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 8764951e3b55047b6a0c713601921105, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 24ce0ac57df92450f8d9328f36d161a5, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: e18b5237c7c80425c9e3680be9aeb985, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 6813f1b14263643a1ace602246b2a343, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 6348b409124354e4f9185abddd69755a, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 1b01d03f005954d688ecccdcd57d5b4a, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 91e14081e23514c5b9b8c619cc3c301d, type: 2}
+      weight: 1
+    - command: {fileID: 11400000, guid: 1880228f01edb44dfb9cf91d02516c11, type: 2}
+      weight: 1

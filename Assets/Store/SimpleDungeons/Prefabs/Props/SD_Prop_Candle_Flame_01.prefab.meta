@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cb19cf532cb13814ca5674b3a3784182
+timeCreated: 1478995823
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Candle_Flame_01.prefab
+  uploadId: 572781

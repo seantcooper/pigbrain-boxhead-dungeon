@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2971063031282911693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2459588073373319980}
+  - component: {fileID: 5533852063874498260}
+  - component: {fileID: 6444111727404384347}
+  - component: {fileID: 7617404294732373156}
+  - component: {fileID: 4855682225599600046}
+  - component: {fileID: 6189375983014580678}
+  - component: {fileID: 6253892745394701996}
+  - component: {fileID: 5262119151577439801}
+  - component: {fileID: 6949004968272505477}
+  - component: {fileID: -8476753139994272446}
+  - component: {fileID: 6826007549924271338}
+  m_Layer: 8
+  m_Name: Placement Object ($Base)
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2459588073373319980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 0, z: -2.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &5533852063874498260
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6444111727404384347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.98, y: 1.7, z: 2.2}
+  m_Center: {x: 0, y: 0.85, z: -0.08}
+--- !u!195 &7617404294732373156
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1.11
+  m_Speed: 0
+  m_Acceleration: 0
+  avoidancePriority: 15
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 0
+  m_AutoRepath: 0
+  m_Height: 1.7
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 3
+--- !u!114 &4855682225599600046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb47e79f173740fea0504fec0380519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigBrain.Prototype.Boxhead.Health
+  maxHitPoints: 10
+  damageSound:
+    target: {fileID: 0}
+    id: 
+  deathSound:
+    target: {fileID: 0}
+    id: 
+  force: {fileID: 0}
+  totalDamage: 0
+  registeredAffectsDamage: 0
+--- !u!114 &6189375983014580678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d3610925ac140b8b6853adac337ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.Statistic.StatsController
+  index: 0
+  stats: {fileID: 0}
+  levels: {fileID: 0}
+  properties: []
+  showGizmos: 1
+--- !u!114 &6253892745394701996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ddd50b6532304a5faebce7566d89d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.ShotPlacement
+  containerID: -23883172
+  speed: 10
+  damageMask:
+    serializedVersion: 2
+    m_Bits: 0
+  damage: 0
+  registerDamage: 0
+  effect: {fileID: 0}
+  massForce: {fileID: 0}
+  fireSound:
+    target: {fileID: 0}
+    id: 
+  target:
+    targeting: {fileID: 0}
+    registerObject: {fileID: 0}
+    cfearitem: {fileID: 0}
+  owner: {fileID: 0}
+  duration: 0
+  retraction: {fileID: 5262119151577439801}
+  retractSwitch: {fileID: -3286319166520501043, guid: 9cf6db495dde847a5b73a5ad1d04ba2a, type: 3}
+  retractType: 0
+  deployDistance: 3
+  fused:
+    enabled: 0
+    fuse: 5
+  turret:
+    enabled: 0
+  barrier:
+    enabled: 0
+    barrierCount: 10
+    node: {fileID: 0}
+    spread: 10
+  retractSwitchInstance: {fileID: 0}
+  state: 0
+--- !u!135 &5262119151577439801
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 3840
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 253689983
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6949004968272505477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c455b4ba225da4893b1d61f7c01c53c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.UI.EdgeMarker
+  traits: 0
+  prefab: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 1}
+  alpha: 0.5
+  layer: 5
+--- !u!114 &-8476753139994272446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de665eded1704dd0b6ede3242a5cdbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.HealthBar
+  traits: 1
+  material: {fileID: 2100000, guid: 6a597aed124ac44e6b91952a9883d06c, type: 2}
+  offset: {x: 0, y: 2, z: 0}
+  size: {x: 1, y: 0.2}
+--- !u!114 &6826007549924271338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971063031282911693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc928a4c1124b424baa2adbfc39213d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Navigation.NavMapLayerMoveItem
+  agent: {fileID: 7617404294732373156}
+  distance: 5

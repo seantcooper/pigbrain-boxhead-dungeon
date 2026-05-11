@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d39f9ef3f9d3b94449ee1a524428fe38
+timeCreated: 1477971772
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_PrisonCell_DoorFrame_01.prefab
+  uploadId: 572781

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3af82c9db1f753a498909121f79d05c7
+timeCreated: 1477530235
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Tool_Hook_01.prefab
+  uploadId: 572781

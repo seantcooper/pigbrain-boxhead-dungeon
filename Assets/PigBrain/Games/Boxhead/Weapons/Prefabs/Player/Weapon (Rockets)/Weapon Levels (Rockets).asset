@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Weapon Levels (Rockets)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: f839019738f0542b6a10002b5a1156ef
+  stats:
+  - {fileID: 11400000, guid: 9e443eba02c3848fd8aaad558b55c5a6, type: 2}
+  - {fileID: 11400000, guid: 654bbcb4079664967b65c7848cb54762, type: 2}
+  - {fileID: 11400000, guid: 9a05b0a6fcd7e4325b27c85cf61f8aef, type: 2}
+  - {fileID: 11400000, guid: 49e1722c4678a48b8978be1a617c68de, type: 2}
+  - {fileID: 11400000, guid: f95b17d89e3ed4370b0cd011d57d897f, type: 2}

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd33046632364203961f8f8b2a97b39, type: 3}
+  m_Name: Parts (Furniture)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.PrefabList
+  prefabs:
+    items:
+    - prefab: {fileID: 0}
+      weight: 20
+    - prefab: {fileID: 5940305458755178960, guid: 51b6b32042f864f9ba781c6a3018f743, type: 3}
+      weight: 1
+    - prefab: {fileID: 2450604810818913948, guid: c6aae928f278f46a183387e7b2335e49, type: 3}
+      weight: 1
+    - prefab: {fileID: 8073456736501973249, guid: 8a2dbfa8c37994f198a57a1a07a2dafe, type: 3}
+      weight: 1
+    - prefab: {fileID: 6209503877094752346, guid: f45d7c93f4ec449c9b81a9ecb25c9afe, type: 3}
+      weight: 1
+    - prefab: {fileID: 7068052014631825920, guid: 351bd79b108574f74819fedd418e319e, type: 3}
+      weight: 1
+    - prefab: {fileID: 8733330339962725886, guid: 11c1e5cd46c8146929ab05fbb8a01a5d, type: 3}
+      weight: 1
+    - prefab: {fileID: 636861108624142632, guid: dd72d3a3bcb5a4663bb0730dfffd3472, type: 3}
+      weight: 1

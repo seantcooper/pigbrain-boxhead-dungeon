@@ -1,0 +1,337 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &292135840654255098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124106815462293024}
+  - component: {fileID: 838065213158625762}
+  - component: {fileID: 4808763476587071022}
+  - component: {fileID: 7946403308721317406}
+  - component: {fileID: 4146212871448008330}
+  - component: {fileID: 4720191758521880861}
+  - component: {fileID: 7355476656280056167}
+  - component: {fileID: 2736201918273177814}
+  - component: {fileID: 489324916068463382}
+  m_Layer: 8
+  m_Name: -Object (Turret) (old)
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124106815462293024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 6279194004664074461}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &838065213158625762
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &4808763476587071022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.98, y: 1.7, z: 2.2}
+  m_Center: {x: 0, y: 0.85, z: -0.08}
+--- !u!195 &7946403308721317406
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1.11
+  m_Speed: 0
+  m_Acceleration: 0
+  avoidancePriority: 0
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 0
+  m_AutoRepath: 0
+  m_Height: 1.7
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &4146212871448008330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb47e79f173740fea0504fec0380519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigBrain.Prototype.Boxhead.Health
+  maxHitPoints: 10
+  damageSound:
+    target: {fileID: 0}
+    id: 
+  deathSound:
+    target: {fileID: 0}
+    id: 
+  totalDamage: 0
+--- !u!114 &4720191758521880861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2f8dd9bfd0742738e0bd00755e3fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigBrain.Prototype.Boxhead.Targeting
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxDistance: 10
+  target:
+    registerObject: {fileID: 0}
+    localBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  agent: {fileID: 7946403308721317406}
+--- !u!114 &7355476656280056167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b8449944e064ce8bcc9ce51d6172e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.Navigation.Turret
+  weaponTransform: {fileID: 6279194004664074443}
+  target:
+    registerObject: {fileID: 0}
+    localBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  targeting: {fileID: 4720191758521880861}
+  agent: {fileID: 7946403308721317406}
+--- !u!114 &2736201918273177814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a37a14c62e4346b4b5ee77866bee5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigBrain.Prototype.Boxhead.Weapon
+  type: 0
+  range:
+    min: 0
+    max: 10
+  fireRate: 0.05
+  shot: {fileID: -5655720510303458052, guid: 92dd66cd745ab4e45aa1d93d574a0104, type: 3}
+  emitterIndex: 0
+  emitters:
+  - {fileID: 6279194004664074459}
+  - {fileID: 6279194004664074451}
+  - {fileID: 6279194004664074457}
+  - {fileID: 6279194004664074449}
+  - {fileID: 6279194004664074455}
+  - {fileID: 6279194004664074447}
+  - {fileID: 6279194004664074453}
+  - {fileID: 6279194004664074445}
+--- !u!114 &489324916068463382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292135840654255098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d3610925ac140b8b6853adac337ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.Statistic.StatsController
+  index: 0
+  stats: {fileID: 11400000, guid: 4af24d85b41b1481791828710c695bdc, type: 2}
+  properties: []
+  levels: []
+--- !u!1001 &1932469813775568549
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1124106815462293024}
+    m_Modifications:
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617588126098018904, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+      propertyPath: m_Name
+      value: Turret_Minigun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+--- !u!4 &6279194004664074443 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097722990, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074445 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097722984, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097722986, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074449 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097722996, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097722998, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097722992, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097722994, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074457 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097723004, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097723006, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6279194004664074461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5617588126097723000, guid: 602f046e351f24969aba7bbe161cc080, type: 3}
+  m_PrefabInstance: {fileID: 1932469813775568549}
+  m_PrefabAsset: {fileID: 0}

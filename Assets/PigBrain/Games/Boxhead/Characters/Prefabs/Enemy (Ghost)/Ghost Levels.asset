@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Ghost Levels
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: 1339b5ed425434296b9e14a88609b78b
+  stats:
+  - {fileID: 11400000, guid: b37cc4ed78d7040c8bfa47241a0d4875, type: 2}
+  - {fileID: 11400000, guid: 08527fcacf59d414f8e33c24f198732a, type: 2}
+  - {fileID: 11400000, guid: a5ae3c37426e44bfc9f34ec260c0a781, type: 2}

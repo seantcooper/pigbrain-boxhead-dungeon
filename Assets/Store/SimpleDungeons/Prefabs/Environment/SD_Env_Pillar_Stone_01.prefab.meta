@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 73c08e84ae0965a4b9674d1c89f21e59
+timeCreated: 1477530229
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Pillar_Stone_01.prefab
+  uploadId: 572781

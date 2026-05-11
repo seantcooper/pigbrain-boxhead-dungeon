@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Weapon Levels (Shield)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: 1d44618ec973b493eb38af3daec03f45
+  stats:
+  - {fileID: 11400000, guid: 590a9f3244f72470b9f5dc7ea1d3126c, type: 2}
+  - {fileID: 11400000, guid: 874f0a55adf2545abab2e733e83dd39e, type: 2}
+  - {fileID: 11400000, guid: 7cf65fba6e90a4995a7ed07c452e6e01, type: 2}
+  - {fileID: 11400000, guid: 147216d21317445928cbd191f0ad1ccb, type: 2}
+  - {fileID: 11400000, guid: 3214e9be422144f18ad570cb15c27c17, type: 2}

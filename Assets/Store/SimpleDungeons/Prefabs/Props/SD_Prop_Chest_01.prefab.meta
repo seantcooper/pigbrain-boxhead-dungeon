@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 58bd7588bfe562141a6fdaaa24bd6adc
+timeCreated: 1477530228
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Chest_01.prefab
+  uploadId: 572781

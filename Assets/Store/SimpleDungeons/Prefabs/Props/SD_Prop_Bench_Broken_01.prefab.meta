@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3399df232015b5048a1d4cd47bfe3974
+timeCreated: 1477530236
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Bench_Broken_01.prefab
+  uploadId: 572781

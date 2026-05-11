@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c2b38c070ead7e5419a9abd37b9a36ae
+timeCreated: 1477530240
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Coin_02.prefab
+  uploadId: 572781

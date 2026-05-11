@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8949702383814138122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310419163081507190}
+  - component: {fileID: 6040428056945661737}
+  - component: {fileID: 5006298562365478035}
+  - component: {fileID: -515477968881808962}
+  m_Layer: 0
+  m_Name: Explosion ($Base)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310419163081507190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949702383814138122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0347, y: 0.32573, z: -0.81169}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5973824949739477053}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6040428056945661737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949702383814138122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf248c0f6353b43df82851d02b5aa9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.EffectExplosion
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 3840
+  radius: 5
+  duration: 0.5
+  damage: 100
+  explodeModel: 1
+  massForce: {fileID: 5006298562365478035}
+  sound:
+    target: {fileID: 8300000, guid: 18c04ff15227e43d8868f4e43b0f817d, type: 3}
+    id: Explosion_0
+--- !u!114 &5006298562365478035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949702383814138122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623cc25953728481e9585da119cad4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Core.AI.MassForce
+  mass: 1000
+--- !u!114 &-515477968881808962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949702383814138122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0579056a18e8e425abf4e5d6d1cb7311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.core.UnityObject.PoolGroup
+  id: Explosion
+--- !u!1001 &2579360386136412315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1310419163081507190}
+    m_Modifications:
+    - target: {fileID: 3475879734113144371, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_Name
+      value: Particle Explosion (Large)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+--- !u!4 &5973824949739477053 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8155157728205359270, guid: 1a35163a2eb2c4d77b13b24f647c7396, type: 3}
+  m_PrefabInstance: {fileID: 2579360386136412315}
+  m_PrefabAsset: {fileID: 0}

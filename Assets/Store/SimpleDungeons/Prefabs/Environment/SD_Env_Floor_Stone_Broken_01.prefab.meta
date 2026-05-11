@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: abeede308550bf74c8b88218b6b3e39f
+timeCreated: 1477881443
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Floor_Stone_Broken_01.prefab
+  uploadId: 572781

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 061f8c0920336704a9a34f18ffaaa3a5
+timeCreated: 1477530229
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Bookshelf_01.prefab
+  uploadId: 572781

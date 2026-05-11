@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 98ab854a0716c49d78da500ac325771f
+timeCreated: 1525793702
+licenseType: Pro
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+  assetHash:
+    serializedVersion: 2
+    Hash: f68074f618b2658c8cf8bf69306e89a1
+  longitude: -105.242139
+  latitude: 40.018309
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 0.6679212, y: -0.8209162, z: -1.5952077}
+      lookAt: {x: -0.030859416, y: -0.18410476, z: -0.47404063}
+      up: {x: 0.22967383, y: 0.9008083, z: -0.36850294}
+      fov: 45
+      aspectRatio: 0
+      orthoSize: 40.112076
+      isPerspective: 0
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: MINIGUN
+    100002: //RootNode
+    100004: ShotNode1
+    100006: ShotNode2
+    100008: ShotNode3
+    100010: ShotNode4
+    100012: ShotNode5
+    100014: ShotNode6
+    400000: MINIGUN
+    400002: //RootNode
+    400004: ShotNode1
+    400006: ShotNode2
+    400008: ShotNode3
+    400010: ShotNode4
+    400012: ShotNode5
+    400014: ShotNode6
+    2100000: _defaultMat
+    2100002: _auto_6
+    2300000: MINIGUN
+    2300002: ShotNode1
+    2300004: ShotNode2
+    2300006: ShotNode3
+    2300008: ShotNode4
+    2300010: ShotNode5
+    2300012: ShotNode6
+    2300014: //RootNode
+    3300000: MINIGUN
+    3300002: ShotNode1
+    3300004: ShotNode2
+    3300006: ShotNode3
+    3300008: ShotNode4
+    3300010: ShotNode5
+    3300012: ShotNode6
+    3300014: //RootNode
+    4300000: Mesh MINIGUN
+    4300002: Mesh ShotNode3
+    4300004: Mesh Minigun
+    4300006: Mesh ShotNode4
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

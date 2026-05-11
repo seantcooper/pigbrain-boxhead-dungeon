@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ca36cb4d7411091498d4fce0cd736d0d
+timeCreated: 1477530232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Alter_Evil_01.prefab
+  uploadId: 572781

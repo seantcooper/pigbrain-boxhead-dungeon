@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501ce9795cea9446dbbe91f1f86d9b9c, type: 3}
+  m_Name: Weapon Levels (AK47)
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.Statistic.StatsCollection
+  guid: d89637437f55d4a2690f74af7b4791a7
+  stats:
+  - {fileID: 11400000, guid: a139a4024b90f4c179130ae4ef3fe246, type: 2}
+  - {fileID: 11400000, guid: 61876d20e25534cab9109c3c5295b3e8, type: 2}
+  - {fileID: 11400000, guid: 23978f535da7f43259624fe7f4d9f8eb, type: 2}
+  - {fileID: 11400000, guid: cd991f3837447496a83ffdb923db1225, type: 2}
+  - {fileID: 11400000, guid: 980b5501be4044e43921738d87408bed, type: 2}

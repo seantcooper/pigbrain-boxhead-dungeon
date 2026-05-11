@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 393a18a191d4d6f4a968edb53f6747c0
+timeCreated: 1477530232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Undead_Pillar_Broken_01.prefab
+  uploadId: 572781

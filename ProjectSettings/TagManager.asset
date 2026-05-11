@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Death
+  - Chicken
+  - Food
+  - Rooster
+  - Wolf
+  - Chick
+  - FoodSpawn
+  - RoosterMain
+  - Egg
+  - Target
+  - FX
+  - Effect
+  - Background
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Reserved
+  - Water
+  - UI
+  - UIWorld
+  - 
+  - Team1
+  - Team2
+  - Team3
+  - Team4
+  - 
+  - 
+  - 
+  - 
+  - Terrain
+  - Wall
+  - Furniture
+  - Ceiling
+  - Void
+  - 
+  - 
+  - 
+  - FX
+  - Camera
+  - WorldPP
+  - UIPP
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 2218844027
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  - Floor Markers
+  - Environment
+  - Character
+  m_MigratedRenderPipelines: []

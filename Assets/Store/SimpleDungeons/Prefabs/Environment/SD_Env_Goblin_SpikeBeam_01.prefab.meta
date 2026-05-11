@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c2b76d8503c414d408591f2c3b62f5cc
+timeCreated: 1477530240
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Goblin_SpikeBeam_01.prefab
+  uploadId: 572781

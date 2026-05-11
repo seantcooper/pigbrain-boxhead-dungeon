@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 51c5cdb72ae8b9a4b9eeb0c7ae29a53c
+timeCreated: 1477530232
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_Toolrack_02.prefab
+  uploadId: 572781

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: boxhead-dungeon01
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: boxhead-dungeon01
+  m_GUID: 36b8bfb9333c34f2fac656c0835ab5f1
+  m_SerializeEntries:
+  - m_GUID: 396804dbf70934f77a3f7655433d11c1
+    m_Address: boxhead-dungeon01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 17579c727ba1e47b2b8e8b3f24e4f571, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: facb6de10123c4b8eae2bbb38a85bd85, type: 2}
+    - {fileID: 11400000, guid: 0d9bd81305b6345a3af041501866e0e9, type: 2}

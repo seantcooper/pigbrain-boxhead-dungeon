@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 352d37cf490a80045b4736575b648af4
+timeCreated: 1477600634
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Environment/SD_Env_Floor_Stone_ClearEdge_03.prefab
+  uploadId: 572781

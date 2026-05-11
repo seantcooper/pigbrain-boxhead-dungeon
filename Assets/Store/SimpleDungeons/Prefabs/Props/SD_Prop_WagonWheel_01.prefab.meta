@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0b76fd65986e71e4fb9303f4279ba505
+timeCreated: 1477530241
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75980
+  packageName: Simple Dungeons - Cartoon Assets
+  packageVersion: 1.1
+  assetPath: Assets/SimpleDungeons/Prefabs/Props/SD_Prop_WagonWheel_01.prefab
+  uploadId: 572781
