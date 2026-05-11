@@ -3,7 +3,7 @@ using System.Collections;
 using pigbrain.core.UnityObject;
 using pigbrain.core.Geom;
 using pigbrain.core.AI;
-using pigbrain.game.Boxhead.Audio;
+using pigbrain.core.Audio;
 using pigbrain.core.Inspector;
 using System;
 using pigbrain.game.Boxhead.Statistic;

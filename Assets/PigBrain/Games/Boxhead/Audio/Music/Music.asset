@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf74c2107a4974d3790c9819698f3431, type: 3}
   m_Name: Music
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.Audio.Music
-  stats:
-    target: {fileID: 11400000, guid: 0587e0b78cd704129be3e48e0ede54bb, type: 2}
-    id: Session
-  stat: 105
   mixDuration: 1
   tracks:
   - name: IngameTrack_1_0

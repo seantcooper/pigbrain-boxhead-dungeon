@@ -7,7 +7,7 @@ using System;
 using pigbrain.game.Boxhead.Navigation;
 using pigbrain.core.Geom;
 using pigbrain.core.UnityObject;
-using pigbrain.game.Boxhead.Audio;
+using pigbrain.core.Audio;
 using PigBrain.Generated;
 
 namespace pigbrain.game.Boxhead

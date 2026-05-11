@@ -14,7 +14,7 @@ using pigbrain.core.Collections;
 using pigbrain.core.Graphics;
 using System.Collections.Generic;
 using pigbrain.core.UnityObject;
-using pigbrain.game.Boxhead.Audio;
+using pigbrain.core.Audio;
 
 namespace pigbrain.game.Boxhead
 {

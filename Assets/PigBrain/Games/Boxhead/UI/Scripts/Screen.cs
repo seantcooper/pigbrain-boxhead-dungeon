@@ -5,7 +5,7 @@ using System.Collections;
 using pigbrain.core.Analytics;
 using pigbrain.core.Collections;
 using pigbrain.core.UnityObject;
-using pigbrain.game.Boxhead.Audio;
+using pigbrain.core.Audio;
 using pigbrain.game.Boxhead.Environment;
 using pigbrain.game.Boxhead.FiniteStateMachine;
 using pigbrain.game.Boxhead.Statistic;

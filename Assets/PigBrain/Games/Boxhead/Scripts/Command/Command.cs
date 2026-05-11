@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using pigbrain.core.Collections;
 using pigbrain.core.Inspector;
-using pigbrain.game.Boxhead.Audio;
+using pigbrain.core.Audio;
 using pigbrain.game.Boxhead.UI;
 using UnityEngine;
 using static pigbrain.core.Geom.Rnd;

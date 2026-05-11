@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System;
 using pigbrain.core.Geom;
 using pigbrain.core.AI;
-using pigbrain.game.Boxhead.Audio;
+using pigbrain.core.Audio;
 using pigbrain.core.UnityObject;
 
 namespace pigbrain.game.Boxhead

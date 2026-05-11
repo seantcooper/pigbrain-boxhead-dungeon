@@ -6,7 +6,7 @@ using pigbrain.core.Collections;
 using pigbrain.core.Graphics;
 using pigbrain.core.Inspector;
 using pigbrain.core.UnityObject;
-using pigbrain.game.Boxhead.Audio;
+using pigbrain.core.Audio;
 using pigbrain.game.Boxhead.Environment;
 using pigbrain.game.Boxhead.Navigation;
 using pigbrain.game.Boxhead.Statistic;
@@ -53,7 +53,17 @@ namespace pigbrain.game.Boxhead
         {
             builder = GetComponent<RoomBuilder>();
             RunStartRoom();
+            StatsCatalog.Session.AddChangeListener(Stat.Track_EnemyActive, OnEnemyActiveChange);
         }
+
+        void OnEnemyActiveChange(Stats.ChangeEvent ev) => AudioManager.SetIntensity(ev.newValue);
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            StatsCatalog.Session.RemoveChangeListener(Stat.Track_EnemyActive, OnEnemyActiveChange);
+        }
+
         #endregion
 
         #region Start Room
