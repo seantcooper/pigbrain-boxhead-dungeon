@@ -1,3 +1,4 @@
+#pragma warning disable UDR0001
 using System;
 using System.Collections;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace pigbrain.game.Boxhead
         float startTime; // Start
 
         public static event Action<Pickup> OnCreated;
+        public static event Action<Pickup, Transform> OnPickup;
+        public static int PickupCount;
 
         void Awake()
         {
@@ -64,6 +67,8 @@ namespace pigbrain.game.Boxhead
             triggered = true;
             pickupClip.Play(transform.position);
             commands?.Invoke(other.transform);
+            OnPickup?.Invoke(this, other.transform);
+            PickupCount++;
             if (traits.HasFlag(Traits.MoveTo)) StartCoroutine(MoveToTarget(other));
             else Destroy(gameObject);
         }

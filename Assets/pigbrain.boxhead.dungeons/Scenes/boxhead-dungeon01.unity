@@ -341,6 +341,7 @@ MonoBehaviour:
   currentRoom: {fileID: 0}
   levelRoom: {fileID: 0}
   lootRoom: {fileID: 0}
+  corridorRoom: {fileID: 0}
 --- !u!114 &1189805495
 MonoBehaviour:
   m_ObjectHideFlags: 0

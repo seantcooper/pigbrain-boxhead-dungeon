@@ -140,7 +140,7 @@ namespace pigbrain.game.Boxhead.UI
 
         IEnumerator Pop(float scale = 2, float duration = 0.25f)
         {
-            yield return new OverTime(duration, (t) => ((RectTransform)transform)
+            yield return new OverTimeUnscaled(duration, (t) => ((RectTransform)transform)
                 .localScale = Vector3.Lerp((float3)scale, (float3)1, t));
         }
         #endregion

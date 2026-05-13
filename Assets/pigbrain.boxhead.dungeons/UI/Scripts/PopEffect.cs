@@ -11,8 +11,8 @@ namespace pigbrain.game.Boxhead.UI
     {
         IEnumerator Pop(float scale = 2, float duration = 0.25f)
         {
-            using var _ = new CanvasSortOrderScope(transform);
-            yield return new OverTime(duration, (t) => ((RectTransform)transform)
+            // using var _ = new CanvasSortOrderScope(transform);
+            yield return new OverTimeUnscaled(duration, (t) => ((RectTransform)transform)
                 .localScale = Vector3.Lerp((float3)scale, (float3)1, t));
         }
 
@@ -29,21 +29,21 @@ namespace pigbrain.game.Boxhead.UI
             PopEffect.TryPop(owner, magnitude);
     }
 
-    public class CanvasSortOrderScope : IDisposable
-    {
-        readonly static HashSet<Transform> Transforms = new();
-        public Transform transform;
-        public CanvasSortOrderScope(Transform transform)
-        {
-            Transforms.RemoveWhere(t => t);
-            Transforms.Add(this.transform = transform);
-            SetOrder(Transforms.Count);
-        }
-        void SetOrder(int order)
-        {
-            if (transform.TryGetComponent(out Canvas canvas))
-                canvas.sortingOrder = order;
-        }
-        void IDisposable.Dispose() => SetOrder(0);
-    }
+    // public class CanvasSortOrderScope : IDisposable
+    // {
+    //     readonly static HashSet<Transform> Transforms = new();
+    //     public Transform transform;
+    //     public CanvasSortOrderScope(Transform transform)
+    //     {
+    //         Transforms.RemoveWhere(t => t);
+    //         Transforms.Add(this.transform = transform);
+    //         SetOrder(Transforms.Count);
+    //     }
+    //     void SetOrder(int order)
+    //     {
+    //         if (transform.TryGetComponent(out Canvas canvas))
+    //             canvas.sortingOrder = order;
+    //     }
+    //     void IDisposable.Dispose() => SetOrder(0);
+    // }
 }

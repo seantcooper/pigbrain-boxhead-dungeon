@@ -32,7 +32,21 @@ namespace pigbrain.game.Boxhead.Environment
         internal int level => data.level;
         internal IEnumerable<Room> nextRooms => data.children.Select(c => c.GetComponent<Room>());
         internal Type type => data.roomType;
+        internal State currentState => state;
         RoomItem[] roomItemRemoval => GetComponentsInChildren<RoomItem>(true);
+
+        #region └Lock Doors
+        public void LockDoors(bool locked, Cell.Type type = Cell.Type.Enter) =>
+            LockDoors(locked, data.Find(type, GeomType.Door).ToArray());
+
+        public void LockDoors(bool locked, params CellObject[] doors) =>
+            doors.Where(c => c.transform.Find("Lock"))
+                .ForEach(c =>
+                {
+                    c.transform.Find("Lock").gameObject.SetActive(locked);
+                    c.GetLabel().gameObject.SetActive(!locked);
+                });
+        #endregion
 
         public string GetLevelID()
         {

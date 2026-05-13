@@ -418,7 +418,6 @@ MonoBehaviour:
   stats: {fileID: 0}
   levels: {fileID: 0}
   properties: []
-  showGizmos: 1
 --- !u!1 &6122837799960860402
 GameObject:
   m_ObjectHideFlags: 0

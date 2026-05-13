@@ -1,3 +1,4 @@
+using System.Linq;
 using pigbrain.generated;
 using Unity.Mathematics;
 using UnityEngine;
@@ -26,6 +27,8 @@ namespace pigbrain.game.Boxhead.Environment
 
         public static int2 GetWorldPositionKey(Vector3 position) =>
             new(Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.z));
+
+        public CellObject GetLabel() => GetComponentsInChildren<CellObject>(true).FirstOrDefault(c => c.geomType == GeomType.Label);
 
     }
 

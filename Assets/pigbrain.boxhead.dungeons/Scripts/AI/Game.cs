@@ -3,6 +3,7 @@ using pigbrain.core.Collections;
 using pigbrain.core.Project;
 using pigbrain.core.Statistics;
 using pigbrain.core.UnityObject;
+using pigbrain.generated;
 using UnityEngine;
 
 namespace pigbrain.game.Boxhead

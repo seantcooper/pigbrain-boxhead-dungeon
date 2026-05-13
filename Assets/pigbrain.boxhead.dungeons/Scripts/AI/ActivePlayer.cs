@@ -30,6 +30,8 @@ namespace pigbrain.game.Boxhead
         public event Action<Room> OnLeaveRoom;
         public event Action<Room> OnEnterRoom;
 
+        public static Room Room => Instance ? Instance.room : null;
+
         static Vector3 LastPosition;
         public static Vector3 Position => Instance.player ? LastPosition =
             Instance.player.transform.position : LastPosition;
@@ -37,16 +39,15 @@ namespace pigbrain.game.Boxhead
         public static bool HasPlayer => Instance && Instance.player;
         public static bool IsRespawning { get; private set; }
 
+        public static Camera GetCamera() => Instance && Instance.player ? Instance.player.GetComponentInChildren<Camera>() : null;
+
         void Start()
         {
             CreatePlayer();
             OnPlayerStart?.Invoke(player);
             Pickup.OnCreated += OnPickupCreated;
         }
-        void OnDestroy()
-        {
-            Pickup.OnCreated -= OnPickupCreated;
-        }
+        void OnDisable() => Pickup.OnCreated -= OnPickupCreated;
 
         void InstantiatePlayer(Vector3 position)
         {
@@ -57,7 +58,7 @@ namespace pigbrain.game.Boxhead
             Debug.Log($"Player Instantiated {player}");
         }
 
-        readonly HashSet<Pickup> pickups = new();
+        public readonly HashSet<Pickup> pickups = new();
         void OnPickupCreated(Pickup pickup) => pickups.Add(pickup);
 
         void OnEnterZone(CullingGroupZone zone)
@@ -114,7 +115,7 @@ namespace pigbrain.game.Boxhead
         {
             IEnumerator Run()
             {
-                using var _ = new ScopeState(() => IsRespawning = true, () => IsRespawning = false);
+                using var _ = new ScopeState((s) => IsRespawning = s);
                 OnPlayerRespawning?.Invoke(player);
                 yield return null;
                 if (player) Destroy(player.gameObject);

@@ -13,18 +13,6 @@ MonoBehaviour:
   m_Name: Tasks
   m_EditorClassIdentifier: Assembly-CSharp-Editor::TaskList
   tasks:
-  - name: Balance the Levels (25)
-    duration: 1
-    status: 0
-  - name: Localization
-    duration: 1
-    status: 0
-  - name: Balance the Weapons
-    duration: 1
-    status: 0
-  - name: When respawning, lose something and stop messages in the ticker
-    duration: 1
-    status: 0
   - name: Make pickups Pooling Behaviours
     duration: 1
     status: 1
@@ -34,15 +22,34 @@ MonoBehaviour:
   - name: Upgrade Character sound
     duration: 1
     status: 1
-  - name: To many explode models
-    duration: 1
-    status: 1
   - name: Pooling reset not working correctly - trails on fireballs?
     duration: 1
     status: 1
-  - name: Stripper not putting images back after build? (Cancel? or just Post build)
+  - name: Trails on Boxes look funky
     duration: 1
     status: 1
+  - name: More tutorial - pointing out the components around the screen - Combo Index,
+      Player icon, Money, Weapons and Editing?
+    duration: 1
+    status: 1
+  - name: Balance the Weapons
+    duration: 1
+    status: 2
+  - name: Localization
+    duration: 1
+    status: 2
+  - name: Balance the Levels (25)
+    duration: 1
+    status: 2
+  - name: Stripper not putting images back after build? (Cancel? or just Post build)
+    duration: 1
+    status: 2
+  - name: To many explode models
+    duration: 1
+    status: 2
+  - name: When respawning, lose something and stop messages in the ticker
+    duration: 1
+    status: 2
   - name: Regions break on endgame 1
     duration: 1
     status: 2

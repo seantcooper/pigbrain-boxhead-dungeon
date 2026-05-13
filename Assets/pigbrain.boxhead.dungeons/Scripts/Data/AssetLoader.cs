@@ -58,7 +58,7 @@ namespace pigbrain.game.Boxhead.Environment
                 // // Ensure the loaded scene becomes the active scene immediately
                 // if (scene.IsValid() && scene.isLoaded)
                 //     SceneManager.SetActiveScene(scene);
-
+                Debug.Log($"Loaded: {key}");
                 completed?.Invoke(scene);
             }
             else scenes.Remove(key);

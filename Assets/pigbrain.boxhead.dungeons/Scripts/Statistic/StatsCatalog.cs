@@ -28,6 +28,8 @@ namespace pigbrain.game.Boxhead.Statistic
 
         public static Stats Session =>
             Instance ? Instance.GetComponent<StatsController>().GetStats() : null;
+        public static Stats SessionRuntime =>
+            Instance ? Instance["Session"] : null;
 
         public void ResetRuntime()
         {

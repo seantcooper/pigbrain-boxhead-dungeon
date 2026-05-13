@@ -35,6 +35,10 @@ namespace pigbrain.game.Boxhead
         [SerializeField][ReadOnly] Room currentRoom;
         [SerializeField][ReadOnly] Room levelRoom;
         [SerializeField][ReadOnly] Room lootRoom;
+        [SerializeField][ReadOnly] Room corridorRoom;
+
+        public static event Action OnDungeonStarted;
+        public static event Action OnDungeonStopped;
 
         public event Action<Room> OnRoomStarted;
         public event Action<Room> OnRoomCompleted;
@@ -43,6 +47,7 @@ namespace pigbrain.game.Boxhead
         public Room GetCurrentRoom() => currentRoom;
         public Room GetLevelRoom() => levelRoom;
         public Room GetLootRoom() => lootRoom;
+        public Room GetCorridorRoom() => corridorRoom;
         public Player player => ActivePlayer.Instance.player;
 
         RoomBuilder builder;
@@ -54,13 +59,16 @@ namespace pigbrain.game.Boxhead
             builder = GetComponent<RoomBuilder>();
             RunStartRoom();
             StatsCatalog.Session.AddChangeListener(Stat.Track_EnemyActive, OnEnemyActiveChange);
+            OnDungeonStarted?.Invoke();
         }
 
         void OnEnemyActiveChange(Stats.ChangeEvent ev) => AudioManager.SetIntensity(ev.newValue);
 
         protected override void OnDestroy()
         {
-            StatsCatalog.Session.RemoveChangeListener(Stat.Track_EnemyActive, OnEnemyActiveChange);
+            if (StatsCatalog.Session)
+                StatsCatalog.Session.RemoveChangeListener(Stat.Track_EnemyActive, OnEnemyActiveChange);
+            OnDungeonStopped?.Invoke();
             base.OnDestroy();
         }
 
@@ -109,7 +117,7 @@ namespace pigbrain.game.Boxhead
                 else yield return new WaitForSeconds(0.25f);
 
                 Debug.Log(state = $"Room Complete: {levelRoom}");
-                LockDoors(levelRoom, false);
+                levelRoom.LockDoors(false);
                 Analytics.Post(new Analytics.Level(Analytics.Level.Status.Complete));
 
                 roomComplete.Play();
@@ -135,7 +143,15 @@ namespace pigbrain.game.Boxhead
                     if (!forcedComplete) StartCoroutine(FadeIn(corridor));
                     foreach (var next in corridor.nextRooms)
                     {
-                        if (next.data.roomType == Room.Type.Loot) lootRoom = next; else levelRoom = next;
+                        if (next.data.roomType == Room.Type.Loot)
+                        {
+                            lootRoom = next;
+                        }
+                        else
+                        {
+                            corridorRoom = corridor;
+                            levelRoom = next;
+                        }
                         next.Activate();
                     }
                 }
@@ -179,7 +195,7 @@ namespace pigbrain.game.Boxhead
 
             OnLevelStarted?.Invoke(room);
 
-            if (room.data.levelData.lockDoor) LockDoors(room, true);
+            if (room.data.levelData.lockDoor) room.LockDoors(room);
 
             Analytics.CTX.levelid = room.GetLevelID();
             Analytics.Post(new Analytics.Level(Analytics.Level.Status.Started));
@@ -188,16 +204,6 @@ namespace pigbrain.game.Boxhead
         }
         #endregion
 
-        #region └Lock Doors
-        void LockDoors(Room room, bool locked)
-        {
-            void Lock() => room.data.Find(Cell.Type.Enter, GeomType.Door)
-                .Select(c => c.transform.Find("Lock"))
-                .Where(l => l)
-                .ForEach(l => l.gameObject.SetActive(locked));
-            Lock();
-        }
-        #endregion
         #endregion
 
         #region Fade In

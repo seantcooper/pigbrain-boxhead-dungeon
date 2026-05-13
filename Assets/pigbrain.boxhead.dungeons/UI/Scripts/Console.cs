@@ -278,7 +278,7 @@ namespace pigbrain.game.Boxhead.UI
                 Debug.Log($"historyIndex: {index}/{items.Count}");
             }
 
-            public void SaveHistory() => PlayerPrefs.SetString(HistoryKey, string.Join("\n", items));
+            public void SaveHistory() => Persistence.SetString(HistoryKey, string.Join("\n", items));
             public void LoadHistory()
             {
                 if (!Persistence.HasKey(HistoryKey)) return;

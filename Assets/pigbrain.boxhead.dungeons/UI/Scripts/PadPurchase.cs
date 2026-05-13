@@ -20,6 +20,8 @@ namespace pigbrain.game.Boxhead
         [SerializeField] Type type;
         [SerializeField] GameObject upgrade;
 
+        public static int PurchaseCounter;
+
         enum Type
         {
             Undefined,
@@ -119,6 +121,7 @@ namespace pigbrain.game.Boxhead
         protected override void CompleteFill(Collider other)
         {
             base.CompleteFill(other);
+            PurchaseCounter++;
             commands?.Invoke(other.transform);
         }
 

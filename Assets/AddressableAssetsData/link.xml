@@ -179,6 +179,7 @@
     <type fullname="pigbrain.core.Geom.MinMaxInt" preserve="nothing" serialized="true" />
     <type fullname="pigbrain.core.Localization.LocalizationData/KeyValue" preserve="nothing" serialized="true" />
     <type fullname="pigbrain.core.Statistics.GoogleSheetReader" preserve="nothing" serialized="true" />
+    <type fullname="pigbrain.core.Statistics.GoogleSheetReader/Line" preserve="nothing" serialized="true" />
     <type fullname="pigbrain.core.UnityObject.PrefabList/Info" preserve="nothing" serialized="true" />
     <type fullname="pigbrain.core.UnityObject.PrefabList/PrefabContainer" preserve="nothing" serialized="true" />
     <type fullname="pigbrain.core.Audio.AudioClips/Clip" preserve="nothing" serialized="true" />

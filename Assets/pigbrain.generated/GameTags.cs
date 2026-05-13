@@ -18,6 +18,7 @@ namespace pigbrain.generated
         FX = 10,
         Effect = 11,
         Background = 12,
+        RecorderCamera = 13,
     }
 }
 
@@ -43,6 +44,7 @@ namespace pigbrain.generated
         FX = 1 << 10,
         Effect = 1 << 11,
         Background = 1 << 12,
+        RecorderCamera = 1 << 13,
         All = ~0
     }
 }
@@ -70,6 +72,7 @@ namespace pigbrain.generated
             "FX",
             "Effect",
             "Background",
+            "RecorderCamera",
         };
 
         public static readonly System.Collections.Generic.Dictionary<string, GameTag> Lookup =
@@ -89,6 +92,7 @@ namespace pigbrain.generated
                 { "FX", GameTag.FX },
                 { "Effect", GameTag.Effect },
                 { "Background", GameTag.Background },
+                { "RecorderCamera", GameTag.RecorderCamera },
             };
 
 
@@ -109,6 +113,7 @@ namespace pigbrain.generated
                 { GameTag.FX, "FX" },
                 { GameTag.Effect, "Effect" },
                 { GameTag.Background, "Background" },
+                { GameTag.RecorderCamera, "RecorderCamera" },
             };
 
     }

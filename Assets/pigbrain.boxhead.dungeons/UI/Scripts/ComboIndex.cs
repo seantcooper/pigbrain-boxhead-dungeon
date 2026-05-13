@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using pigbrain.core.Collections;
 using pigbrain.core.Geom;
 using pigbrain.core.Inspector;

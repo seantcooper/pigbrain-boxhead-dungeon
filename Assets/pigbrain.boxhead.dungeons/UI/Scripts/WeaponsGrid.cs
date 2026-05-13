@@ -111,7 +111,7 @@ namespace pigbrain.game.Boxhead.UI
             {
                 gameObject.TryAddComponent(out CanvasGroup cg);
                 Vector2 start = (Vector2)defaultPosition, end = new(0, start.y);
-                yield return new OverTime(0.25f, t =>
+                yield return new OverTimeUnscaled(0.25f, t =>
                 {
                     t = Ease.Out(t);
                     float f = state ? 1 - t : t;
@@ -158,7 +158,7 @@ namespace pigbrain.game.Boxhead.UI
 
             // animate
             Vector3 startPos = temp.transform.position, endPos = moveToGrid[weapon].transform.position;
-            yield return new OverTime(0.25f,
+            yield return new OverTimeUnscaled(0.25f,
                 (t) => temp.transform.position = Vector3.Lerp(startPos, moveToGrid[weapon].transform.position, Ease.Out(t, 1)));
 
             // restore

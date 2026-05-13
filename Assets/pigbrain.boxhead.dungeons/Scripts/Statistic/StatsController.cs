@@ -33,7 +33,10 @@ namespace pigbrain.game.Boxhead.Statistic
             if (levels && !stats) stats = levels[this.index = Math.Clamp(index, 0, levels.count - 1)];
         }
 
-        void Awake() { SetLevelIndex(index, true); }
+        void Awake()
+        {
+            SetLevelIndex(index, true);
+        }
         void OnDestroy() => properties.ForEach(p => p.Detach());
 
         #region Events
@@ -137,15 +140,15 @@ namespace pigbrain.game.Boxhead.Statistic
         }
         #endregion
 
-        #region Gizmos
-        [SerializeField][HideInInspector] bool showGizmos = true;
-        [ContextMenu("Show Gizmos")] void ToogleGizmos() => showGizmos = !showGizmos;
-        void OnDrawGizmos()
-        {
-            if (!showGizmos) return;
-            GizmosUtility.DrawText(transform.position, index);
-        }
-        #endregion
+        // #region Gizmos
+        // [SerializeField][HideInInspector] bool showGizmos = true;
+        // [ContextMenu("Show Gizmos")] void ToogleGizmos() => showGizmos = !showGizmos;
+        // void OnDrawGizmos()
+        // {
+        //     if (!showGizmos) return;
+        //     GizmosUtility.DrawText(transform.position, index);
+        // }
+        // #endregion
     }
 
     #region Member

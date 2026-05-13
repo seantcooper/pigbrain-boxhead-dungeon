@@ -1,3 +1,4 @@
+#pragma warning disable UDR0001
 using UnityEngine;
 using static pigbrain.game.Boxhead.Statistic.Stat;
 using pigbrain.game.Boxhead.Statistic;
@@ -8,9 +9,7 @@ using pigbrain.core.Geom;
 using TMPro;
 using System.Collections;
 using pigbrain.core.Collections;
-using System.Collections.Generic;
 using pigbrain.game.Boxhead.Environment;
-using System.Linq;
 using UnityEngine.AI;
 
 namespace pigbrain.game.Boxhead
@@ -20,7 +19,7 @@ namespace pigbrain.game.Boxhead
     //      - Chain kill count reset when chain time or max time elapses
     //      - Chain kill reward
 
-    public class ChainKills : MonoBehaviour
+    public class ChainKills : MonoBehaviourSingleton<ChainKills>
     {
         const float MinChainKill = 2;
         [SerializeField][Range(0.01f, 1)] float chainTime = 0.1f;
@@ -32,8 +31,11 @@ namespace pigbrain.game.Boxhead
 
         float delta, endTime, maxEndTime;
         Vector3? lastPosition;
-
         ControlValue enemykills, maxChainKills;
+
+        public static event Action<GameObject> OnCreateReward;
+        public static int RewardCreatedCount;
+
         void OnKill(ChangeEvent ev)
         {
             if (ev.delta == 0) return;
@@ -51,22 +53,11 @@ namespace pigbrain.game.Boxhead
             maxChainKills = StatsCatalog.Session.TryGetControl(Track_MaxChainKills);
             enemykills.AddChangeListener(OnKill);
             rewards = EnvironmentData.GetChainRewardContainer();
-            // if (ActivePlayer.Instance)
-            // {
-            //     Pickup.OnCreated += OnPickupCreated;
-            //     ActivePlayer.Instance.OnPlayerDead += OnPlayerDead;
-            //     ActivePlayer.Instance.OnPlayerRespawn += OnPlayerRespawn;
-            // }
         }
-
-        // void OnPlayerRespawn(Player player) => ClearPopulation();
-        // void OnPlayerDead(Player player) { } // => ClearPopulation();
 
         void OnDisable()
         {
-            // if (ActivePlayer.Instance) ActivePlayer.Instance.OnPlayerDead -= OnPlayerDead;
             enemykills.RemoveChangeListener(OnKill);
-            // ClearPopulation();
             StopAllCoroutines();
         }
 
@@ -99,7 +90,9 @@ namespace pigbrain.game.Boxhead
                     position = hit.position;
 
                 CreateNumber(position, count, best.color);
-                best.prefab.Instantiate(position);
+                var reward = best.prefab.Instantiate(position);
+                OnCreateReward?.Invoke(reward);
+                RewardCreatedCount++;
             }
         }
 

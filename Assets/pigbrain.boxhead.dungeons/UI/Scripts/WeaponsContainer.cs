@@ -17,6 +17,9 @@ namespace pigbrain.game.Boxhead.UI
 
         void OnValidate() => grids = GetComponentsInChildren<WeaponsGrid>();
 
+        public static event Action OnStartEdit;
+        public static event Action OnStopEdit;
+
         protected override void Awake()
         {
             base.Awake();
@@ -108,6 +111,7 @@ namespace pigbrain.game.Boxhead.UI
             if (room.data.roomType != Room.Type.Loot) return;
             grids.ForEach(g => g.StartEdit());
             OrthoCamera.Instance.SetHorizontalOffset(3.75f);
+            OnStartEdit?.Invoke();
         }
 
         void OnLeaveRoom(Room room)
@@ -116,6 +120,7 @@ namespace pigbrain.game.Boxhead.UI
 
             grids.ForEach(g => g.StopEdit());
             if (OrthoCamera.Instance) OrthoCamera.Instance.SetHorizontalOffset(0);
+            OnStopEdit?.Invoke();
         }
     }
 }
