@@ -18,17 +18,31 @@ MonoBehaviour:
   SubmodulesToStrip:
   - 2D Rendering
   - Advanced Text Generator Support
+  - AndroidJNIModule
+  - Expression Evaluator
+  - GPU Resident Drawer
   - IMGUI
+  - IMGUI Script Bindings
   - Mesh Blend Shapes
   - Mesh Combiner
   - Mesh Optimizer
   - Mesh Skinning
+  - Mono
   - Newtonsoft Json.NET
+  - System.ComponentModel
   - System.Data
+  - System.DateTimeOffset
+  - System.DateTimeParse
+  - System.Dynamic
+  - System.Numerics
+  - System.TimeZoneInfo
   - TetGen
   - Text Rendering
+  - Text Selecting Utilities
   - Texture Decompression ASTC
   - Texture Decompression BC
   - Texture Decompression DXT
   - UI Toolkit Framework
+  - Unity 2D Feature Set
+  - Unity In-App Purchasing
   - WebGPU Support

@@ -19,6 +19,7 @@ MonoBehaviour:
   title: Dungeon 101
   seed: 2128843157
   money: 50
+  exp: 0
   startWeapons:
   - AK47
   soldiers: 0
@@ -63,7 +64,7 @@ MonoBehaviour:
     - AK47
     - Grenade
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 0
   - name: 'Push [3]'
@@ -85,7 +86,7 @@ MonoBehaviour:
     - AK47
     - Barrier
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 0
   - name: 'Haunted Rooms [4]'
@@ -129,7 +130,7 @@ MonoBehaviour:
     - Grenade
     - AK47
     - Health
-    - Coin
+    - Coin50
     - Soldier
     lockDoor: 1
   - name: 'Pressure Room [6]'
@@ -151,7 +152,7 @@ MonoBehaviour:
     - AK47
     - Shotgun
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 1
   - name: 'Control Room [7]'
@@ -173,7 +174,7 @@ MonoBehaviour:
     - Shield
     - Grenade
     - Health
-    - Coin
+    - Coin50
     - Soldier
     lockDoor: 1
   - name: 'Terror Room [8]'
@@ -217,7 +218,7 @@ MonoBehaviour:
     - Shield
     - Railgun
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 1
   - name: 'Devil Hall [10]'
@@ -278,7 +279,7 @@ MonoBehaviour:
     - Uzi
     - Grenade
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 0
   - name: 'Control II [13]'
@@ -300,7 +301,7 @@ MonoBehaviour:
     - Shield
     - Railgun
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 1
   - name: 'Break Room [14]'

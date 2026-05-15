@@ -77,7 +77,7 @@ namespace pigbrain.game.Boxhead
             return Mathf.Lerp(time.max, time.min, 1f - Mathf.Pow(1f - t, curve));
         }
 
-        [ConsoleCommand("Rage")]
+        [Inline("Rage")]
         public static (Console.Command.Status, string) ActivateRage(Console console, string[] args)
         {
             Instance.StartRage();

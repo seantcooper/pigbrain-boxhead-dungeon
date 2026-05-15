@@ -19,6 +19,7 @@ MonoBehaviour:
   title: Beginning
   seed: 57405012
   money: 10
+  exp: 0
   startWeapons:
   - Uzi
   soldiers: 0

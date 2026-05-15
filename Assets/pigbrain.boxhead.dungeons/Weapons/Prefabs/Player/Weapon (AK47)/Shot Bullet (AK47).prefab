@@ -52,17 +52,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shot Bullet (AK47)
       objectReference: {fileID: 0}
+    - target: {fileID: 4751293556482516724, guid: 92dd66cd745ab4e45aa1d93d574a0104, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f440e8091f34a0fb27586bd6c8bd10, type: 2}
     - target: {fileID: 4798031651362545201, guid: 92dd66cd745ab4e45aa1d93d574a0104, type: 3}
       propertyPath: mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5354770443804640789, guid: 92dd66cd745ab4e45aa1d93d574a0104, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f440e8091f34a0fb27586bd6c8bd10, type: 2}
     - target: {fileID: 5529957848709850180, guid: 92dd66cd745ab4e45aa1d93d574a0104, type: 3}
       propertyPath: speed
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5529957848709850180, guid: 92dd66cd745ab4e45aa1d93d574a0104, type: 3}
       propertyPath: containerID
-      value: -3056084
+      value: -715512
       objectReference: {fileID: 0}
     - target: {fileID: 5529957848709850180, guid: 92dd66cd745ab4e45aa1d93d574a0104, type: 3}
       propertyPath: registerDamage

@@ -1,14 +1,10 @@
 using UnityEngine;
-using pigbrain.generated.WeaponIconBase;
 using pigbrain.core.Collections;
 using pigbrain.core.UnityObject;
 using System;
 using System.Linq;
 using System.Collections;
-using pigbrain.core.Inspector;
-using System.Collections.Generic;
 using pigbrain.core.Motion;
-using System.ComponentModel;
 
 namespace pigbrain.game.Boxhead.UI
 {

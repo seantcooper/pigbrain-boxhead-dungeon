@@ -336,7 +336,9 @@ namespace pigbrain.game.Boxhead
         [SerializeField] CommandCreate prize;
         [SerializeField] CommandCreate exp;
         [SerializeField] CommandContainer onDeath;
+        [SerializeField] GameObject effect;
         [SerializeField] internal GameObject explodeModel;
+        [SerializeField] float shake = 1;
 
         public override bool locked => true;
         public override void Enter()
@@ -347,6 +349,16 @@ namespace pigbrain.game.Boxhead
             SetTrigger($"Dead{(++DeathIndex % 3) + 1}");
             CreatePrize();
             CreateExp();
+
+            CameraShake.Apply(transform.position, 10 * shake, "EnemyDeath"
+                , CameraShake.Action.Replace);
+
+            // if (fsm.health.lastAffector)
+            // {
+            //     Debug.Log($"fsm.health.lastAffector {fsm.health.lastAffector.transform.position - transform.position}");
+            // }
+
+            if (effect) effect.Instantiate(transform.position, transform.rotation);
         }
 
         public override IEnumerator Run()

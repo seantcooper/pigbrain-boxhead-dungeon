@@ -22,16 +22,35 @@ MonoBehaviour:
   - name: Upgrade Character sound
     duration: 1
     status: 1
-  - name: Pooling reset not working correctly - trails on fireballs?
-    duration: 1
-    status: 1
   - name: Trails on Boxes look funky
     duration: 1
     status: 1
+  - name: Larger tutorial text - make the boxes bigger
+    duration: 1
+    status: 1
+  - name: smaller exp cubes, join them together like liquid.
+    duration: 1
+    status: 1
+  - name: Empty Card in Loot shop
+    duration: 1
+    status: 1
+  - name: Level didn't start?
+    duration: 1
+    status: 1
+  - name: Souls are not merging
+    duration: 1
+    status: 1
+  - name: Save should not save Dungeon during the spawning session - i.e. keep saving
+      until combat happens
+    duration: 1
+    status: 1
+  - name: Pooling reset not working correctly - trails on fireballs?
+    duration: 1
+    status: 2
   - name: More tutorial - pointing out the components around the screen - Combo Index,
       Player icon, Money, Weapons and Editing?
     duration: 1
-    status: 1
+    status: 2
   - name: Balance the Weapons
     duration: 1
     status: 2

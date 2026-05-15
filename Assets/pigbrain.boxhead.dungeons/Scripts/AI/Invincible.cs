@@ -9,7 +9,7 @@ namespace pigbrain.game.Boxhead
     public class Invincible : MonoBehaviour
     {
         [SerializeField][Range(0.1f, 120)] float duration = 5;
-        [SerializeField] GameObject effect;
+        [SerializeField] PrefabObject effect;
 
         public void Activate(float duration)
         {
@@ -28,7 +28,8 @@ namespace pigbrain.game.Boxhead
         IEnumerator Run()
         {
             GetComponent<Health>().onDamage += OnDamage;
-            using var _ = new LifetimeScope(effect.Instantiate(transform));
+            // using var _ = new LifetimeScope(effect.Instantiate(transform));
+            effect.Instantiate(transform);
             yield return new WaitForSeconds(duration);
             enabled = false;
         }

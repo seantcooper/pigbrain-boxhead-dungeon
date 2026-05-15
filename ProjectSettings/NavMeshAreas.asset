@@ -15,7 +15,7 @@ NavMeshProjectSettings:
     cost: 3
   - name: Player Only
     cost: 1
-  - name: 
+  - name: Danger
     cost: 1
   - name: Enemy Only
     cost: 1

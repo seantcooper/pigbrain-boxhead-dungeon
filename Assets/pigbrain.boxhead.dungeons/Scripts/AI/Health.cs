@@ -39,6 +39,7 @@ namespace pigbrain.game.Boxhead
         public bool isDamageDead => totalDamage >= maxHitPoints;
         public bool isDeadOrWillBe => totalDamage + registeredAffectsDamage >= maxHitPoints;
         public bool hasDied { get; private set; }
+        public Affector lastAffector { get; private set; }
 
         [SetValue]
         internal float damage { get => totalDamage; set => totalDamage = value; }
@@ -76,6 +77,8 @@ namespace pigbrain.game.Boxhead
             if (ev.cancelled) return false;
 
             totalDamage += damage;
+            lastAffector = affector;
+
             if (damage > 0)
             {
                 damageSound.Play(transform.position);

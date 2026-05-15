@@ -10,6 +10,7 @@ namespace pigbrain.game.Boxhead.Environment
         public RoomData.Cell.Type cellType;
         public GeomType geomType;
         public int2 worldPositionKey;
+        public bool tracking;
 
         public bool Is(RoomData.Cell.Type cellType, GeomType geomType) =>
             this.cellType.HasFlag(cellType) && this.geomType == geomType;

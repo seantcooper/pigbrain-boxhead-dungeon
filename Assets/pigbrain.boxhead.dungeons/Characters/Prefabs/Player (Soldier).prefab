@@ -84,6 +84,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5183208805011494062, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
+      propertyPath: areas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5183208805011494062, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
+      propertyPath: areas.Array.data[0].cost
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5183208805011494062, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
+      propertyPath: areas.Array.data[0].name
+      value: Danger
+      objectReference: {fileID: 0}
     - target: {fileID: -3599803312679447342, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
       propertyPath: id
       value: Player (Base)
@@ -122,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cba22cfd8f4df4f13b671813db6f1286, type: 2}
     - target: {fileID: 848465973858448242, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
       propertyPath: m_WalkableMask
-      value: 17
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 848465973858448242, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
       propertyPath: avoidancePriority

@@ -19,6 +19,7 @@ MonoBehaviour:
   title: Defender
   seed: 601957809
   money: 100
+  exp: 0
   startWeapons:
   - Turret
   - Barrel
@@ -59,7 +60,7 @@ MonoBehaviour:
     - Turret
     - Barrier
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 0
   - name: 'Build Up [3]'
@@ -108,7 +109,7 @@ MonoBehaviour:
     - Barrier
     - Grenade
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 1
   - name: 'Devil Intro [5]'
@@ -125,7 +126,7 @@ MonoBehaviour:
     - Grenade
     - Turret
     - Health
-    - Coin
+    - Coin50
     - Soldier
     lockDoor: 1
   - name: 'Pressure [6]'
@@ -147,7 +148,7 @@ MonoBehaviour:
     - Shotgun
     - Barrel
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 1
   - name: 'Control [7]'
@@ -186,7 +187,7 @@ MonoBehaviour:
     - Shotgun
     - Railgun
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 0
   - name: 'Mixed [9]'
@@ -230,7 +231,7 @@ MonoBehaviour:
     - AK47
     - Shotgun
     - Health
-    - Coin
+    - Coin100
     - Soldier
     lockDoor: 1
   - name: 'Ramp [11]'
@@ -269,7 +270,7 @@ MonoBehaviour:
     - Uzi
     - Grenade
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 0
   - name: 'Control II [13]'
@@ -291,7 +292,7 @@ MonoBehaviour:
     - Shield
     - Railgun
     - Health
-    - Coin
+    - Coin10
     - Soldier
     lockDoor: 1
   - name: 'Break [14]'

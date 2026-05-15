@@ -14,8 +14,8 @@ namespace pigbrain.game.Boxhead
     {
         [Header("Set Value")]
         [SerializeField] TypeProperty propertyType;
-        [SerializeField] internal Assignment assignment;
-        [SerializeField] internal GameObject assignEffect;
+        [SerializeField] Assignment assignment;
+        [SerializeField] PrefabObject assignEffect;
 
         protected override bool OnInvoke(Transform target)
         {

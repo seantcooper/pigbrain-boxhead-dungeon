@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6163119839371297399, guid: 696a2229e4ee14b28b542b7beeefbeed, type: 3}
       propertyPath: traits
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6163119839371297399, guid: 696a2229e4ee14b28b542b7beeefbeed, type: 3}
       propertyPath: stat.id

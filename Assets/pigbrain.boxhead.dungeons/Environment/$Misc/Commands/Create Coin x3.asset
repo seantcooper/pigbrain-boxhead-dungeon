@@ -16,7 +16,12 @@ MonoBehaviour:
     target: {fileID: 0}
     id: 
   message: {fileID: 11400000, guid: 794485eaa54cc402d87c8d48d9bd14b9, type: 2}
-  prefab: {fileID: 3676180232018591091, guid: 477aa16a06e5243efa5d2bbe7430572d, type: 3}
+  filters: []
+  traits: 0
+  prefab2: {fileID: 3676180232018591091, guid: 477aa16a06e5243efa5d2bbe7430572d, type: 3}
+  prefabObject:
+    gameObject: {fileID: 3676180232018591091, guid: 477aa16a06e5243efa5d2bbe7430572d, type: 3}
+    poolBehaviour: {fileID: 0}
   count: 3
   baseOffset: 1
   frequency: 0

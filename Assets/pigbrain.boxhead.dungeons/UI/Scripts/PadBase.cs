@@ -76,7 +76,10 @@ namespace pigbrain.game.Boxhead
         {
             GetComponentInChildren<Collider>().enabled = false;
             OnFillComplete?.Invoke();
-            if (traits.HasFlag(Trait.DestroyOnUsed)) Destroy(gameObject, 0.1f);
+            if (traits.HasFlag(Trait.DeactivateOnUsed))
+                StartCoroutine(CoroutineUtility.Delay(0.1f, () => gameObject.SetActive(false)));
+            else if (traits.HasFlag(Trait.DestroyOnUsed))
+                Destroy(gameObject, 0.1f);
         }
 
         protected virtual void StartFill(Collider other) { }
@@ -88,7 +91,8 @@ namespace pigbrain.game.Boxhead
             None = 0,
             ResetOnLeave = 1 << 0,
             DestroyOnUsed = 1 << 2,
-            Another = 1 << 3,
+            DeactivateOnUsed = 1 << 3,
+            Another = 1 << 16,
         }
     }
 

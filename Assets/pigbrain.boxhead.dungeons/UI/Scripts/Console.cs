@@ -8,7 +8,6 @@ using System;
 using System.Linq;
 using pigbrain.core.UnityObject;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine.InputSystem.Controls;
 using static System.StringComparison;
 using UnityEngine.Scripting;
@@ -126,10 +125,17 @@ namespace pigbrain.game.Boxhead.UI
             public abstract (Status status, string message) Parse(Console console, string[] parts);
             public enum Status { Success, Error }
         }
-        public class ConsoleCommandAttribute : Attribute
+
+        public class InlineAttribute : Attribute
         {
             public readonly string name;
-            public ConsoleCommandAttribute(string name) => this.name = name;
+            public InlineAttribute(string name) => this.name = name;
+        }
+        [AttributeUsage(AttributeTargets.Class)]
+        public class NameAttribute : Attribute
+        {
+            public readonly string name;
+            public NameAttribute(string name) => this.name = name;
         }
 
         bool Process(string[] parts)
@@ -195,8 +201,8 @@ namespace pigbrain.game.Boxhead.UI
 
             static string GetName(Type type)
             {
-                var attr = (DisplayNameAttribute)Attribute.GetCustomAttribute(type, typeof(DisplayNameAttribute));
-                return attr != null && !string.IsNullOrEmpty(attr.DisplayName) ? attr.DisplayName : type.Name;
+                var attr = (InlineAttribute)Attribute.GetCustomAttribute(type, typeof(InlineAttribute));
+                return attr != null && !string.IsNullOrEmpty(attr.name) ? attr.name : type.Name;
             }
             return types.ToDictionary(t => GetName(t).ToUpper(), t => t);
         }
@@ -218,7 +224,7 @@ namespace pigbrain.game.Boxhead.UI
             .SelectMany(a => a.GetTypes())
             .Where(t => typeof(MonoBehaviour).IsAssignableFrom(t))
             .SelectMany(t => t.GetMethods(ReflectionUtility.DefaultBindings | BindingFlags.Static))
-            .Select(m => (method: m, attr: m.GetCustomAttribute<ConsoleCommandAttribute>()))
+            .Select(m => (method: m, attr: m.GetCustomAttribute<InlineAttribute>()))
             .Where(x => x.attr != null)
             .ToDictionary(x => x.attr.name.ToUpper(), x => x.method);
 
@@ -278,11 +284,11 @@ namespace pigbrain.game.Boxhead.UI
                 Debug.Log($"historyIndex: {index}/{items.Count}");
             }
 
-            public void SaveHistory() => Persistence.SetString(HistoryKey, string.Join("\n", items));
+            public void SaveHistory() => Persistence.CurrentData.SetString(HistoryKey, string.Join("\n", items));
             public void LoadHistory()
             {
-                if (!Persistence.HasKey(HistoryKey)) return;
-                items = Persistence.GetString(HistoryKey).Split('\n').Where(s => !string.IsNullOrEmpty(s)).ToList();
+                if (!Persistence.CurrentData.HasKey(HistoryKey)) return;
+                items = Persistence.CurrentData.GetString(HistoryKey).Split('\n').Where(s => !string.IsNullOrEmpty(s)).ToList();
                 CleanupHistory();
                 index = items.Count;
             }

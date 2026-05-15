@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using pigbrain.core.Collections;
@@ -19,11 +20,18 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField][InlineScriptableObject] LevelData dungeonSelected;
         [SerializeField] DungeonCard cardPrefab;
 
+        public event Action<LevelData> OnSelectionChanged;
+
         public LevelData GetSelectedDungeon() => dungeonSelected;
         public static LevelData GetDungeon()
         {
             if (Instance == null) Instance = FindAnyObjectByType<DungeonSelector>(FindObjectsInactive.Include);
             return Instance.dungeonSelected;
+        }
+        void SelectDungeon(LevelData dungeon)
+        {
+            dungeonSelected = dungeon;
+            OnSelectionChanged?.Invoke(dungeon);
         }
 
         readonly List<DungeonCard> cards = new();
@@ -35,7 +43,7 @@ namespace pigbrain.game.Boxhead.UI
             cards.Skip(1).ForEach(c => c.SetLock(!IsLocked));
         }
 
-        [ConsoleCommand("LOADALL")]
+        [Inline("LOADALL")]
         public static (UI.Console.Command.Status, string) LoadAll(UI.Console console, string[] args)
         {
             if (Instance.dungeonsDynamic)
@@ -47,7 +55,7 @@ namespace pigbrain.game.Boxhead.UI
             return (UI.Console.Command.Status.Success, "");
         }
 
-        [ConsoleCommand("UNLOCK")]
+        [Inline("UNLOCK")]
         public static (UI.Console.Command.Status, string) Unlock(UI.Console console, string[] args)
         {
             UnlockAllAndSave(true);
@@ -57,12 +65,12 @@ namespace pigbrain.game.Boxhead.UI
         public static void UnlockAllAndSave(bool save = true)
         {
             Instance.cards.ForEach(c => c.SetLock(false));
-            if (save) Persistence.SetBool("DungeonSelector.Unlock", true);
+            if (save) Persistence.CurrentData.SetBool("DungeonSelector.Unlock", true);
         }
-        static bool IsLocked => Persistence.GetBool("DungeonSelector.Unlock");
+        static bool IsLocked => Persistence.CurrentData.GetBool("DungeonSelector.Unlock");
 
         DungeonCard CreateButton(LevelData levelData) =>
-            DungeonCard.CreateInstance(cardPrefab, levelData, transform, (ld) => dungeonSelected = ld);
+            DungeonCard.CreateInstance(cardPrefab, levelData, transform, (ld) => SelectDungeon(ld));
 
     }
 }

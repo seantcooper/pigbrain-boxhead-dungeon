@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebac0f1707ca040aab31b6c395ef27ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyDrop
-  traits: 4
+  traits: 9
   fillDuration: 1
   fill: 0
   trigger: {fileID: 7767337135276003033}

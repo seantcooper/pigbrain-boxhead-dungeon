@@ -18,9 +18,12 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField] generated.TickerWorld.PrefabView worldPrefab;
         [Range(0.5f, 20)] float worldDuration = 1.5f;
 
+        public static bool MuteMessages = false;
+
         public static bool IsAvailable => Instance && Instance.gameObject.activeInHierarchy;
         public void CreateMessage(MessageTickerData message, Transform owner)
         {
+            if (MuteMessages) return;
             if (Instance.uiPrefab) StartCoroutine(UIMessage(message));
             if (owner && Instance.worldPrefab)
             {

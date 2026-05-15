@@ -34,7 +34,10 @@ MonoBehaviour:
   m_PlatformBuildProfile:
     rid: 9037943255171596595
   m_OverrideGlobalSceneList: 1
-  m_Scenes: []
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/pigbrain.boxhead.dungeons/Scenes/Boxhead-2026.unity
+    m_guid: e3a63d4a6b40b4e37a09fa94ada6b0c3
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
@@ -182,7 +185,7 @@ MonoBehaviour:
     - line: '|   loadStoreDebugModeEnabled: 0'
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
-    - line: '|   bundleVersion: 0.3.29'
+    - line: '|   bundleVersion: 0.3.43'
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: -944628639613478452, guid: daaa2d149b8a74ddf913e39d6806fc84,
         type: 3}'

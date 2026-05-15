@@ -51,7 +51,7 @@ namespace pigbrain.game.Boxhead.UI
         IEnumerator Run()
         {
             yield return new WaitForSeconds(1);
-            cards.Where(c => !Persistence.GetBool(c.key, false)).ForEach(c => c.Start());
+            cards.Where(c => !Persistence.CurrentData.GetBool(c.key, false)).ForEach(c => c.Start());
             while (enabled)
             {
                 yield return new WaitUntil(() => queue.Count > 0);
@@ -84,7 +84,7 @@ namespace pigbrain.game.Boxhead.UI
                 }
                 card.OnClose += Closed;
                 card.SetActive(true);
-                Persistence.SetBool(key, true);
+                Persistence.CurrentData.SetBool(key, true);
             }
             public string key => $"tutorial.{card}";
         }

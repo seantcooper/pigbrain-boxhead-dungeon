@@ -37,8 +37,7 @@ namespace pigbrain.game.Boxhead.Environment
 
         public const string CeilingContainerName = "ceiling";
 
-
-        internal static RoomData CreateInstance(RoomShape shape, int gridSize, uint seed, RoomPrefabs prefabs)
+        internal static RoomData CreateInstance(RoomShape shape, int gridSize, uint seed, IEnumerable<RoomPrefabs> prefabGroups)
         {
             string levelName = shape.index == -1 ? "" : $" [{shape.index}]";
             GameObject room = new($"Room ({shape.roomType}){levelName}");
@@ -47,7 +46,7 @@ namespace pigbrain.game.Boxhead.Environment
             roomData.rnd = new(roomData.seed = seed);
             roomData.level = shape.index;
             roomData.roomType = shape.roomType;
-            roomData.prefabs = prefabs;
+            roomData.prefabs = roomData.rnd.NextWeighted<RoomPrefabs>(prefabGroups);
             roomData.worldIndex = shape.position;
             roomData.gridSize = gridSize;
 
@@ -98,15 +97,15 @@ namespace pigbrain.game.Boxhead.Environment
         public Vector3 GetLocalCenter(int2 i) => GetLocalPosition((float2)i + 0.5f);
         public Vector3 GetLocalPosition(float2 i) => new(i.x * gridSize, 0, i.y * gridSize);
 
-        internal GameObject CreateObject(PrefabList prefabs, Vector3 p, Quaternion r, Cell.Type cellType, GeomType geomType) =>
+        internal CellObject CreateObject(PrefabList prefabs, Vector3 p, Quaternion r, Cell.Type cellType, GeomType geomType) =>
             prefabs ? CreateObject(prefabs.prefabs.items, p, r, cellType, geomType) : null;
 
-        internal GameObject CreateObject(IEnumerable<PrefabList.Info> items, Vector3 p, Quaternion r,
+        internal CellObject CreateObject(IEnumerable<PrefabList.Info> items, Vector3 p, Quaternion r,
             Cell.Type cellType, GeomType geomType) =>
             prefabs && rnd.NextWeighted<GameObject>(items) is GameObject prefab
-                && CreateObject(prefab, p, r, cellType, geomType) is GameObject inst ? inst : null;
+                && CreateObject(prefab, p, r, cellType, geomType) is CellObject inst ? inst : null;
 
-        internal GameObject CreateObject(GameObject prefab, Vector3 p, Quaternion r, Cell.Type cellType, GeomType geomType)
+        internal CellObject CreateObject(GameObject prefab, Vector3 p, Quaternion r, Cell.Type cellType, GeomType geomType)
         {
             if (!prefab) return null;
             var inst = prefab.PrefabInstantiate(builder);
@@ -118,7 +117,7 @@ namespace pigbrain.game.Boxhead.Environment
             cellObject.worldPositionKey = GetWorldPositionKey(inst.transform.position);
             objects.Add(cellObject);
             AddCellObjectToMap(cellObject);
-            return inst;
+            return cellObject;
         }
 
         internal void MarkExternalAndInternal()

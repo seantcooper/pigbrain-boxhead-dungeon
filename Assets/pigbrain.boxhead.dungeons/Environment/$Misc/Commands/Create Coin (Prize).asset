@@ -12,8 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0f552a84cd84121bf38bab11211fa5, type: 3}
   m_Name: Create Coin (Prize)
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.CommandCreate
-  clip: {fileID: 0}
-  prefab: {fileID: 3676180232018591091, guid: 477aa16a06e5243efa5d2bbe7430572d, type: 3}
+  sound:
+    target: {fileID: 0}
+    id: 
+  message: {fileID: 0}
+  filters: []
+  traits: 0
+  prefab2: {fileID: 3676180232018591091, guid: 477aa16a06e5243efa5d2bbe7430572d, type: 3}
+  prefabObject:
+    gameObject: {fileID: 3676180232018591091, guid: 477aa16a06e5243efa5d2bbe7430572d, type: 3}
+    poolBehaviour: {fileID: 0}
   count: 1
   baseOffset: 1
   frequency: 0

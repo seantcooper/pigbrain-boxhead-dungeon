@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using pigbrain.core.Collections;
+using pigbrain.core.UnityObject;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ namespace pigbrain.game.Boxhead.UI
 
         public static void TryPop(MonoBehaviour owner, float magnitude)
         {
-            if (owner.isActiveAndEnabled && owner.TryGetComponent(out PopEffect pe))
+            if (owner.isActiveAndEnabled && owner.TryGetComponentInChildren(out PopEffect pe))
                 pe.StartCoroutine(pe.Pop(magnitude));
         }
     }

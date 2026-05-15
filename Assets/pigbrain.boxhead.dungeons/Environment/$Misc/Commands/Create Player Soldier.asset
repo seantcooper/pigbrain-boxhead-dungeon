@@ -17,7 +17,11 @@ MonoBehaviour:
     id: Reload
   message: {fileID: 11400000, guid: efb11717400c847c2a55dd8f0dfa2bd3, type: 2}
   filters: []
-  prefab: {fileID: 3633253301172464602, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+  traits: 0
+  prefab2: {fileID: 3633253301172464602, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+  prefabObject:
+    gameObject: {fileID: 3633253301172464602, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+    poolBehaviour: {fileID: 0}
   count: 1
   baseOffset: 1
   frequency: 0

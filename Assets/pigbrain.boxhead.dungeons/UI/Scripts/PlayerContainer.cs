@@ -23,7 +23,7 @@ namespace pigbrain.game.Boxhead.UI
 
         ControlValue enemykills, exp;
 
-        [ConsoleCommand("EXP")]
+        [Inline("EXP")]
         public static (UI.Console.Command.Status, string) ActivateRage(UI.Console console, string[] args)
         {
             Instance.exp.Set(int.Parse(args[0]));
@@ -53,11 +53,16 @@ namespace pigbrain.game.Boxhead.UI
 
         void OnExpChange(ChangeEvent ev)
         {
+            UpdateExp();
+            UpdateUI();
+            this.TryPop();
+        }
+
+        void UpdateExp()
+        {
             if (!player) return;
             if (player.SetIndex(Mathf.FloorToInt(ExpToLevelIndex())))
                 upgraded.Invoke(player.transform, ("name", "Bambo"), ("level", $"{player.GetIndex() + 1}"));
-            UpdateUI();
-            this.TryPop();
         }
 
         void OnPlayerDead(Player player) => UpdateUI();
@@ -67,6 +72,7 @@ namespace pigbrain.game.Boxhead.UI
             Debug.Log("Player Created");
             this.player = player;
             player.GetComponent<StatsController>().AddListener((evt) => UpdateUI());
+            UpdateExp();
             UpdateUI();
         }
 

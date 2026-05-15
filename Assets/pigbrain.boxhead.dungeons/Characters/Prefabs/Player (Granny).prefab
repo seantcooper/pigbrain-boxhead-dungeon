@@ -148,6 +148,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3225f5da6a5f4a15b47c9579753e794, type: 2}
+    - target: {fileID: 4743370780176627039, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+      propertyPath: areas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743370780176627039, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+      propertyPath: areas.Array.data[0].cost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743370780176627039, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+      propertyPath: areas.Array.data[0].name
+      value: Walkable
+      objectReference: {fileID: 0}
     - target: {fileID: 4790558360006824678, guid: 17c447decf7664966bf70f2d40739895, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

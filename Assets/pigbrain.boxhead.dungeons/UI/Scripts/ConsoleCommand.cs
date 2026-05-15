@@ -7,8 +7,6 @@ using UnityEngine.Scripting;
 using pigbrain.game.Boxhead.Statistic;
 using pigbrain.core.UnityObject;
 using static UnityEngine.Object;
-using System.Collections.Generic;
-using System.ComponentModel;
 using pigbrain.core.Analysis;
 
 namespace pigbrain.game.Boxhead.UI
@@ -64,6 +62,14 @@ namespace pigbrain.game.Boxhead.UI
                 }
             }
             StatsCatalog.Session.SetValue(Stat.Money, 999);
+            StatsCatalog.Session.SetValue(Stat.Exp, 100000);
+
+            var soldier = Catalog.Q<GameObject>("soldier");
+            for (int i = 0; i < 10; i++)
+                soldier.Instantiate();
+
+
+
             return (Status.Success, "");
         }
     }
@@ -220,7 +226,7 @@ namespace pigbrain.game.Boxhead.UI
 
     #region System
     [Preserve]
-    [DisplayName("SYSTEM")]
+    [Console.Name("SYSTEM")]
     public class Sys : Console.Command
     {
         public override string Help(Console console) => "";

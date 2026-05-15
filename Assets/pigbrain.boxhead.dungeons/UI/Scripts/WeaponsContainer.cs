@@ -109,6 +109,7 @@ namespace pigbrain.game.Boxhead.UI
         void OnEnterRoom(Room room)
         {
             if (room.data.roomType != Room.Type.Loot) return;
+            SetCard();
             grids.ForEach(g => g.StartEdit());
             OrthoCamera.Instance.SetHorizontalOffset(3.75f);
             OnStartEdit?.Invoke();

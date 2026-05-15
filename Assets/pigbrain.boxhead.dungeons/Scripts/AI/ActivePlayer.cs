@@ -22,6 +22,9 @@ namespace pigbrain.game.Boxhead
         [SerializeField][ReadOnly] internal bool playerIsDead;
         [ReadOnly] public Player player;
         [ReadOnly] public Room room;
+        [SerializeField][ReadOnly] string currentRoom;
+        [SerializeField][ReadOnly] float currentEXP;
+        [SerializeField][ReadOnly] float currentMoney;
 
         public event Action<Player> OnPlayerStart;
         public event Action<Player> OnPlayerRespawning;
@@ -47,15 +50,23 @@ namespace pigbrain.game.Boxhead
             OnPlayerStart?.Invoke(player);
             Pickup.OnCreated += OnPickupCreated;
         }
-        void OnDisable() => Pickup.OnCreated -= OnPickupCreated;
 
-        void InstantiatePlayer(Vector3 position)
+        void OnDisable()
         {
+            Pickup.OnCreated -= OnPickupCreated;
+        }
+
+        Player InstantiatePlayer(Vector3 position)
+        {
+            MessageTicker.MuteMessages = true;
+            StartCoroutine(Delay(1f, () => MessageTicker.MuteMessages = false));
+
             player = playerPrefab.Instantiate(position, Quaternion.identity);
             player.GetComponent<Health>().onDeath += OnPlayerDeath;
             player.GetComponent<CullingGroupItem>().OnAddedToZone += OnEnterZone;
             player.GetComponent<CullingGroupItem>().OnRemovedFromZone += OnLeaveZone;
             Debug.Log($"Player Instantiated {player}");
+            return player;
         }
 
         public readonly HashSet<Pickup> pickups = new();
@@ -64,6 +75,7 @@ namespace pigbrain.game.Boxhead
         void OnEnterZone(CullingGroupZone zone)
         {
             room = zone.GetComponent<Room>();
+            currentRoom = room.name;
             OnEnterRoom?.Invoke(room);
         }
         void OnLeaveZone(CullingGroupZone zone) =>
@@ -73,20 +85,49 @@ namespace pigbrain.game.Boxhead
         {
             Debug.Log(">>>> Creating player");
             var builder = GetComponent<RoomBuilder>();
-            GameObject[] weapons = builder.levelData.startWeapons.Select(w => Catalog.Query.Get<GameObject>(w)).ToArray();
-            InstantiatePlayer(default);
-            StartCoroutine(Delay(0.5f, () =>
+
+            if (BootStrap.Instance.currentState && !BootStrap.Instance.currentState.playerStates.IsNullOrEmpty())
             {
-                var soldier = Catalog.Q<GameObject>("soldier");
-                for (int i = 0; i < builder.levelData.soldiers; i++)
-                    soldier.Instantiate();
-            }));
+                foreach (var p in BootStrap.Instance.currentState.playerStates)
+                {
+                    Player inst = p.human ? InstantiatePlayer(default)
+                            : Catalog.Q<GameObject>(p.name).Instantiate().GetComponent<Player>();
+                    inst.GetComponent<Health>().damage = p.health;
+                    inst.transform.position = p.position;
+                    inst.agent.Warp(p.position);
+                    inst.transform.eulerAngles = p.rotation;
+                }
+            }
+            else
+            {
+                InstantiatePlayer(default);
+                StartCoroutine(Delay(0.5f, () =>
+                {
+                    var soldier = Catalog.Q<GameObject>("soldier");
+                    for (int i = 0; i < builder.levelData.soldiers; i++)
+                        soldier.Instantiate();
+                }));
+            }
 
-            // set the initial money
-            StatsCatalog.Session.SetValue(Stat.Money, builder.levelData.money);
+            // WEAPONS set the initial weapons
+            if (BootStrap.Instance.currentState && !BootStrap.Instance.currentState.weaponStates.IsNullOrEmpty())
+                BootStrap.Instance.currentState.weaponStates
+                    .ForEach(w =>
+                    {
+                        var inst = Catalog.Query.Get<GameObject>(w.name).Instantiate(player.transform);
+                        inst.SetActive(w.active);
+                        inst.GetComponent<StatsController>().SetLevelIndex(w.levelIndex);
+                    });
 
-            // set the initial weapons
-            weapons?.Where(w => w).ForEach(w => w.Instantiate(player.transform));
+            else builder.levelData.startWeapons
+                .ForEach(w => Catalog.Query.Get<GameObject>(w).Instantiate(player.transform));
+
+            // MONEY / EXP set the initial money
+
+            float money = BootStrap.Instance.currentState ? BootStrap.Instance.currentState.money : builder.levelData.money;
+            float exp = BootStrap.Instance.currentState ? BootStrap.Instance.currentState.exp : builder.levelData.exp;
+            StatsCatalog.Session.SetValue(Stat.Exp, exp);
+            StatsCatalog.Session.SetValue(Stat.Money, money);
         }
 
         #region └Death

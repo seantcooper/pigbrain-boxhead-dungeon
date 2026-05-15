@@ -8,6 +8,7 @@ using pigbrain.core.UnityObject;
 using pigbrain.core.Utility;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace pigbrain.game.Boxhead
 {
@@ -16,7 +17,8 @@ namespace pigbrain.game.Boxhead
     {
         [Header("Create")]
         [SerializeField] Traits traits;
-        [SerializeField] internal GameObject prefab;
+        // [SerializeField] internal GameObject prefab2;
+        [SerializeField][FormerlySerializedAs("prefabObject")] internal PrefabObject prefab;
         // [SerializeField] internal PoolBehaviour poolprefab;
         [SerializeField] internal int count = 1;
         [SerializeField][Range(0, 2)] float baseOffset = 1;
@@ -28,6 +30,7 @@ namespace pigbrain.game.Boxhead
         {
             None = 0,
             Volumize = 1 << 0,
+            PoolObject = 1 << 1,
             Other = 1 << 16,
         }
 

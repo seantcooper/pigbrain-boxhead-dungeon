@@ -8,6 +8,7 @@ using pigbrain.core.Geom;
 using pigbrain.core.Graphics;
 using pigbrain.core.Inspector;
 using pigbrain.core.Map;
+using pigbrain.core.Statistics;
 using pigbrain.core.UnityObject;
 using pigbrain.generated;
 using TMPro;
@@ -41,7 +42,6 @@ namespace pigbrain.game.Boxhead.Environment
         [Serializable]
         class Events { public UnityEvent onClear, onBuild; }
 
-        Rnd rnd;
         // LevelData levelData;
 
         internal void SetLevelData(LevelData levelData)
@@ -99,7 +99,6 @@ namespace pigbrain.game.Boxhead.Environment
 
             var p1 = Profiler.Start();
             Clear();
-            rnd = new(seed);
 
             var p2 = Profiler.Start();
             RoomShape[] buildList = board.rooms
@@ -113,11 +112,12 @@ namespace pigbrain.game.Boxhead.Environment
 
             // Create Data
 
+            Rnd rnd = new(seed);
             foreach (var shape in buildList)
             {
                 if (!sets.TryGetValue(shape.index, out var set))
                     sets.Add(shape.index, set = setrnd.NextWeighted<PrefabSet>(prefabSets));
-                shapeToData[shape] = CreateRoom(shape, set);
+                shapeToData[shape] = CreateRoom(shape, set, rnd);
             }
 
             // Connect rooms
@@ -248,13 +248,12 @@ namespace pigbrain.game.Boxhead.Environment
         #endregion
 
         #region Create Room
-        public RoomData CreateRoom(RoomShape shape, PrefabSet set)
+        public RoomData CreateRoom(RoomShape shape, PrefabSet set, Rnd rnd)
         {
             IEnumerable<RoomPrefabs> prefabGroups = set.GetTypePrefabs(shape.roomType);
             if (prefabGroups.Count() == 0) throw new Exception($"Room prefabs is empty for {shape.roomType}");
 
-            RoomData data = CreateInstance(shape, gridSize, rnd.NextUInt(),
-                rnd.NextWeighted<RoomPrefabs>(prefabGroups));
+            RoomData data = CreateInstance(shape, gridSize, rnd.NextUInt(), prefabGroups);
 
             data.transform.parent = transform;
 
@@ -380,9 +379,8 @@ namespace pigbrain.game.Boxhead.Environment
             void Create(string id)
             {
                 var prefab = loot.Get(id);
-                // Debug.Log($"Loot: {id} '{prefab}'");
                 if (!prefab) return;
-                int2 i = rnd.Next(floor);
+                int2 i = data.rnd.Next(floor);
                 Vector3 p = data.GetLocalCenter(i);
                 var wp = data.transform.TransformPoint(p);
 
@@ -393,7 +391,16 @@ namespace pigbrain.game.Boxhead.Environment
                     p = data.transform.InverseTransformPoint(wp).AddY(0.01f);
                 }
 
+                prefab.SetActive(false);
                 var inst = data.CreateObject(prefab, p, Quaternion.identity, data.map[i].type, GeomType.Loot);
+
+                string key = $"{id}.{data.rnd.seed}";
+                inst.name = key;
+                inst.tracking = true;
+
+                inst.SetActive(true);
+                prefab.SetActive(true);
+
                 floor.Remove(i);
             }
             levelData[data.level].loot.ForEach(id => Create(id));
@@ -447,17 +454,17 @@ namespace pigbrain.game.Boxhead.Environment
                 if (cell.type == Cell.Type.Empty) return;
                 // if (cell.type.HasFlag(Cell.Type.HiddenFloor)) return;
 
-                GameObject inst = null;
+                CellObject inst = null;
                 if (!inst) inst = CreateSpawn(data, cell);
                 if (!inst) inst = CreateTrap(data, cell);
                 if (!inst) inst = data.CreateObject(prefabs, data.GetLocalCenter(i),
-                    Quaternion.Euler(0, rnd.NextInt(4) * 90, 0), cell.type, GeomType.Floor);
+                    Quaternion.Euler(0, data.rnd.NextInt(4) * 90, 0), cell.type, GeomType.Floor);
             });
         }
         #endregion
 
         #region Create Trap
-        GameObject CreateTrap(RoomData data, Cell cell)
+        CellObject CreateTrap(RoomData data, Cell cell)
         {
             if (!cell.type.HasFlag(Cell.Type.Trap)) return null;
             if (!data.prefabs.trap) return null;
@@ -481,7 +488,7 @@ namespace pigbrain.game.Boxhead.Environment
         #endregion
 
         #region Create Spawn
-        GameObject CreateSpawn(RoomData data, Cell cell)
+        CellObject CreateSpawn(RoomData data, Cell cell)
         {
             if (!cell.type.HasFlag(Cell.Type.SpawnHole)) return null;
             if (!data.prefabs.spawn) return null;
@@ -496,11 +503,11 @@ namespace pigbrain.game.Boxhead.Environment
         static Quaternion GetRotation(int2 direction) => GetRotation(Array.IndexOf(Array2.Neighbor4, direction));
         void CreateWallsAndDoors(RoomData data)
         {
-            GameObject CreateWall(int2 i, int2 d)
+            CellObject CreateWall(int2 i, int2 d)
             {
                 var p = data.GetLocalPosition((float2)i + 0.5f + (float2)d / 2);
                 var r = GetRotation(d);
-                GameObject inst;
+                CellObject inst;
                 if (data.IsDoor(i, d))
                 {
                     var cellType = data.GetCellType(i);
@@ -571,7 +578,7 @@ namespace pigbrain.game.Boxhead.Environment
                     {
                         var o = data.GetCellObjectsAt(data.GetWorldPosition((float2)cell.index + 0.5f + (float2)d / 2))
                             .FirstOrDefault(c => c.geomType == GeomType.Wall);
-                        MoveToWall(inst, o is CellObject c ? c.gameObject : null);
+                        MoveToWall(inst.gameObject, o is CellObject c ? c.gameObject : null);
                     }
                 }
 
@@ -586,7 +593,7 @@ namespace pigbrain.game.Boxhead.Environment
                         {
                             var o = data.GetCellObjectsAt(data.GetWorldPosition((float2)cell.index + 0.5f + (float2)d / 2))
                                 .FirstOrDefault(c => c.geomType == GeomType.Wall);
-                            MoveToWall(inst, o is CellObject c ? c.gameObject : null, 0);
+                            MoveToWall(inst.gameObject, o is CellObject c ? c.gameObject : null, 0);
                         }
                     });
                 }

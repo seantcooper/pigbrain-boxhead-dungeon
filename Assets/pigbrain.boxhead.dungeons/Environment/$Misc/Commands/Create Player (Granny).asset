@@ -15,7 +15,13 @@ MonoBehaviour:
   sound:
     target: {fileID: 0}
     id: 
-  prefab: {fileID: 9036807092736339133, guid: 9719d4fca13ce4568af318fd40cf5aa2, type: 3}
+  message: {fileID: 0}
+  filters: []
+  traits: 0
+  prefab2: {fileID: 9036807092736339133, guid: 9719d4fca13ce4568af318fd40cf5aa2, type: 3}
+  prefabObject:
+    gameObject: {fileID: 9036807092736339133, guid: 9719d4fca13ce4568af318fd40cf5aa2, type: 3}
+    poolBehaviour: {fileID: 0}
   count: 1
   baseOffset: 1
   frequency: 0

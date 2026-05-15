@@ -15,6 +15,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static pigbrain.game.Boxhead.UI.ScreenUtility;
+using pigbrain.core.Statistics;
 
 namespace pigbrain.game.Boxhead.UI
 {
@@ -109,10 +110,64 @@ namespace pigbrain.game.Boxhead.UI
     public sealed class MainScreen : Screen
     {
         [SerializeField] Button start;
+        [SerializeField] Button confirm;
         [SerializeField] Button resume;
+        DungeonSelector selector => transform.GetComponentInChildren<DungeonSelector>(true);
+
+        public Status status = Status.None;
+
+        public enum Status { None, Start, Resume, Reset }
+
+        public override void Start()
+        {
+            base.Start();
+            selector.OnSelectionChanged += OnDungeonSelected;
+            start.onClick.AddListener(() => status = Status.Start);
+            resume.onClick.AddListener(() => status = Status.Resume);
+            confirm.onClick.AddListener(() => status = Status.Reset);
+        }
+
+        void OnDungeonSelected(LevelData dungeon) =>
+            resume.interactable = BootStrap.HasValidSave(dungeon.name);
+
+        public override void Enter()
+        {
+            base.Enter();
+            status = Status.None;
+            Persistence.Read();
+            OnDungeonSelected(selector.GetSelectedDungeon());
+        }
+
         public override IEnumerator Run()
         {
-            yield return new WaitForButtonClick(start, Game.Input.GamePlay.WeaponFire);
+            while (true)
+            {
+                status = Status.None;
+                yield return new WaitUntil(() => status != Status.None);
+
+                if (status == Status.Start)
+                {
+                    if (resume.interactable)
+                    {
+                        confirm.SetActive(true);
+                        yield return new WaitUntilTimeout(2, () => status != Status.Start);
+                        confirm.SetActive(false);
+
+                        if (status == Status.Start)
+                            status = Status.None;
+
+                        if (status == Status.Reset)
+                        {
+                            Persistence.CurrentData.Clear(selector.GetSelectedDungeon().name);
+                            break;
+                        }
+                    }
+                    else break;
+                }
+
+                if (status == Status.Resume)
+                    break;
+            }
             SetState(fsm.loading);
         }
     }

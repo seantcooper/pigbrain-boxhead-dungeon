@@ -15,8 +15,8 @@ MonoBehaviour:
   entries: []
   groupFilter: -1
   view: 0
-  version: 0.3.31
+  version: 0.3.43
   applicationName: Boxhead Dungeon
-  buildPath: /Volumes/Develop/pigbrain.io/build/Boxhead Dungeon-0.3.31-B
-  buildSize: 9169649
-  bundleSize: 4138338
+  buildPath: /Volumes/Develop/pigbrain.io/build/Boxhead Dungeon-0.3.43-B
+  buildSize: 9149869
+  bundleSize: 4141116

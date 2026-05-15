@@ -32,7 +32,7 @@ namespace pigbrain.game.Boxhead.UI
 
         IEnumerator Run()
         {
-            if (Persistence.GetBool(Key, false))
+            if (Persistence.CurrentData.GetBool(Key, false))
             {
                 gameObject.SetActive(false);
                 yield break;
@@ -106,7 +106,7 @@ namespace pigbrain.game.Boxhead.UI
                     messages.ForEach(m => m.Remove());
                     messages.Clear();
                 })
-                .Call(() => Persistence.SetBool(Key, true))
+                .Call(() => Persistence.CurrentData.SetBool(Key, true))
                 .Run();
         }
 

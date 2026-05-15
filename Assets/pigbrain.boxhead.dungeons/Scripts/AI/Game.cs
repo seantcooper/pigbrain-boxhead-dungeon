@@ -17,7 +17,7 @@ namespace pigbrain.game.Boxhead
             Input.GamePlay.Fast.performed += ctx => Fast(true);
             Input.GamePlay.Fast.canceled += ctx => Fast(false);
 #endif
-            Persistence.Read();
+            Persistence.Start(this);
         }
 
         TimeScale.Scope timescaleScope;

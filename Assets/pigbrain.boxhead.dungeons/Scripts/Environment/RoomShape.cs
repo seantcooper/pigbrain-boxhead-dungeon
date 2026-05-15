@@ -17,6 +17,7 @@ namespace pigbrain.game.Boxhead.Environment
         public int2 position;
         public List<RoomShape> children = new();
         public int index;
+        public uint seed;
 
         public int2 size => map.size;
         public int2 center => (position * 2 + size) / 2;

@@ -16,11 +16,15 @@ MonoBehaviour:
     target: {fileID: 8300000, guid: 38b91581691424036ad83ca9eb8feb3f, type: 3}
     id: Pickup_Powerup
   message: {fileID: 11400000, guid: dc04902e6c0884890a91c90a2a141ebe, type: 2}
+  filters: []
   propertyType:
     componentType: pigbrain.game.Boxhead.Player, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+    filterName: 
     propertyName: totalDamage
     op: 4
     value: 0
   assignment: 1
-  assignEffect: {fileID: 7632410675525011627, guid: 7d4a6f391fc554f26b5271fdbef8ba04, type: 3}
+  assignEffect:
+    gameObject: {fileID: 7632410675525011627, guid: 7d4a6f391fc554f26b5271fdbef8ba04, type: 3}
+    poolBehaviour: {fileID: -7711348537393318364, guid: 7d4a6f391fc554f26b5271fdbef8ba04, type: 3}

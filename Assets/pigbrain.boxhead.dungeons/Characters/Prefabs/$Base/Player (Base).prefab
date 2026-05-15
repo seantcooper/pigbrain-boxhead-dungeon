@@ -13,13 +13,16 @@ GameObject:
   - component: {fileID: 7808127930403090306}
   - component: {fileID: 4336735475902926212}
   - component: {fileID: 8833188857125362056}
+  - component: {fileID: -3151629054589067926}
   - component: {fileID: 3118233386788048186}
   - component: {fileID: 8354235350034900766}
   - component: {fileID: 3571831692541793117}
   - component: {fileID: 5978934858633079017}
   - component: {fileID: 8262334172875778473}
   - component: {fileID: 8087879869070376200}
+  - component: {fileID: 387451058662668583}
   - component: {fileID: 848465973858448242}
+  - component: {fileID: -5183208805011494062}
   - component: {fileID: 3373980135502767032}
   - component: {fileID: 6986660484174808279}
   - component: {fileID: 9212439395875228763}
@@ -31,8 +34,6 @@ GameObject:
   - component: {fileID: -4860258338695816727}
   - component: {fileID: -3538830987536244481}
   - component: {fileID: -3141497400784228762}
-  - component: {fileID: 387451058662668583}
-  - component: {fileID: -3151629054589067926}
   m_Layer: 8
   m_Name: Player (Base)
   m_TagString: Player
@@ -134,6 +135,25 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 1}
   alpha: 0.5
   layer: 0
+--- !u!114 &-3151629054589067926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5452088087869896151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c1fb72f62b541ab9b9a5f83b890882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.HeadTracking
+  head: {fileID: 2623474763468064109}
+  neck: {fileID: 8736414269789185165}
+  targetType: 0
+  offset: {x: 0, y: 0, z: 0}
+  turnSpeed: 10
+  maxYaw: 70
+  maxPitch: 70
 --- !u!114 &3118233386788048186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Invincible
   duration: 5
-  effect: {fileID: 7632410675525011627, guid: 79c19f501a0ed49f2ab95638dd4914c6, type: 3}
+  effect:
+    gameObject: {fileID: 7632410675525011627, guid: 79c19f501a0ed49f2ab95638dd4914c6, type: 3}
+    poolBehaviour: {fileID: 1310501276318233474, guid: 79c19f501a0ed49f2ab95638dd4914c6, type: 3}
 --- !u!114 &8262334172875778473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +251,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Core.AI.NavMeshAgentForce
   agent: {fileID: 848465973858448242}
   mass: 80
+--- !u!114 &387451058662668583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5452088087869896151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc928a4c1124b424baa2adbfc39213d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Navigation.NavMapLayerMoveItem
+  agent: {fileID: 848465973858448242}
+  distance: 100
 --- !u!195 &848465973858448242
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -251,6 +287,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-5183208805011494062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5452088087869896151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d498d7b7bb45b4477a7bab2068ac7b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: pigbrain.core::pigbrain.core.AI.NavMeshAgentArea
+  areas: []
 --- !u!114 &3373980135502767032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +434,7 @@ MonoBehaviour:
     enabled: 1
     onDeath:
       commands: []
+    explodeModel: {fileID: 0}
   nmaController: {fileID: 3373980135502767032}
   targeting: {fileID: 2539248687867162833}
   nmaState: {fileID: 6986660484174808279}
@@ -454,7 +504,6 @@ MonoBehaviour:
   - stat: 52
     component: {fileID: 8389357063761514380}
     memberName: SetTimeScale
-  showGizmos: 1
 --- !u!114 &2539248687867162833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,39 +574,6 @@ MonoBehaviour:
   weapons: []
   rightHand: {fileID: 2914830174536843841}
   leftHand: {fileID: 5100568637084682777}
---- !u!114 &387451058662668583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452088087869896151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc928a4c1124b424baa2adbfc39213d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.Navigation.NavMapLayerMoveItem
-  agent: {fileID: 848465973858448242}
-  distance: 100
---- !u!114 &-3151629054589067926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452088087869896151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c1fb72f62b541ab9b9a5f83b890882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pigbrain.game.Boxhead.HeadTracking
-  head: {fileID: 2623474763468064109}
-  neck: {fileID: 8736414269789185165}
-  targetType: 0
-  offset: {x: 0, y: 0, z: 0}
-  turnSpeed: 10
-  maxYaw: 70
-  maxPitch: 70
 --- !u!1001 &963322605213454519
 PrefabInstance:
   m_ObjectHideFlags: 0

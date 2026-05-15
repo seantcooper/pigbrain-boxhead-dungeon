@@ -38,7 +38,7 @@ namespace pigbrain.game.Boxhead
             float radius = transform.localScale.Min() * this.radius;
             float speed = radius / duration;
 
-            if (massForce) CameraShake.Apply(transform.position, massForce.mass);
+            if (massForce) CameraShake.Apply(transform.position, massForce.mass, "explosion");
 
             for (float time = Time.time, f = 0; f < 1;)
             {

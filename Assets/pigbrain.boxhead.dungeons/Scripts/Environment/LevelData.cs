@@ -19,6 +19,7 @@ namespace pigbrain.game.Boxhead.Environment
         public string title;
         public uint seed;
         public int money;
+        public float exp = 0;
         public string[] startWeapons;
         public int soldiers;
         public MinMaxInt roomSize;

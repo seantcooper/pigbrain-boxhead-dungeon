@@ -18,14 +18,17 @@ MonoBehaviour:
   message: {fileID: 0}
   filters: []
   traits: 1
-  prefab: {fileID: 3676180232018591091, guid: 0ec8468d90772443cb4d7711af3f89c8, type: 3}
-  count: 3
+  prefab2: {fileID: 3676180232018591091, guid: 0ec8468d90772443cb4d7711af3f89c8, type: 3}
+  prefabObject:
+    gameObject: {fileID: 3676180232018591091, guid: 0ec8468d90772443cb4d7711af3f89c8, type: 3}
+    poolBehaviour: {fileID: 0}
+  count: 0
   baseOffset: 1
   frequency: 0
   burst: 1
   spread:
-    enabled: 1
+    enabled: 0
     radius: 1
   force:
     enabled: 1
-    force: 14.1
+    force: 7

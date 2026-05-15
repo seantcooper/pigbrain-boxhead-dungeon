@@ -16,6 +16,7 @@ using UnityEngine.AI;
 using static pigbrain.core.Collections.CoroutineUtility;
 using static pigbrain.game.Boxhead.Environment.CellObject;
 using static pigbrain.game.Boxhead.Environment.RoomData;
+using UnityEngine.Rendering.Universal;
 
 namespace pigbrain.game.Boxhead
 {
@@ -36,6 +37,7 @@ namespace pigbrain.game.Boxhead
         [SerializeField][ReadOnly] Room levelRoom;
         [SerializeField][ReadOnly] Room lootRoom;
         [SerializeField][ReadOnly] Room corridorRoom;
+        public static Room CompletedRoom;
 
         public static event Action OnDungeonStarted;
         public static event Action OnDungeonStopped;
@@ -54,9 +56,14 @@ namespace pigbrain.game.Boxhead
         bool forcedComplete;
 
         #region Start
+        protected override void Awake()
+        {
+            base.Awake();
+            builder = GetComponent<RoomBuilder>();
+        }
+
         void Start()
         {
-            builder = GetComponent<RoomBuilder>();
             RunStartRoom();
             StatsCatalog.Session.AddChangeListener(Stat.Track_EnemyActive, OnEnemyActiveChange);
             OnDungeonStarted?.Invoke();
@@ -75,8 +82,33 @@ namespace pigbrain.game.Boxhead
         #endregion
 
         #region Start Room
+
+        static Room[] Rooms => Instance.GetComponentsInChildren<Room>();
+
+        internal static Room FindRoom(string name) => Rooms.FirstOrDefault(r =>
+            r.name == name) is Room room ? room : null;
+
+        Room GetStartRoom()
+        {
+            if (BootStrap.Instance.currentState
+                && FindRoom(BootStrap.Instance.currentState.completedRoom) is Room room)
+            {
+                Rooms.Where(r => r.level <= room.level).ForEach(r => { r.Activate(); r.Complete(true); });
+                forcedComplete = true;
+                levelRoom = room;
+                NextRoom();
+                return levelRoom;
+            }
+            return Instance.builder.startRoom.GetComponent<Room>();
+        }
+
         Coroutine running;
-        void RunStartRoom() => RunRoom(builder.startRoom.GetComponent<Room>());
+        void RunStartRoom()
+        {
+            Room startRoom = GetStartRoom();
+            RunRoom(GetStartRoom());
+        }
+
         void RunRoom(Room room)
         {
             StopRunRoom();
@@ -126,6 +158,12 @@ namespace pigbrain.game.Boxhead
                 levelRoom.Complete(forcedComplete);
                 OnRoomCompleted?.Invoke(levelRoom);
                 Debug.Log($"Room Completed: {levelRoom}");
+                CompletedRoom = levelRoom;
+
+                BootStrap.Save();
+
+                if (levelRoom.level >= 5) DungeonSelector.UnlockAllAndSave();
+
 
                 if (levelRoom.type == Room.Type.Final)
                 {
@@ -135,28 +173,53 @@ namespace pigbrain.game.Boxhead
                     yield break;
                 }
 
-                StartCoroutine(NavMap.Instance.RuntimeBakeResync());
 
-                foreach (var corridor in levelRoom.nextRooms)
-                {
-                    corridor.Activate();
-                    if (!forcedComplete) StartCoroutine(FadeIn(corridor));
-                    foreach (var next in corridor.nextRooms)
-                    {
-                        if (next.data.roomType == Room.Type.Loot)
-                        {
-                            lootRoom = next;
-                        }
-                        else
-                        {
-                            corridorRoom = corridor;
-                            levelRoom = next;
-                        }
-                        next.Activate();
-                    }
-                }
-                Debug.Log(state = $"Next Room: {levelRoom}");
+                //     foreach (var corridor in levelRoom.nextRooms)
+                //     {
+                //         corridor.Activate();
+                //         if (!forcedComplete) StartCoroutine(FadeIn(corridor));
+                //         foreach (var next in corridor.nextRooms)
+                //         {
+                //             if (next.data.roomType == Room.Type.Loot)
+                //             {
+                //                 lootRoom = next;
+                //             }
+                //             else
+                //             {
+                //                 corridorRoom = corridor;
+                //                 levelRoom = next;
+                //             }
+                //             next.Activate();
+                //         }
+                //     }
+                //     Debug.Log(state = $"Next Room: {levelRoom}");
+                NextRoom();
             }
+        }
+
+        void NextRoom()
+        {
+            StartCoroutine(NavMap.Instance.RuntimeBakeResync());
+            foreach (var corridor in levelRoom.nextRooms)
+            {
+                corridor.Activate();
+                if (!forcedComplete) StartCoroutine(FadeIn(corridor));
+                foreach (var next in corridor.nextRooms)
+                {
+                    if (next.data.roomType == Room.Type.Loot)
+                    {
+                        lootRoom = next;
+                    }
+                    else
+                    {
+                        corridorRoom = corridor;
+                        levelRoom = next;
+                    }
+                    next.Activate();
+                }
+            }
+            Debug.Log(state = $"Next Room: {levelRoom}");
+
         }
 
         #region └Wait Players
