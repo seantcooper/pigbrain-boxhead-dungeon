@@ -29,7 +29,7 @@ namespace pigbrain.game.Boxhead.Environment
         [SerializeField] CullingGroupManager cullingGroupManager;
 
         [Header("Debug")]
-        [ReadOnly] internal ProgressState1_0_0 currentState;
+        [ReadOnly] internal ProgressState currentState;
 
         public event Action OnComplete;
 
@@ -53,8 +53,15 @@ namespace pigbrain.game.Boxhead.Environment
             if (cullingGroupManager) cullingGroupManager.enabled = false;
         }
 
+        // protected override void OnDestroy()
+        // {
+        //     base.OnDestroy();
+        //     PoolingContainer.ForceDestroy();
+        // }
+
         public void Activate()
         {
+            PoolingContainer.ForceScene(gameObject.scene);
             gameObject.SetActive(true);
             activePlayer.OnPlayerStart += OnPlayerStart;
             StartCoroutine(Run());
@@ -107,26 +114,50 @@ namespace pigbrain.game.Boxhead.Environment
         }
 
         #region Save
-        public static bool HasValidSave(string name)
+        public static bool HasValidSave(string name) =>
+            Persistence.CurrentData.HasKey(name);
+
+        Coroutine saveRoutine;
+        AssetIdentity soldierIdentity, bamboIdentity;
+        bool pauseSave;
+        public static void StartSave()
         {
-            var version = GetVersion(name);
-            return version != "0.0.0";
+            Instance.pauseSave = false;
+            StopSave();
+            Instance.soldierIdentity = Catalog.Q<GameObject>("soldier").GetComponent<AssetIdentity>();
+            Instance.bamboIdentity = Catalog.Q<GameObject>("bambo").GetComponent<AssetIdentity>();
+            Instance.saveRoutine = Instance.StartCoroutine(Instance.PeriodicSaving());
         }
 
-        static string GetVersion(string name) => Persistence.CurrentData.GetString($"{name}.version", "0.0.0");
+        public static void PauseSave(bool state)
+        {
+            Instance.pauseSave = state;
+        }
 
-        public static void Save()
+        public static void StopSave()
+        {
+            if (Instance.saveRoutine == null) return;
+            Instance.StopCoroutine(Instance.saveRoutine);
+            Instance.saveRoutine = null;
+        }
+
+        IEnumerator PeriodicSaving()
+        {
+            while (true)
+            {
+                if (!Instance.pauseSave) Save();
+                yield return new WaitForSeconds(1);
+            }
+        }
+
+        static void Save()
         {
             var state = GetProgressState();
             var json = JsonUtility.ToJson(state);
             var name = DungeonSelector.GetDungeon().name;
-#if UNITY_EDITOR
-            File.WriteAllText($"{GetFolderPath(SpecialFolder.Desktop)}/{name}.json", json);
-#endif
             Persistence.CurrentData.SetString(name, json);
-            Persistence.CurrentData.SetString($"{name}.version", "1.0.0");
         }
-        internal static bool Load(out ProgressState1_0_0 state)
+        internal static bool Load(out ProgressState state)
         {
             var name = DungeonSelector.GetDungeon().name;
             if (!HasValidSave(name))
@@ -143,7 +174,7 @@ namespace pigbrain.game.Boxhead.Environment
             $"Progress.{DungeonSelector.GetDungeon().name}.{string.Join(".", keys)}";
 
         [Serializable]
-        internal class ProgressState1_0_0
+        internal class ProgressState
         {
             public float money, exp;
             public string completedRoom;
@@ -171,55 +202,50 @@ namespace pigbrain.game.Boxhead.Environment
             }
 
             [Serializable]
-            public class ObjectState
-            {
-                public string name;
-                public bool active;
-            }
-            public static implicit operator bool(ProgressState1_0_0 empty) => empty != null;
+            public class ObjectState { public string name; }
+
+            public static implicit operator bool(ProgressState empty) => empty != null;
         }
 
-        static ProgressState1_0_0 GetProgressState(string json) =>
-            JsonUtility.FromJson<ProgressState1_0_0>(json);
+        static ProgressState GetProgressState(string json) =>
+            JsonUtility.FromJson<ProgressState>(json);
 
-        static ProgressState1_0_0 GetProgressState() => new()
+        static ProgressState GetProgressState() => new()
         {
-            completedRoom = ActiveRoom.CompletedRoom ? ActiveRoom.CompletedRoom.name : "",
+            completedRoom = ActiveRoom.Instance.GetCompletedRoom() is Room r ? r.name : "",
             money = StatsCatalog.Session.GetValue(Stat.Money),
             exp = StatsCatalog.Session.GetValue(Stat.Exp),
-
             playerStates = GetPlayerStates(),
-
-            weaponStates = (ActivePlayer.Instance.player
-                ? ActivePlayer.Instance.player.GetComponent<WeaponCache>().GetWeapons()
-                : new Weapon[0])
-                .Select(w => new ProgressState1_0_0.WeaponState
-                {
-                    name = w.name,
-                    active = w.gameObject.activeSelf,
-                    levelIndex = w.GetLevel()
-                })
-                .ToArray(),
-
-            objectStates = Instance.GetComponentsInChildren<CellObject>(true)
-                .Where(c => c.tracking)
-                .Select(c => new ProgressState1_0_0.ObjectState
-                {
-                    name = c.name,
-                    active = c.gameObject.activeSelf,
-                })
-                .ToArray()
+            weaponStates = GetWeaponStates(),
+            objectStates = GetObjectStates()
         };
 
-        static ProgressState1_0_0.PlayerState[] GetPlayerStates()
-        {
-            var soldier = Catalog.Q<GameObject>("soldier");
-            var bambo = Catalog.Q<GameObject>("bambo");
+        static ProgressState.WeaponState[] GetWeaponStates() =>
+            ActivePlayer.Instance.player
+                ? ActivePlayer.Instance.player.GetComponent<WeaponCache>().GetWeapons()
+                    .Select(w => new ProgressState.WeaponState
+                    {
+                        name = w.name,
+                        active = w.gameObject.activeSelf,
+                        levelIndex = w.GetLevel()
+                    })
+                    .ToArray()
+                : new ProgressState.WeaponState[0];
 
-            var players = FindObjectsByType<Player>(FindObjectsInactive.Include);
-            return players.Where(p => p.GetComponent<AssetIdentity>().Equals(soldier)
-                || p.GetComponent<AssetIdentity>().Equals(bambo))
-                .Select(c => new ProgressState1_0_0.PlayerState
+        static ProgressState.ObjectState[] GetObjectStates() => ActiveRoom.CellObjects
+            .Where(c => c.tracking && !c.gameObject.activeSelf)
+            .Select(c => new ProgressState.ObjectState
+            {
+                name = c.name,
+            })
+            .ToArray();
+
+        static ProgressState.PlayerState[] GetPlayerStates()
+        {
+            var players = ActivePlayer.Instance.player.transform.parent.GetComponentsInChildren<Player>();
+            return players.Where(p => p.GetComponent<AssetIdentity>().Equals(Instance.soldierIdentity)
+                || p.GetComponent<AssetIdentity>().Equals(Instance.bamboIdentity))
+                .Select(c => new ProgressState.PlayerState
                 {
                     name = c.name,
                     health = c.GetComponent<Health>().damage,

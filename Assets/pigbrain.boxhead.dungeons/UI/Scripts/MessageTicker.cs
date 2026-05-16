@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using pigbrain.core.Collections;
 using pigbrain.core.Geom;
 using pigbrain.core.Motion;
@@ -18,7 +19,16 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField] generated.TickerWorld.PrefabView worldPrefab;
         [Range(0.5f, 20)] float worldDuration = 1.5f;
 
+        readonly List<GameObject> messages = new();
         public static bool MuteMessages = false;
+
+        void OnDisable()
+        {
+            messages.ForEach(m =>
+            {
+                m.DestroyObject();
+            });
+        }
 
         public static bool IsAvailable => Instance && Instance.gameObject.activeInHierarchy;
         public void CreateMessage(MessageTickerData message, Transform owner)
@@ -48,6 +58,7 @@ namespace pigbrain.game.Boxhead.UI
             inst.imageIcon.image.color = message.color;
             inst.imageIcon.image.gameObject.SetActive(message.icon);
             inst.TryAddComponent(out CanvasGroup group);
+            messages.Add(inst.gameObject);
             group.alpha = 1;
 
             RectTransform rt = (RectTransform)inst.transform;
@@ -71,6 +82,8 @@ namespace pigbrain.game.Boxhead.UI
                     rt.anchoredPosition = Vector2.Lerp(start, end, t);
                 });
             }
+
+            messages.Remove(inst.gameObject);
             Destroy(inst.gameObject);
         }
         #endregion
@@ -82,6 +95,7 @@ namespace pigbrain.game.Boxhead.UI
             inst.transform.position = p;
             inst.textTMP.text.text = message.runtimeText;
             inst.textTMP.text.color = message.color;
+            messages.Add(inst.gameObject);
 
             Vector3 scaleScale = new(4, 1, 1), endScale = Vector3.one;
             yield return new OverTime(0.25f, (t) =>
@@ -98,12 +112,7 @@ namespace pigbrain.game.Boxhead.UI
                     Vector3.Lerp(startPosition, endPosition, Ease.In(t, 1));
             });
 
-            // yield return new OverTime(0.25f, (t) =>
-            // {
-            //     inst.textTMP.text.color = message.color.WithA(1 - t);
-            //     inst.transform.localScale = Vector3.Lerp(endScale, scaleScale, t);
-            // });
-
+            messages.Remove(inst.gameObject);
             Destroy(inst.gameObject);
         }
         #endregion

@@ -37,8 +37,11 @@ namespace pigbrain.game.Boxhead.FiniteStateMachine
             SetTimeScale(timeScale);
         }
 
-        void OnApplicationQuit() => IsQuitting = true;
-        void OnDestroy() { if (!IsQuitting) currentScope?.Dispose(); }
+        protected virtual void OnDestroy()
+        {
+            if (ApplicationMonitor.IsQuitting) return;
+            currentScope?.Dispose();
+        }
 
         public virtual void SetTimeScale(float timeScale) =>
             this.timeScale = timeScale;

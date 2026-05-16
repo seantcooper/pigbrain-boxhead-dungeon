@@ -62,7 +62,7 @@ namespace pigbrain.game.Boxhead
             if (fsm.TryGetComponent(out Invincible invincible)) invincible.Activate(duration);
             CreateSoldiers();
             enter.Play(default, 0);
-            enter.Play(default, 0.2f);
+            // enter.Play(default, 0.2f);
             during.Play();
         }
 
@@ -70,8 +70,9 @@ namespace pigbrain.game.Boxhead
         {
             base.Exit();
             if (fsm.TryGetComponent(out Invincible invincible)) invincible.enabled = false;
+            enter.StopLast();
             exit.Play(default, 0);
-            exit.Play(default, 0.2f);
+            // exit.Play(default, 0.2f);
             during.StopLast();
         }
 

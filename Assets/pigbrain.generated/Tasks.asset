@@ -37,13 +37,19 @@ MonoBehaviour:
   - name: Level didn't start?
     duration: 1
     status: 1
-  - name: Souls are not merging
-    duration: 1
-    status: 1
   - name: Save should not save Dungeon during the spawning session - i.e. keep saving
       until combat happens
     duration: 1
     status: 1
+  - name: Navigation across traps should cost????
+    duration: 1
+    status: 1
+  - name: Saving during tutorial is broken
+    duration: 1
+    status: 1
+  - name: Souls are not merging
+    duration: 1
+    status: 2
   - name: Pooling reset not working correctly - trails on fireballs?
     duration: 1
     status: 2

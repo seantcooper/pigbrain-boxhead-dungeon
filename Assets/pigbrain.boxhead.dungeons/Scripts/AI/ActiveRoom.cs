@@ -17,6 +17,8 @@ using static pigbrain.core.Collections.CoroutineUtility;
 using static pigbrain.game.Boxhead.Environment.CellObject;
 using static pigbrain.game.Boxhead.Environment.RoomData;
 using UnityEngine.Rendering.Universal;
+using pigbrain.core.Geom;
+using pigbrain.core.Statistics;
 
 namespace pigbrain.game.Boxhead
 {
@@ -37,7 +39,8 @@ namespace pigbrain.game.Boxhead
         [SerializeField][ReadOnly] Room levelRoom;
         [SerializeField][ReadOnly] Room lootRoom;
         [SerializeField][ReadOnly] Room corridorRoom;
-        public static Room CompletedRoom;
+        [SerializeField][ReadOnly] Room completedRoom;
+
 
         public static event Action OnDungeonStarted;
         public static event Action OnDungeonStopped;
@@ -46,14 +49,20 @@ namespace pigbrain.game.Boxhead
         public event Action<Room> OnRoomCompleted;
         public event Action<Room> OnLevelStarted;
 
+        public Room GetCompletedRoom() => completedRoom;
         public Room GetCurrentRoom() => currentRoom;
         public Room GetLevelRoom() => levelRoom;
         public Room GetLootRoom() => lootRoom;
         public Room GetCorridorRoom() => corridorRoom;
-        public Player player => ActivePlayer.Instance.player;
+        Player player => ActivePlayer.Instance.player;
 
         RoomBuilder builder;
         bool forcedComplete;
+        public float progress;
+
+        CellObject[] cellObjects = null;
+        public static CellObject[] CellObjects =>
+            Instance.cellObjects ??= Instance.GetComponentsInChildren<CellObject>(true);
 
         #region Start
         protected override void Awake()
@@ -85,19 +94,32 @@ namespace pigbrain.game.Boxhead
 
         static Room[] Rooms => Instance.GetComponentsInChildren<Room>();
 
+        void DeactivatePurchases()
+        {
+            var lookup = CellObjects.Where(c => c.tracking).ToDictionary(c => c.name, c => c);
+            BootStrap.Instance.currentState.objectStates.ForEach(n =>
+            {
+                if (lookup.TryGetValue(n.name, out var c))
+                    c.SetActive(false);
+            });
+        }
+
         internal static Room FindRoom(string name) => Rooms.FirstOrDefault(r =>
             r.name == name) is Room room ? room : null;
 
         Room GetStartRoom()
         {
-            if (BootStrap.Instance.currentState
-                && FindRoom(BootStrap.Instance.currentState.completedRoom) is Room room)
+            if (BootStrap.Instance.currentState)
             {
-                Rooms.Where(r => r.level <= room.level).ForEach(r => { r.Activate(); r.Complete(true); });
-                forcedComplete = true;
-                levelRoom = room;
-                NextRoom();
-                return levelRoom;
+                DeactivatePurchases();
+                completedRoom = FindRoom(BootStrap.Instance.currentState.completedRoom);
+                if (completedRoom)
+                {
+                    Rooms.Where(r => r.level <= completedRoom.level).ForEach(r => { r.Activate(); r.Complete(true); });
+                    levelRoom = completedRoom;
+                    NextRoom(true);
+                    return levelRoom;
+                }
             }
             return Instance.builder.startRoom.GetComponent<Room>();
         }
@@ -127,8 +149,14 @@ namespace pigbrain.game.Boxhead
 
         IEnumerator RunRoom()
         {
+            BootStrap.StartSave();
+
             while (true)
             {
+                progress = (float)levelRoom.level / builder.finalRoom.level;
+                Debug.Log($"RunRoom Progress {progress} {builder.levelData.name} {levelRoom.level}/{builder.finalRoom.level}");
+                Persistence.CurrentData.SetFloat($"{builder.levelData.name}.progress", progress);
+
                 currentRoom = levelRoom;
 
                 // Wait for the players to enter
@@ -136,6 +164,7 @@ namespace pigbrain.game.Boxhead
                 yield return WaitForPlayers(levelRoom);
                 OnRoomStarted?.Invoke(levelRoom);
 
+                BootStrap.StopSave();
                 roomStart.Play();
 
                 // Run Spawners and Wait for them to finish
@@ -158,12 +187,11 @@ namespace pigbrain.game.Boxhead
                 levelRoom.Complete(forcedComplete);
                 OnRoomCompleted?.Invoke(levelRoom);
                 Debug.Log($"Room Completed: {levelRoom}");
-                CompletedRoom = levelRoom;
+                completedRoom = levelRoom;
 
-                BootStrap.Save();
+                BootStrap.StartSave();
 
                 if (levelRoom.level >= 5) DungeonSelector.UnlockAllAndSave();
-
 
                 if (levelRoom.type == Room.Type.Final)
                 {
@@ -172,32 +200,11 @@ namespace pigbrain.game.Boxhead
                     dungeonCompleted.Invoke();
                     yield break;
                 }
-
-
-                //     foreach (var corridor in levelRoom.nextRooms)
-                //     {
-                //         corridor.Activate();
-                //         if (!forcedComplete) StartCoroutine(FadeIn(corridor));
-                //         foreach (var next in corridor.nextRooms)
-                //         {
-                //             if (next.data.roomType == Room.Type.Loot)
-                //             {
-                //                 lootRoom = next;
-                //             }
-                //             else
-                //             {
-                //                 corridorRoom = corridor;
-                //                 levelRoom = next;
-                //             }
-                //             next.Activate();
-                //         }
-                //     }
-                //     Debug.Log(state = $"Next Room: {levelRoom}");
-                NextRoom();
+                NextRoom(forcedComplete);
             }
         }
 
-        void NextRoom()
+        void NextRoom(bool forcedComplete)
         {
             StartCoroutine(NavMap.Instance.RuntimeBakeResync());
             foreach (var corridor in levelRoom.nextRooms)
@@ -233,9 +240,14 @@ namespace pigbrain.game.Boxhead
             while (true)
             {
                 yield return new WaitUntil(() => ActivePlayer.Instance.player && ActivePlayer.Instance.player.transform.parent);
+                BootStrap.PauseSave(true);
+
                 if (player.GetRoom() != room) timeout = Time.time;
                 else if (Time.time >= timeout + MaxTimeout) break;
+
                 if (PlayersInRoom(room)) break;
+
+                BootStrap.PauseSave(false);
                 yield return WaitSecondsTenth;
             }
 
@@ -258,7 +270,9 @@ namespace pigbrain.game.Boxhead
 
             OnLevelStarted?.Invoke(room);
 
-            if (room.data.levelData.lockDoor) room.LockDoors(room);
+            // if (room.data.levelData.lockDoor) 
+            // Always lock door (because of saving during spawning?)
+            room.LockDoors(room);
 
             Analytics.CTX.levelid = room.GetLevelID();
             Analytics.Post(new Analytics.Level(Analytics.Level.Status.Started));

@@ -5,12 +5,14 @@ using System.Linq;
 using static pigbrain.core.Collections.CoroutineUtility;
 using pigbrain.core.Collections;
 using pigbrain.core.UnityObject;
+using Unity.Mathematics;
 
 namespace pigbrain.game.Boxhead
 {
     public class WeaponCache : MonoBehaviour
     {
         [SerializeField][Range(1, 10)] int maxWeapons = 6;
+        [SerializeField][Range(1, 5)] float holdScale = 2;
         [SerializeField] List<Weapon> weapons = new();
 
         public event Action<Weapon> OnWeaponAdded;
@@ -100,7 +102,10 @@ namespace pigbrain.game.Boxhead
         void OnAnimatorMove()
         {
             foreach (var carry in carrying)
+            {
                 carry.transform.SetPositionAndRotation(carry.parentTarget.position, carry.parentTarget.rotation);
+                carry.transform.localScale = (float3)holdScale;
+            }
         }
 
         void OnWeaponChange(Weapon.ChangeEvent e)

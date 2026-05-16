@@ -29,7 +29,7 @@ namespace pigbrain.game.Boxhead
         {
             GetComponent<Health>().onDamage += OnDamage;
             // using var _ = new LifetimeScope(effect.Instantiate(transform));
-            effect.Instantiate(transform);
+            effect.Instantiate(transform).transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             yield return new WaitForSeconds(duration);
             enabled = false;
         }

@@ -115,5 +115,26 @@ PrefabInstance:
     - {fileID: 7685830502202271814, guid: 992e9404867524c779320b49f7d09015, type: 3}
     - {fileID: 2915016670246162033, guid: 992e9404867524c779320b49f7d09015, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2898258142704761506, guid: 992e9404867524c779320b49f7d09015, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2045861209608162830}
   m_SourcePrefab: {fileID: 100100000, guid: 992e9404867524c779320b49f7d09015, type: 3}
+--- !u!1 &7982392477543171766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2898258142704761506, guid: 992e9404867524c779320b49f7d09015, type: 3}
+  m_PrefabInstance: {fileID: 5115959188014169108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2045861209608162830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982392477543171766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0579056a18e8e425abf4e5d6d1cb7311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: pigbrain.core::pigbrain.core.UnityObject.PoolGroup
+  id: Boxhead2 ExplodeModel (Zombie)

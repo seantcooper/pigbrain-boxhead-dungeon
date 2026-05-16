@@ -36,10 +36,11 @@ namespace pigbrain.game.Boxhead
 
         public void Combine(CommandContainer other) =>
             commands = commands.Concat(other.commands).ToArray();
-
         public bool IsValid(Transform target) =>
             commands.Where(c => c).Any(c => c.IsValid(target));
         public void Invoke(Transform target) =>
+            Invoke(commands, target);
+        public static void Invoke(Command[] commands, Transform target) =>
             commands.Where(c => c).ForEach(c => c.Invoke(target));
     }
 

@@ -75,7 +75,7 @@ namespace pigbrain.game.Boxhead
             var statsController = GetComponent<StatsController>();
             if (!statsController) return;
 
-            var purchasingController = ActiveRoom.Instance.player
+            var purchasingController = ActivePlayer.Instance.player
                 .GetComponentsInChildren<StatsController>(true)
                 .FirstOrDefault(s => s.id == statsController.id);
 

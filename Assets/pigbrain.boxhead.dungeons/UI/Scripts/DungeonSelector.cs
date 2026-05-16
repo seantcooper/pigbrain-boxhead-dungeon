@@ -20,6 +20,8 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField][InlineScriptableObject] LevelData dungeonSelected;
         [SerializeField] DungeonCard cardPrefab;
 
+        readonly List<DungeonCard> cards = new();
+
         public event Action<LevelData> OnSelectionChanged;
 
         public LevelData GetSelectedDungeon() => dungeonSelected;
@@ -28,19 +30,12 @@ namespace pigbrain.game.Boxhead.UI
             if (Instance == null) Instance = FindAnyObjectByType<DungeonSelector>(FindObjectsInactive.Include);
             return Instance.dungeonSelected;
         }
+
         void SelectDungeon(LevelData dungeon)
         {
             dungeonSelected = dungeon;
+            Persistence.CurrentData.SetString("DungeonSelector.selected", dungeonSelected.name);
             OnSelectionChanged?.Invoke(dungeon);
-        }
-
-        readonly List<DungeonCard> cards = new();
-        protected override void Awake()
-        {
-            base.Awake();
-            foreach (var levelData in dungeons.levelDatas)
-                cards.Add(CreateButton(levelData));
-            cards.Skip(1).ForEach(c => c.SetLock(!IsLocked));
         }
 
         [Inline("LOADALL")]
@@ -69,8 +64,45 @@ namespace pigbrain.game.Boxhead.UI
         }
         static bool IsLocked => Persistence.CurrentData.GetBool("DungeonSelector.Unlock");
 
-        DungeonCard CreateButton(LevelData levelData) =>
-            DungeonCard.CreateInstance(cardPrefab, levelData, transform, (ld) => SelectDungeon(ld));
+        void OnDisable()
+        {
+            RemoveButtons();
+        }
+        void OnEnable()
+        {
+            RemoveButtons();
+            CreateButtons();
+        }
+
+        void CreateButtons()
+        {
+            foreach (var levelData in dungeons.levelDatas)
+                cards.Add(CreateButton(levelData));
+            cards.Skip(1).ForEach(c => c.SetLock(!IsLocked));
+
+            var selected = Persistence.CurrentData.GetString("DungeonSelector.selected", "");
+            var selectedDungeon = dungeons.levelDatas.FirstOrDefault(l => l.name == selected);
+            if (selectedDungeon == null) selectedDungeon = dungeons.levelDatas.FirstOrDefault();
+
+            int index = Array.IndexOf(dungeons.levelDatas, selectedDungeon);
+            cards[index].Select();
+        }
+
+        void RemoveButtons()
+        {
+            cards.ForEach(c => c.DestroyObject());
+            cards.Clear();
+        }
+
+        DungeonCard CreateButton(LevelData levelData)
+        {
+            var progress = Persistence.CurrentData.GetFloat($"{levelData.name}.progress");
+            Debug.Log($"Progress {progress} {levelData.name}");
+            var card = DungeonCard.CreateInstance(cardPrefab, levelData, transform, (ld) => SelectDungeon(ld));
+            card.SetProgress(progress);
+            return card;
+
+        }
 
     }
 }

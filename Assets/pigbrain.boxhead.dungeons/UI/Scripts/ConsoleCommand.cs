@@ -35,7 +35,7 @@ namespace pigbrain.game.Boxhead.UI
         public override (Status, string) Parse(Console console, string[] parts)
         {
             if (!BootStrap.Instance) return (Status.Error, "Scene is not loaded!");
-            ActiveRoom.Instance.player.GetComponent<Health>().enabled = !ActiveRoom.Instance.player.GetComponent<Health>().enabled;
+            ActivePlayer.Instance.player.GetComponent<Health>().enabled = !ActivePlayer.Instance.player.GetComponent<Health>().enabled;
             return (Status.Success, "");
         }
     }
@@ -57,7 +57,7 @@ namespace pigbrain.game.Boxhead.UI
             {
                 foreach (var w in weapons)
                 {
-                    w.Instantiate(ActiveRoom.Instance.player.transform);
+                    w.Instantiate(ActivePlayer.Instance.player.transform);
                     w.transform.ResetLocal();
                 }
             }
@@ -194,14 +194,14 @@ namespace pigbrain.game.Boxhead.UI
             if (!BootStrap.Instance) return (Status.Error, "No Dungeon running");
             if (Catalog.Query.Find<GameObject>(parts[0]) is GameObject go)
             {
-                go.Instantiate(ActiveRoom.Instance.player.transform);
+                go.Instantiate(ActivePlayer.Instance.player.transform);
                 return (Status.Success, "");
             }
             // foreach (var kv in Catalog.Find<Weapon>())
             // {
             //     if (kv.Key.Equals(parts[0], StringComparison.OrdinalIgnoreCase))
             //     {
-            //         kv.Value.Instantiate(ActiveRoom.Instance.player.transform);
+            //         kv.Value.Instantiate(ActivePlayer.Instance.player.transform);
             //         return (Status.Success, "");
             //     }
             // }

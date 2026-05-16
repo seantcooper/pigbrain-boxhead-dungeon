@@ -290,7 +290,7 @@ namespace pigbrain.game.Boxhead.UI
         void RegisterPlayer()
         {
             player = ActivePlayer.Instance.player;
-            Debug.Log($"RegisterPlayer {ActiveRoom.Instance.player} {ActiveRoom.Instance.player.GetEntityId()}");
+            Debug.Log($"RegisterPlayer {ActivePlayer.Instance.player} {ActivePlayer.Instance.player.GetEntityId()}");
             screen.GetComponentInChildren<WeaponsContainer>().Bind(player);
             player.GetComponent<Health>().onDeath += () => exiting = true;
             edgeMarkers.target = player.transform;

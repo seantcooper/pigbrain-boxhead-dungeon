@@ -56,7 +56,9 @@ namespace pigbrain.game.Boxhead
         void OnDisable()
         {
             if (ActivePlayer.Instance) ActivePlayer.Instance.OnPlayerDead -= OnPlayerDead; enemykills.RemoveChangeListener(OnKill);
+            StopRage();
             StopAllCoroutines();
+            Debug.Log($"{this} {enabled} {isActiveAndEnabled}");
         }
 
         void OnKill(ChangeEvent ev)
@@ -90,23 +92,26 @@ namespace pigbrain.game.Boxhead
         void StartStateCoroutine(IEnumerator routine)
         {
             if (stateCoroutine != null) StopCoroutine(stateCoroutine);
-            stateCoroutine = StartCoroutine(routine);
+            if (isActiveAndEnabled) stateCoroutine = StartCoroutine(routine);
         }
 
         float rageEndTime;
         void StartRage()
         {
             rage.SetActive(true);
-            rageEndTime = ActiveRoom.Instance.player.Rage(true);
-            ActiveRoom.Instance.player.onChangeState += StopRage;
+            rageEndTime = ActivePlayer.Instance.player.Rage(true);
+            ActivePlayer.Instance.player.onChangeState += StopRage;
             StartStateCoroutine(UpdateRage());
         }
 
         void StopRage()
         {
             rage.SetActive(false);
-            ActiveRoom.Instance.player.Rage(false);
-            ActiveRoom.Instance.player.onChangeState -= StopRage;
+            if (ActivePlayer.HasPlayer)
+            {
+                ActivePlayer.Instance.player.Rage(false);
+                ActivePlayer.Instance.player.onChangeState -= StopRage;
+            }
             StartNormal();
         }
 

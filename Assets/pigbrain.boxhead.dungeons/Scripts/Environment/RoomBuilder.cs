@@ -130,6 +130,7 @@ namespace pigbrain.game.Boxhead.Environment
                 shape.children.ForEach(s => AddChild(shapeToData[shape], shapeToData[s]));
 
             startRoom = shapeToData.Values.FirstOrDefault(d => d.roomType == Room.Type.Start);
+            finalRoom = shapeToData.Values.FirstOrDefault(d => d.roomType == Room.Type.Final);
 
             Profiler.StopAndLog(p2, $"Create Rooms");
 

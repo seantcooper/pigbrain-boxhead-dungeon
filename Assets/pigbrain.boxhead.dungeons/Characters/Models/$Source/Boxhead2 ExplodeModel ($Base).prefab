@@ -570,6 +570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5091036251366274367}
+  - component: {fileID: -7862414097811442726}
   m_Layer: 0
   m_Name: Boxhead2 ExplodeModel ($Base)
   m_TagString: Untagged
@@ -606,6 +607,19 @@ Transform:
   - {fileID: 1568240404947520227}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7862414097811442726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2898258142704761506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0579056a18e8e425abf4e5d6d1cb7311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: pigbrain.core::pigbrain.core.UnityObject.PoolGroup
+  id: Boxhead2 ExplodeModel
 --- !u!1 &2915016670246162033
 GameObject:
   m_ObjectHideFlags: 0

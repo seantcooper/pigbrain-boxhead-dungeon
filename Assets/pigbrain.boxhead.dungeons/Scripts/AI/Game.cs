@@ -70,9 +70,9 @@ namespace pigbrain.game.Boxhead
             (Player player, Camera camera) monitor = (null, null);
             while (enabled)
             {
-                if (ActiveRoom.Instance && monitor.player != ActiveRoom.Instance.player)
+                if (ActiveRoom.Instance && monitor.player != ActivePlayer.Instance.player)
                 {
-                    monitor.player = ActiveRoom.Instance.player;
+                    monitor.player = ActivePlayer.Instance.player;
                     monitor.camera = monitor.player.GetComponentInChildren<Camera>(true);
                 }
                 if (monitor.camera && monitor.camera.gameObject.activeSelf != playerCamera3DToggle)

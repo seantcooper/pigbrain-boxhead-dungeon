@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.22448458, g: 0.20363119, b: 0.3018868, a: 1}
+  m_Color: {r: 0.13189746, g: 0.4583831, b: 0.49056602, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1234,6 +1234,7 @@ MonoBehaviour:
   weapons: {fileID: 5327785301671822750}
   enemies: {fileID: 2841791322696134535}
   locked: {fileID: 9214379547266793850}
+  progress: {fileID: 6690074961555817054}
   background: {fileID: 4268683727816702089}
 --- !u!1 &3404291732017267856
 GameObject:
@@ -1275,7 +1276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.634993, y: -0.9749756}
+  m_AnchoredPosition: {x: 6.6349945, y: -0.9749756}
   m_SizeDelta: {x: -13.270015, y: 1.9500111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1711336587608957228
@@ -1365,20 +1366,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3470369633297581178}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.05608285, w: 0.99842614}
+  m_LocalPosition: {x: 0, y: 0, z: 0.002905165}
   m_LocalScale: {x: 1.0001895, y: 1.0001897, z: 1.0001898}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2184596565177278372}
   - {fileID: 3981222862309303881}
   m_Father: {fileID: 2204759877697818018}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.43}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96, y: -23.5}
+  m_AnchoredPosition: {x: -68.74007, y: -34.28}
   m_SizeDelta: {x: 54.51007, y: 28.989998}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3962196296219601534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +2436,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6815835529323447693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7382471149108326455}
+  - component: {fileID: 928874302142355901}
+  - component: {fileID: 6690074961555817054}
+  m_Layer: 5
+  m_Name: Progress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7382471149108326455
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815835529323447693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2204759877697818018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -51.5}
+  m_SizeDelta: {x: -3.999998, y: -93.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &928874302142355901
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815835529323447693}
+  m_CullTransparentMesh: 1
+--- !u!114 &6690074961555817054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815835529323447693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 2100000, guid: 9b9329882ed90413d967a69757a8f1c6, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.70980394}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7099314191300119428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,6 +2622,7 @@ RectTransform:
   - {fileID: 3599120007586349823}
   - {fileID: 2841791322696134535}
   - {fileID: 5327785301671822750}
+  - {fileID: 7382471149108326455}
   m_Father: {fileID: 4506386162275497720}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2712,8 +2789,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 0, y: 43.199997}
+  m_SizeDelta: {x: -20, y: -78.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5472843525115523346
 CanvasRenderer:
@@ -2743,7 +2820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DUNGEON-01
+  m_text: THE BEGINNING
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf9e8cddb290c4086964d1fe7b3b4792, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 5dac3625a2c4b4d0e8c0fbefe32a1a9d, type: 2}
@@ -2770,7 +2847,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.3
+  m_fontSize: 24.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2778,9 +2855,9 @@ MonoBehaviour:
   m_fontSizeMax: 36
   m_fontStyle: 32
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -6.3
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: -25.3
@@ -2788,7 +2865,7 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_TextWrappingMode: 0
-  m_wordWrappingRatios: 0.4
+  m_wordWrappingRatios: 1
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
@@ -2809,7 +2886,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -6.7547607}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

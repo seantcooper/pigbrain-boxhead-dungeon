@@ -80,6 +80,8 @@ namespace pigbrain.game.Boxhead
         #region Create Box reward
         void CreateReward(Vector3 position, int count)
         {
+            if (!PoolingContainer.Instance) return;
+
             ChainReward best = null;
             foreach (var reward in rewards.items)
                 if (reward.prefab && count > reward.count) best = reward;

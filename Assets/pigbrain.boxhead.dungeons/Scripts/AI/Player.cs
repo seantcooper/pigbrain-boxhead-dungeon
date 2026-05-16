@@ -100,11 +100,6 @@ namespace pigbrain.game.Boxhead
             return 0;
         }
 
-        void OnDestroy()
-        {
-            // NavMap.TryGetLayer<NavMapLayerMove>().Remove(agent);
-        }
-
         void Update()
         {
             if (TimeScale.IsPaused) return;

@@ -19,6 +19,8 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField] TMP_Text header;
         [SerializeField] TMP_Text message;
 
+        readonly List<Message> messages = new();
+
         Color GetColor(string html) => ColorUtility.TryParseHtmlString(html, out Color color) ? color : Color.magenta;
         Color head => GetColor("#EEEEEE");
         Color kill => GetColor("#FF004B");
@@ -28,7 +30,12 @@ namespace pigbrain.game.Boxhead.UI
         Color buy => GetColor("#AB8700");
 
         void OnEnable() => StartCoroutine(Run());
-        void OnDisable() => StopAllCoroutines();
+        void OnDisable()
+        {
+            messages.ForEach(m => m.Destroy());
+            messages.Clear();
+            StopAllCoroutines();
+        }
 
         IEnumerator Run()
         {
@@ -37,11 +44,13 @@ namespace pigbrain.game.Boxhead.UI
                 gameObject.SetActive(false);
                 yield break;
             }
+
+            messages.Clear();
+
             ActiveRoom activeRoom = null;
             Room currentLevelRoom = null;
             Room currentLootRoom = null;
             Room currentCorridorRoom = null;
-            List<Message> messages = new();
 
             yield return new Sequencer(this)
                 .WaitUntil(() => activeRoom = ActiveRoom.Instance)
@@ -153,6 +162,7 @@ namespace pigbrain.game.Boxhead.UI
             }
 
             public void Remove() => text.StartCoroutine(Transition(invert: true));
+            public void Destroy() => Object.Destroy(text.gameObject);
 
             public void Complete()
             {

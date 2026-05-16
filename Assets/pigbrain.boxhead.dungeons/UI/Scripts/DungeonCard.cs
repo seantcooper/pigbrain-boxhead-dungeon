@@ -17,7 +17,10 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField] RectTransform weapons;
         [SerializeField] RectTransform enemies;
         [SerializeField] RectTransform locked;
+        [SerializeField] Image progress;
         [SerializeField] Image background;
+
+        public void Select() => toggle.isOn = true;
 
         public void SetLock(bool state)
         {
@@ -31,6 +34,23 @@ namespace pigbrain.game.Boxhead.UI
         {
             if (!background) return;
             background.color = color;
+        }
+
+
+        public void SetProgress(float value)
+        {
+            if (value == 0) progress.SetActive(false);
+            else
+            {
+                if (!progressMaterial) progress.material = progressMaterial = new(progress.material);
+                progressMaterial.SetFloat("_Fill", value);
+            }
+        }
+
+        Material progressMaterial;
+        void OnDestroy()
+        {
+            if (progressMaterial) Destroy(progressMaterial);
         }
 
         public static DungeonCard CreateInstance(DungeonCard prefab, LevelData levelData, Transform parent, Action<LevelData> onSelect)

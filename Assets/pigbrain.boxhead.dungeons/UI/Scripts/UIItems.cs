@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using pigbrain.core.Inspector;
 using pigbrain.core.Populator;
 using pigbrain.core.Project;
+using pigbrain.core.Statistics;
 using pigbrain.core.UnityObject;
 using UnityEngine;
 
@@ -23,8 +24,9 @@ namespace pigbrain.game.Boxhead.UI
         {
             if (tutorial)
             {
-                if (TryGetComponent(out AssetIdentity id) && appearence.Add(id.GetGuid()))
+                if (TryGetComponent(out AssetIdentity id) && !Persistence.CurrentData.GetBool(id.GetGuid()))
                 {
+                    Persistence.CurrentData.SetBool(id.GetGuid(), true);
                     var inst = tutorial.Instantiate(transform);
                     inst.transform.SetLocalPositionAndRotation(default, Quaternion.identity);
                 }

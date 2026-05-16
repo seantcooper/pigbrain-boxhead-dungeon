@@ -13,6 +13,10 @@ PrefabInstance:
       value: Text (Tutorial)
       objectReference: {fileID: 0}
     - target: {fileID: 5230064295904187791, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
+      propertyPath: traits
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230064295904187791, guid: 50bdd8073ccc14c3b9c902285dd810df, type: 3}
       propertyPath: 'commands.commands.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 345e509aed9c4476c9158a5119f27502, type: 2}

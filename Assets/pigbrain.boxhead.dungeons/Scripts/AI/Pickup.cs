@@ -8,6 +8,7 @@ using pigbrain.core.Audio;
 using Unity.Mathematics;
 using UnityEngine;
 using pigbrain.core.UnityObject;
+using pigbrain.core.Geom;
 
 namespace pigbrain.game.Boxhead
 {
@@ -20,21 +21,21 @@ namespace pigbrain.game.Boxhead
         [SerializeField] float expiresAfter = 0;
         [SerializeField][ReadOnly] Vector3 velocity;
 
-        Collider trigger; // awake
-        bool triggered; // Start 
+        Collider trigger;
         float startTime, endTime; // Start
-        Command[] backupCommands;
 
         public static event Action<Pickup> OnCreated;
         public static event Action<Pickup, Transform> OnPickup;
         public static int PickupCount;
-
         AssetIdentity id;
+
+        // requires restoring
+        bool wasMerged, triggered;
+        Command[] backupCommands;
 
         void Awake()
         {
             trigger = GetComponents<Collider>().FirstOrDefault(c => c.isTrigger);
-            backupCommands = commands.commands;
             if (!trigger) Debug.LogError("Pickups require a Collider as a Trigger");
         }
 
@@ -44,6 +45,12 @@ namespace pigbrain.game.Boxhead
             startTime = Time.time;
             Expiration();
             OnCreated?.Invoke(this);
+        }
+
+        void Remove()
+        {
+            if (traits.HasFlag(Traits.Disable)) gameObject.SetActive(false);
+            else Destroy(gameObject);
         }
 
         void OnTriggerEnter(Collider other) => OnTrigger(other);
@@ -64,34 +71,39 @@ namespace pigbrain.game.Boxhead
             OnPickup?.Invoke(this, other.transform);
             PickupCount++;
             if (traits.HasFlag(Traits.MoveTo)) StartCoroutine(MoveToTarget(other));
-            else Destroy(gameObject);
+            else Remove();
         }
 
         void MoveToMerge(Collider other)
         {
             if (!traits.HasFlag(Traits.Merge)) return;
             if (other.gameObject.layer != gameObject.layer) return;
-            if (id.Equals(other)) return;
+            if (!id.Equals(other)) return;
             if (!TryGetComponent(out Rigidbody rb)) return;
 
             Vector3 dir = (other.bounds.center - transform.position).normalized;
             rb.linearVelocity += dir * 5f;
 
-            if (Vector3.Distance(other.ClosestPoint(transform.position),
-                trigger.ClosestPoint(other.bounds.center)) > 0.1f) return;
+            var distsq = (transform.position - other.transform.position).sqrMagnitude;
+            float s1 = transform.localScale.Min(), s2 = other.transform.localScale.Min();
+            float d = (s1 + s2) * 0.7f;
+            if (distsq > d * d) return;
 
-            MergeWith(GetComponent<Pickup>());
-        }
+            var otherPickup = other.GetComponent<Pickup>();
+            if (otherPickup.wasMerged || wasMerged) return;
 
-        void MergeWith(Pickup other)
-        {
-            if (expiresAfter >= 0)
-                endTime = Mathf.Max(endTime, other.endTime);
-            commands.Combine(other.commands);
+            if (expiresAfter >= 0) endTime = Mathf.Max(endTime, otherPickup.endTime);
 
-            // Merge scales
-            // center if the same scale and more towards the largeset if not
+            backupCommands ??= commands.commands.ToArray();
+            commands.Combine(otherPickup.commands);
 
+            var scale = Mathf.Pow((s1 * s1 * s1) + (s2 * s2 * s2), 1f / 3f);
+            transform.localScale = Vector3.one * scale;
+
+            otherPickup.wasMerged = true;
+            rb.linearVelocity *= 0.1f;
+
+            otherPickup.Remove();
         }
 
         void Expiration()
@@ -106,7 +118,7 @@ namespace pigbrain.game.Boxhead
                 Vector3 start = transform.localScale, end = (float3)0.001f;
                 yield return new OverTime(DisappearTime, (t) => transform.localScale = Vector3.Lerp(start, end, t));
 
-                Destroy(gameObject);
+                Remove();
             }
             StartCoroutine(Disappear());
         }
@@ -121,7 +133,7 @@ namespace pigbrain.game.Boxhead
                 transform.position = Vector3.Lerp(startPosition, collider.bounds.center, t);
                 yield return new WaitForNextUpdate();
             }
-            Destroy(gameObject);
+            Remove();
         }
     }
 
@@ -138,6 +150,7 @@ namespace pigbrain.game.Boxhead
         Trigger = 1 << 2,
         Delay = 1 << 3,
         Merge = 1 << 4,
+        Disable = 1 << 5,
         [InspectorName("")] Other = 1 << 8,
     }
 }
