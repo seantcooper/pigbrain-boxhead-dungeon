@@ -15,6 +15,7 @@ using pigbrain.core.Graphics;
 using System.Collections.Generic;
 using pigbrain.core.UnityObject;
 using pigbrain.core.Audio;
+using pigbrain.core.Statistics;
 
 namespace pigbrain.game.Boxhead
 {
@@ -29,7 +30,7 @@ namespace pigbrain.game.Boxhead
 
     #region Control
     [Serializable]
-    public class PlayerControl : PlayerState, IAgentControllerInput
+    public class PlayerControl : PlayerState, IAgentController
     {
         PlayerInput playerInput;
         internal InputAction move;
@@ -42,8 +43,15 @@ namespace pigbrain.game.Boxhead
         public override void Enter() => fsm.nmaController.SetController(this);
         public override void Exit() => fsm.nmaController.SetController(null);
 
-        Vector3 IAgentControllerInput.GetAxisControl() =>
-            move.ReadValue<Vector2>().X_Y();
+        IAgentController.Result control;
+        IAgentController.Result IAgentController.GetAxisControl()
+        {
+            control.value = move.ReadValue<Vector2>().X_Y();
+            control.type = control.value.sqrMagnitude > 0.1f
+                ? IAgentController.Result.Type.Direction
+                : IAgentController.Result.Type.None;
+            return control;
+        }
     }
     #endregion
 
@@ -166,7 +174,7 @@ namespace pigbrain.game.Boxhead
 
     #region Follow
     [Serializable]
-    public sealed class PlayerFollow : PlayerState, IAgentControllerInput
+    public sealed class PlayerFollow : PlayerState, IAgentController
     {
         [SerializeField][Range(0.5f, 10)] internal float leaderDistance = 1;
         [SerializeField][Range(5, 20)] internal float lostDistance = 10;
@@ -194,13 +202,31 @@ namespace pigbrain.game.Boxhead
         public override void Cancel() => SetState(fsm.leave);
 
         #region AI Control
-        Vector3 IAgentControllerInput.GetAxisControl()
+        IAgentController.Result control;
+        IAgentController.Result IAgentController.GetAxisControl()
         {
-            if (!leader) return Vector3.zero;
+            if (!leader)
+            {
+                control.type = IAgentController.Result.Type.None;
+                return control;
+            }
+
             Vector3 bestPosition = fsm.GetRankPosition(leaderDistance);
             Vector3 delta = bestPosition - transform.position;
             float distance = delta.magnitude;
-            return distance < 0.5f ? Vector3.zero : delta.normalized;
+
+            if (distance > lostDistance || true)
+            {
+                control.type = IAgentController.Result.Type.Position;
+                control.value = bestPosition;
+            }
+            else if (distance >= 0.5f)
+            {
+                control.type = IAgentController.Result.Type.Direction;
+                control.value = delta.normalized;
+            }
+            else control.type = IAgentController.Result.Type.None;
+            return control;
         }
         #endregion
     }

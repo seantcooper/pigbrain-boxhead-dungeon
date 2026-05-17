@@ -5,6 +5,7 @@ using pigbrain.core.Collections;
 using pigbrain.core.Inspector;
 using System.Collections.Generic;
 using pigbrain.core.UnityObject;
+using System;
 
 namespace pigbrain.game.Boxhead.Navigation
 {
@@ -15,19 +16,19 @@ namespace pigbrain.game.Boxhead.Navigation
         const float MinSpeedSq = 0.00001f;
         [SerializeField, Range(0.5f, 10f)] float cornerProbeDistance = 2f;
 
-        Vector3 target;
-        bool hasTarget;
+        // Vector3 target;
+        // bool hasTarget;
         NavMeshAgent agent;
         NavMeshAgentState state;
-        IAgentControllerInput control;
+        IAgentController control;
         Vector3 velocity { get => state.velocity; set => state.velocity = value; }
 
-        public void SetController(IAgentControllerInput control) => this.control = control;
+        public void SetController(IAgentController control) => this.control = control;
 
         public void SetProbeDistance(float probeDistance) => cornerProbeDistance = probeDistance;
         public float GetProbeDistance() => cornerProbeDistance;
-        public void SetTarget(Vector3 target) { this.target = target; hasTarget = true; }
-        public void ClearTarget() => hasTarget = false;
+        // public void SetTarget(Vector3 target) { this.target = target; hasTarget = true; }
+        // public void ClearTarget() => hasTarget = false;
 
         void Awake()
         {
@@ -35,16 +36,25 @@ namespace pigbrain.game.Boxhead.Navigation
             agent = state.agent;
             agent.updatePosition = true;
             agent.updateRotation = true;
-            control ??= GetComponent<IAgentControllerInput>();
+            control ??= GetComponent<IAgentController>();
         }
 
         void Update()
         {
             if (TimeScale.IsPaused) return;
-            Vector3 input = control == null ? GetAxisControl() : control.GetAxisControl();
 
-            Vector3 newVelocity = input.sqrMagnitude < MinSpeedSq ? default
-                : GetMovementDirection(input) * agent.speed;
+            // Vector3 input = control == null ? GetAxisControl() : control.GetAxisControl();
+            IAgentController.Result r = control?.GetAxisControl() ?? default;
+
+            Vector3 newVelocity = default;
+            if (r.type == IAgentController.Result.Type.Direction)
+            {
+                newVelocity = GetMovementDirection(r.value) * agent.speed;
+            }
+            else if (r.type == IAgentController.Result.Type.Position)
+            {
+                newVelocity = GetMovementPosition(r.value) * agent.speed;
+            }
 
             velocity = Vector3.MoveTowards(velocity, newVelocity, agent.acceleration * Time.deltaTime);
 
@@ -58,40 +68,79 @@ namespace pigbrain.game.Boxhead.Navigation
         {
             if (!agent.isActiveAndEnabled) return default;
             Path ??= new();
+#if UNITY_EDITOR
             gizmoCorners.Clear(); gizmoMarkers.Clear(); gizmoResults.Clear();
+#endif
             Vector3 position = transform.position;
 
-            if (hasTarget) direction = this.target - position;
+            // if (hasTarget) direction = this.target - position;
             direction = direction.normalized;
 
             Vector3 d = direction * cornerProbeDistance;
             Vector3 sample = position + d;
 
-            if (NavMesh.SamplePosition(sample, out var hit, d.magnitude * 1.01f, agent.areaMask))
+            if (NavMesh.SamplePosition(sample, out var hit, cornerProbeDistance * 1.01f, state.areaMask))
                 sample = hit.position;
 
             if (agent.CalculatePath(sample, Path))
             {
+                if (Path.status != NavMeshPathStatus.PathComplete)
+                    return default;
+
                 Vector3[] corners = Path.corners;
+                if (corners == null || corners.Length < 2)
+                    return default;
+#if UNITY_EDITOR
                 gizmoCorners.AddRange(corners);
+#endif
                 for (int i = 1; i < corners.Length; i++)
                 {
                     var to = corners[i] - transform.position;
                     if (to.sqrMagnitude > 0.01f)
                     {
+#if UNITY_EDITOR
                         gizmoResults.Add(corners[i]);
-                        direction = to.normalized;
-                        break;
+#endif
+                        return to.normalized;
                     }
                 }
             }
-            return direction;
+            return default;
         }
         #endregion
 
-        Vector3 GetAxisControl() => default;
+        #region  Movement Direction
+        Vector3 GetMovementPosition(Vector3 destination)
+        {
+            if (!agent.isActiveAndEnabled) return default;
+            Path ??= new();
+
+            Vector3 position = transform.position;
+
+            if (agent.CalculatePath(destination, Path))
+            {
+                if (Path.status != NavMeshPathStatus.PathComplete)
+                    return default;
+
+                Vector3[] corners = Path.corners;
+                if (corners == null || corners.Length < 2)
+                    return default;
+
+                for (int i = 1; i < corners.Length; i++)
+                {
+                    var to = corners[i] - position;
+                    if (to.sqrMagnitude > 0.01f)
+                        return to.normalized;
+                }
+            }
+            return default;
+        }
+        #endregion
+
+        // Vector3 GetAxisControl() => default;
 
         #region  Gizmos
+#if UNITY_EDITOR
         readonly List<Vector3> gizmoCorners = new(), gizmoMarkers = new(), gizmoResults = new();
         [SerializeField][HideInInspector] bool showGizmos = true;
         [ContextMenu("Show Gizmos")] void ToogleGizmos() => showGizmos = !showGizmos;
@@ -108,13 +157,20 @@ namespace pigbrain.game.Boxhead.Navigation
             Gizmos.color = Color.red;
             if (!gizmoResults.IsNullOrEmpty())
                 GizmosUtility.DrawPoints(gizmoResults, 0.2f);
-
         }
+#endif
         #endregion
     }
 
-    public interface IAgentControllerInput
+    public interface IAgentController
     {
-        Vector3 GetAxisControl();
+        Result GetAxisControl();
+
+        public struct Result
+        {
+            public Type type;
+            public Vector3 value;
+            public enum Type { None, Direction, Position, }
+        }
     }
 }

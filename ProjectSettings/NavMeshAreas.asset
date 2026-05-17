@@ -67,8 +67,8 @@ NavMeshProjectSettings:
     cost: 1
   - name: 
     cost: 1
-  - name: 
-    cost: 1
+  - name: x2
+    cost: 2
   m_LastAgentTypeID: 658490984
   m_Settings:
   - serializedVersion: 3

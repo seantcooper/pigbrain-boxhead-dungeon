@@ -35,14 +35,14 @@ namespace pigbrain.game.Boxhead.Environment
 
     public static class CellObjectX
     {
-        public static GameLayer GetUnityLayer(this CellObject.GeomType geomType) => geomType switch
+        public static Layer GetUnityLayer(this CellObject.GeomType geomType) => geomType switch
         {
-            CellObject.GeomType.Furniture => GameLayer.Furniture,
-            CellObject.GeomType.Floor => GameLayer.Terrain,
-            CellObject.GeomType.Wall => GameLayer.Wall,
-            CellObject.GeomType.Door => GameLayer.Wall,
-            CellObject.GeomType.Loot => GameLayer.Furniture,
-            CellObject.GeomType.Corner => GameLayer.Wall,
+            CellObject.GeomType.Furniture => Layer.Furniture,
+            CellObject.GeomType.Floor => Layer.Terrain,
+            CellObject.GeomType.Wall => Layer.Wall,
+            CellObject.GeomType.Door => Layer.Wall,
+            CellObject.GeomType.Loot => Layer.Furniture,
+            CellObject.GeomType.Corner => Layer.Wall,
             _ => throw new System.Exception($"Unknown GeomType {geomType}"),
         };
     }

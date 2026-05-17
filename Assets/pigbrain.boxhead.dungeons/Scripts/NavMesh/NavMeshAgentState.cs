@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using pigbrain.core.AI;
 using pigbrain.core.UnityObject;
+using pigbrain.generated;
 
 namespace pigbrain.game.Boxhead.Navigation
 {
@@ -18,6 +19,7 @@ namespace pigbrain.game.Boxhead.Navigation
         [SerializeField] string animatorSpeed = "Speed";
 
         [Header("Repath")]
+        public NavAreaFlags excludeMask;
         [SerializeField][MinMaxRange(0.1f, 10f)] MinMaxFloat repathDistance = new(3, 10);
         [SerializeField][MinMaxRange(0.1f, 2f)] MinMaxFloat repathInterval = new(0.1f, 1);
 
@@ -31,13 +33,15 @@ namespace pigbrain.game.Boxhead.Navigation
         [HideInInspector] public NavMeshAgent agent;
         [HideInInspector] public AnimationController animator;
 
+        public int areaMask => agent.areaMask & ~(int)excludeMask;
+
         void OnValidate()
         {
             agent = GetComponent<NavMeshAgent>();
             animator = GetComponentInChildren<AnimationController>();
         }
 
-        void Start() => agent.TryWarp(transform.position);
+        void Start() => agent.TryWarp(transform.position, areaMask);
         void Update() { if (!TimeScale.IsPaused) UpdateMovement(); }
         void LateUpdate() { if (!TimeScale.IsPaused) UpdateRotation(); }
 
@@ -87,7 +91,7 @@ namespace pigbrain.game.Boxhead.Navigation
 
             if (!agent.isOnNavMesh)
             {
-                if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1, agent.areaMask))
+                if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1, areaMask))
                     agent.Warp(hit.position);
                 else
                 {

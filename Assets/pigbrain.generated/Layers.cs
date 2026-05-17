@@ -2,7 +2,7 @@
 
 namespace pigbrain.generated
 {
-    public enum GameLayer
+    public enum Layer
     {
         Default = 0,
         TransparentFX = 1,
@@ -25,6 +25,7 @@ namespace pigbrain.generated
         Camera = 25,
         WorldPP = 26,
         UIPP = 27,
+        x = 31,
     }
 }
 
@@ -34,7 +35,7 @@ namespace pigbrain.generated
 namespace pigbrain.generated
 {
     [System.Flags]
-    public enum GameLayerFlags
+    public enum LayerFlags
     {
         None = 0,
         Default = 1 << 0,
@@ -58,6 +59,7 @@ namespace pigbrain.generated
         Camera = 1 << 25,
         WorldPP = 1 << 26,
         UIPP = 1 << 27,
+        x = 1 << 31,
         All = ~0
     }
 }

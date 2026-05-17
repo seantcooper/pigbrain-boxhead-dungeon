@@ -46,6 +46,7 @@ namespace pigbrain.game.Boxhead.UI
             }
 
             messages.Clear();
+            Persistence.CurrentData.SetBool(Key, true);
 
             ActiveRoom activeRoom = null;
             Room currentLevelRoom = null;
@@ -78,7 +79,7 @@ namespace pigbrain.game.Boxhead.UI
                 .Call(() => currentLevelRoom.LockDoors(false, RoomData.Cell.Type.Exit))
 
                 .WaitForSeconds(0.25f)
-                .Call(() => messages.Add(new(message, "PROCEED TO WARM UP", level, transform)))
+                .Call(() => messages.Add(new(message, $"PROCEED TO {ActiveRoom.Instance.GetLevelRoom().title}", level, transform)))
                 .WaitUntil(() => ActivePlayer.Room == currentCorridorRoom)
                 .Call(() => messages[^1].Complete())
                 .WaitForSeconds(1)
@@ -115,7 +116,7 @@ namespace pigbrain.game.Boxhead.UI
                     messages.ForEach(m => m.Remove());
                     messages.Clear();
                 })
-                .Call(() => Persistence.CurrentData.SetBool(Key, true))
+                // .Call(() => Persistence.CurrentData.SetBool(Key, true))
                 .Run();
         }
 

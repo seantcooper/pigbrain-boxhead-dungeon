@@ -156,7 +156,8 @@ namespace pigbrain.game.Boxhead
                     Rnd rnd = new(Rnd.GetIntervalSeed(this.GetUniqueID(), 5));
                     var off = RankPositions[rankIndex] * distance + rnd.NextVector3FlatDirection() * distance / 4;
                     Vector3 position = leader.transform.position + leader.transform.TransformDirection(off);
-                    if (NavMesh.SamplePosition(position, out var hit, 5, agent.areaMask))
+
+                    if (NavMesh.SamplePosition(position, out var hit, 5, nmaState.areaMask))
                         return hit.position;
                     return position;
                 }

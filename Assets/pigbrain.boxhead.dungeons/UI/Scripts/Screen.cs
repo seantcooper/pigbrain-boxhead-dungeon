@@ -100,7 +100,13 @@ namespace pigbrain.game.Boxhead.UI
             }
             yield return new WaitUntil(() => loadCount == 0);
             yield return new WaitForSeconds(1);
-            SetState(fsm.main);
+
+            if (Persistence.CurrentData.GetBool("SkipSelection", true))
+            {
+                Persistence.CurrentData.SetBool("SkipSelection", false);
+                SetState(fsm.loading);
+            }
+            else SetState(fsm.main);
         }
     }
     #endregion

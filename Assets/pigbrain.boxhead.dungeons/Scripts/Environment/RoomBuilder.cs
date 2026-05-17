@@ -307,7 +307,7 @@ namespace pigbrain.game.Boxhead.Environment
             volume.isGlobal = true;
             volume.weight = 0;
             volume.sharedProfile = profile;
-            volume.gameObject.layer = (int)GameLayer.WorldPP;
+            volume.gameObject.layer = (int)Layer.WorldPP;
             return volume;
         }
         #endregion
@@ -386,7 +386,7 @@ namespace pigbrain.game.Boxhead.Environment
                 var wp = data.transform.TransformPoint(p);
 
                 if (Physics.Raycast(wp + Vector3.up, Vector3.down, out var hit, 2f,
-                    (int)GameLayerFlags.Terrain, QueryTriggerInteraction.Ignore))
+                    (int)LayerFlags.Terrain, QueryTriggerInteraction.Ignore))
                 {
                     wp = wp.WithY(hit.point.y);
                     p = data.transform.InverseTransformPoint(wp).AddY(0.01f);
@@ -620,7 +620,7 @@ namespace pigbrain.game.Boxhead.Environment
             {
                 var fog = new GameObject("fog") { transform = { parent = data.transform } };
                 fog.transform.localPosition = Vector3.up * fogHeight;
-                fog.layer = (int)GameLayer.Ceiling;
+                fog.layer = (int)Layer.Ceiling;
 
                 var rects = ExtractRects(data.boundary.floor.ToHashSet());
                 var verts = new List<Vector3>();
@@ -671,7 +671,7 @@ namespace pigbrain.game.Boxhead.Environment
                     float2 center = (float2)pos + (float2)size / 2f;
                     inst.transform.position = data.GetWorldPosition(center) + Vector3.up * (gridSize + 0.5f);
                 }
-                ceiling.SetLayer((int)GameLayer.Ceiling);
+                ceiling.SetLayer((int)Layer.Ceiling);
 
                 data.GetComponent<Room>().zone.deactivationObjects.Add(ceiling);
             }
@@ -702,7 +702,7 @@ namespace pigbrain.game.Boxhead.Environment
                     float2 center = (float2)pos + (float2)size / 2f;
                     inst.transform.position = data.GetWorldPosition(center).WithY(gridSize * 0.5f - 0.1f);
                 }
-                voids.SetLayer((int)GameLayer.Void);
+                voids.SetLayer((int)Layer.Void);
                 data.GetComponent<Room>().zone.deactivationObjects.Add(voids);
             }
             datas.ForEach(MarkFloor);

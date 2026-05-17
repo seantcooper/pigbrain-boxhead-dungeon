@@ -33,6 +33,7 @@ namespace pigbrain.game.Boxhead.Environment
         internal IEnumerable<Room> nextRooms => data.children.Select(c => c.GetComponent<Room>());
         internal Type type => data.roomType;
         internal State currentState => state;
+        internal string title => data.levelData.title;
         RoomItem[] roomItemRemoval => GetComponentsInChildren<RoomItem>(true);
 
         #region └Lock Doors

@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1817139966183365338, guid: 17c447decf7664966bf70f2d40739895, type: 3}
+      propertyPath: excludeMask
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 2055974459158617509, guid: 17c447decf7664966bf70f2d40739895, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -166,11 +170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4743370780176627039, guid: 17c447decf7664966bf70f2d40739895, type: 3}
       propertyPath: areas.Array.data[0].cost
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4743370780176627039, guid: 17c447decf7664966bf70f2d40739895, type: 3}
       propertyPath: areas.Array.data[0].name
-      value: Walkable
+      value: Danger
       objectReference: {fileID: 0}
     - target: {fileID: 4790558360006824678, guid: 17c447decf7664966bf70f2d40739895, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

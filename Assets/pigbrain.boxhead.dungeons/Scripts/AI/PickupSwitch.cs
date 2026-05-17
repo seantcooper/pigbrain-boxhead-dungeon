@@ -65,7 +65,7 @@ namespace pigbrain.game.Boxhead
                 if (Physics.CheckSphere(p, radius, positionMask, QueryTriggerInteraction.Ignore))
                     return false;
 
-                if (Physics.Raycast(p + Vector3.up * 1, Vector3.down, out RaycastHit hit, 2, (int)GameLayerFlags.Terrain))
+                if (Physics.Raycast(p + Vector3.up * 1, Vector3.down, out RaycastHit hit, 2, (int)LayerFlags.Terrain))
                 {
                     return Mathf.Abs(hit.point.y - turretPos.y) < 0.5f;
                     // return false;

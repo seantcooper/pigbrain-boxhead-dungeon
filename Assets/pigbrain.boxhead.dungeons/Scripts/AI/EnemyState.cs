@@ -22,7 +22,7 @@ namespace pigbrain.game.Boxhead
 
         public void SetTrigger(string name) => nmaState.animator.SetTrigger(name);
 
-        const int DefaultSightMask = (int)(GameLayerFlags.Wall | GameLayerFlags.Furniture | GameLayerFlags.Terrain);
+        const int DefaultSightMask = (int)(LayerFlags.Wall | LayerFlags.Furniture | LayerFlags.Terrain);
         public bool HasLOS()
         {
             if (!fsm.target) return false;

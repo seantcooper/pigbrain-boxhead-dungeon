@@ -102,7 +102,7 @@ namespace pigbrain.game.Boxhead
 
             for (int i = 0; i <= bounces; i++)
             {
-                if (Physics.Raycast(new Ray(position, direction), out RaycastHit hit, 100, (int)GameLayerFlags.Wall))
+                if (Physics.Raycast(new Ray(position, direction), out RaycastHit hit, 100, (int)LayerFlags.Wall))
                 {
                     sum += (hit.point - position).magnitude;
                     yield return (hit.point, sum);
