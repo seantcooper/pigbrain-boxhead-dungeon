@@ -313,7 +313,6 @@ namespace pigbrain.game.Boxhead.Environment
         }
         #endregion
 
-
         #region Paste Board
         public class PasteBoard
         {
@@ -385,7 +384,6 @@ namespace pigbrain.game.Boxhead.Environment
         #endregion
 
         #region Gizmos
-
         [SerializeField][HideInInspector] bool showGizmos = true;
         [ContextMenu("Show Gizmos")] void ToogleGizmos() => showGizmos = !showGizmos;
         void OnDrawGizmos()

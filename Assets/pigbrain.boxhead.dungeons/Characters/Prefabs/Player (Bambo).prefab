@@ -454,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848465973858448242, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
       propertyPath: m_WalkableMask
-      value: 57
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 1083508729392029826, guid: 6a59cab80af594e6cb5532b2726b2c80, type: 3}
       propertyPath: stats

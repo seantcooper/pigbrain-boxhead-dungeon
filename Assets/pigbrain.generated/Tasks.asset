@@ -25,15 +25,18 @@ MonoBehaviour:
   - name: Level didn't start?
     duration: 1
     status: 1
-  - name: Navigation across traps should cost????
-    duration: 1
-    status: 1
   - name: Lose the bored button
     duration: 1
     status: 1
   - name: Upgrade soliders over time - if they succeed in a level?
     duration: 1
     status: 1
+  - name: Simple Dungeon Creator
+    duration: 1
+    status: 1
+  - name: Navigation across traps should cost????
+    duration: 1
+    status: 2
   - name: Saving during tutorial is broken
     duration: 1
     status: 2
