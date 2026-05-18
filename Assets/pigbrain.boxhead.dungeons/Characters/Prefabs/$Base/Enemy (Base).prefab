@@ -164,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::pigBrain.Prototype.Boxhead.NavMeshAgentState
   velocity: {x: 0, y: 0, z: 0}
   animatorSpeed: Speed
+  excludeMask: 0
   repathDistance:
     min: 3
     max: 10
@@ -224,6 +225,9 @@ MonoBehaviour:
     onDeath:
       commands:
       - {fileID: 0}
+    effect: {fileID: 0}
+    explodeModel: {fileID: 0}
+    shake: 1
   enrage:
     ufsm: {fileID: 7256660330333315722}
     enabled: 0
@@ -302,7 +306,6 @@ MonoBehaviour:
   - stat: 62
     component: {fileID: 7256660330333315722}
     memberName: SetAttackDamage
-  showGizmos: 1
 --- !u!114 &3775833223673652446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,9 +354,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66889aa8b31e49e5a212c358496d883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.HitEffect
-  flashMaterial: {fileID: 2100000, guid: 297f74c260f1c494f972002d5711ee34, type: 2}
+  traits: 1
+  damageMaterial: {fileID: 2100000, guid: 297f74c260f1c494f972002d5711ee34, type: 2}
+  damageScale: 1.2
+  deathMaterial: {fileID: 2100000, guid: 297f74c260f1c494f972002d5711ee34, type: 2}
+  deathScale: 1
   duration: 0.1
-  renderers: []
+  container: {fileID: 0}
 --- !u!114 &7607933041485127511
 MonoBehaviour:
   m_ObjectHideFlags: 0

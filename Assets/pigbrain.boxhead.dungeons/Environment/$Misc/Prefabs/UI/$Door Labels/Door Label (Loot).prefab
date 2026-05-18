@@ -48,41 +48,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
+    - target: {fileID: 576247395130904161, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000061817246
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000061817246
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807439712239208015, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 0d2aeda0adbca4cefa09927813e3e7ef, type: 2}
     - target: {fileID: 7992573392226633996, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: m_Name
       value: Door Label (Loot)
       objectReference: {fileID: 0}
     - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 7465619382376499373, guid: 87928c07e4dc04cefab80845de2c9a75, type: 3}
-    - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: color.g
-      value: 0.9019608
+      propertyPath: color.b
+      value: 0.042452812
       objectReference: {fileID: 0}
     - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: color.r
-      value: 1
+      propertyPath: color.g
+      value: 0.78596014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

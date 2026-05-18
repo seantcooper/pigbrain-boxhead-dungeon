@@ -206,9 +206,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.HitEffect
   traits: 1
-  flashMaterial: {fileID: 2100000, guid: 297f74c260f1c494f972002d5711ee34, type: 2}
+  damageMaterial: {fileID: 2100000, guid: 297f74c260f1c494f972002d5711ee34, type: 2}
+  damageScale: 1.2
+  deathMaterial: {fileID: 2100000, guid: 2970a3999c0b34d358807efad1c7e3d2, type: 2}
+  deathScale: 1.4
   duration: 0.1
-  scale: 1.1
   container: {fileID: 7302531706763521051}
 --- !u!114 &5978934858633079017
 MonoBehaviour:
@@ -330,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::pigBrain.Prototype.Boxhead.NavMeshAgentAnimator
   velocity: {x: 0, y: 0, z: 0}
   animatorSpeed: Speed
+  excludeMask: 0
   repathDistance:
     min: 3
     max: 10
@@ -573,6 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Game.Boxhead.WeaponCache
   maxWeapons: 4
+  holdScale: 2
   weapons: []
   rightHand: {fileID: 2914830174536843841}
   leftHand: {fileID: 5100568637084682777}

@@ -309,10 +309,32 @@ PrefabInstance:
     - {fileID: -4472931898378031914, guid: 4762b8d2df8064baea6ad8a418e1e3a9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -1883237631007921319, guid: 4762b8d2df8064baea6ad8a418e1e3a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8499048979210115713}
   m_SourcePrefab: {fileID: 100100000, guid: 4762b8d2df8064baea6ad8a418e1e3a9, type: 3}
 --- !u!4 &4347237901701028156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4762b8d2df8064baea6ad8a418e1e3a9, type: 3}
   m_PrefabInstance: {fileID: 4314101734935658199}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6774436323163084174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1883237631007921319, guid: 4762b8d2df8064baea6ad8a418e1e3a9, type: 3}
+  m_PrefabInstance: {fileID: 4314101734935658199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8499048979210115713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6774436323163084174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5bf367b61d004106b1cc564ac15659a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: pigbrain.core::pigbrain.core.Motion.MotionEvent
+  onStart: {fileID: 0}
+  onEnable: {fileID: 11400000, guid: c99f9161ad9d54e5586afdcb493bad0c, type: 2}

@@ -286,7 +286,7 @@ namespace pigbrain.game.Boxhead
         #region Fade In
         IEnumerator FadeIn(Room start)
         {
-            Debug.Log("FadeIn");
+            // Debug.Log("FadeIn");
             Vector3 p = start.data.Find(Cell.Type.Enter, GeomType.Floor).FirstOrDefault().transform.position;
 
             float time = Time.time;

@@ -10,9 +10,11 @@ namespace pigbrain.game.Boxhead
     public class HitEffectMesh : MonoBehaviour
     {
         [SerializeField] Traits traits = Traits.OverlayMaterials;
-        [SerializeField] Material flashMaterial;
+        [SerializeField] Material damageMaterial;
+        [SerializeField] float damageScale = 1.1f;
+        [SerializeField] Material deathMaterial;
+        [SerializeField] float deathScale = 1.1f;
         [SerializeField] float duration = 0.06f;
-        [SerializeField] float scale = 1.1f;
         [SerializeField] Transform container;
         (Renderer r, MaterialStack stack)[] renderers;
         float timer;
@@ -22,13 +24,14 @@ namespace pigbrain.game.Boxhead
 
         class MaterialStack
         {
-            public Material[] original, flash;
+            public Material[] original, damage, death;
             public static int Key(Material[] original) => original[0].GetHashCode();
         }
 
         void Start()
         {
             GetComponent<Health>().onDamageApplied += OnDamage;
+            GetComponent<Health>().onDeath += OnDeath;
             timer = -1;
         }
 
@@ -37,6 +40,7 @@ namespace pigbrain.game.Boxhead
         void InitialiseRenderers()
         {
             if (renderers != null) return;
+
             renderers = GetContainer().GetComponentsInChildren<Renderer>().Select(r =>
             {
                 var mats = r.sharedMaterials;
@@ -48,11 +52,13 @@ namespace pigbrain.game.Boxhead
                     Stacks[key] = stack = new MaterialStack
                     {
                         original = r.sharedMaterials,
-                        flash = r.sharedMaterials.Append(flashMaterial).ToArray()
+                        damage = damageMaterial ? r.sharedMaterials.Append(damageMaterial).ToArray() : r.sharedMaterials,
+                        death = deathMaterial ? r.sharedMaterials.Append(deathMaterial).ToArray() : r.sharedMaterials
                     };
                 }
                 return (r, stack);
             }).ToArray();
+
             originalScale = GetContainer().localScale;
         }
 
@@ -61,8 +67,17 @@ namespace pigbrain.game.Boxhead
             InitialiseRenderers();
             timer = duration;
             foreach (var (r, stack) in renderers)
-                r.sharedMaterials = stack.flash;
-            GetContainer().localScale = originalScale * scale;
+                r.sharedMaterials = stack.damage;
+            GetContainer().localScale = originalScale * damageScale;
+        }
+
+        void OnDeath()
+        {
+            InitialiseRenderers();
+            timer = duration;
+            foreach (var (r, stack) in renderers)
+                r.sharedMaterials = stack.death;
+            GetContainer().localScale = originalScale * deathScale;
         }
 
         void LateUpdate()

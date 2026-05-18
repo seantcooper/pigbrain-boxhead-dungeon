@@ -350,7 +350,7 @@ namespace pigbrain.game.Boxhead.UI
                 yield break;
             }
 
-            ActivateBored();
+            // ActivateBored();
             if (fsm.pause.CanSet())
             {
                 yield return fsm.pause.RunState();

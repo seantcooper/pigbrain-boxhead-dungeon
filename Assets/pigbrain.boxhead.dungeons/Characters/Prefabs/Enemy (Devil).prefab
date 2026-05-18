@@ -450,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: grow.scale
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: enrage.range
@@ -656,13 +656,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4637415444786213056, guid: c79396af165bb4cf3b39070b583254d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6569808070413242343}
   m_SourcePrefab: {fileID: 100100000, guid: c79396af165bb4cf3b39070b583254d9, type: 3}
 --- !u!4 &225485229783298328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5273254779591743183, guid: c79396af165bb4cf3b39070b583254d9, type: 3}
   m_PrefabInstance: {fileID: 5336564173136914391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &744255098804410135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4637415444786213056, guid: c79396af165bb4cf3b39070b583254d9, type: 3}
+  m_PrefabInstance: {fileID: 5336564173136914391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6569808070413242343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744255098804410135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5bf367b61d004106b1cc564ac15659a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: pigbrain.core::pigbrain.core.Motion.MotionEvent
+  onStart: {fileID: 0}
+  onEnable: {fileID: 11400000, guid: 9b689022623194585a99c47265b358a7, type: 2}
 --- !u!23 &989568183455198536 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5167018358847490719, guid: c79396af165bb4cf3b39070b583254d9, type: 3}

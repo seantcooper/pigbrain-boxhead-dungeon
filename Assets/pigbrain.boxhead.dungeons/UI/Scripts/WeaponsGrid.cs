@@ -73,7 +73,7 @@ namespace pigbrain.game.Boxhead.UI
 
         internal void StartEdit()
         {
-            Debug.Log($"Start Edit: {editing} {name}");
+            // Debug.Log($"Start Edit: {editing} {name}");
             if (editing) return;
             editing = true;
             Transition(true);
@@ -82,7 +82,7 @@ namespace pigbrain.game.Boxhead.UI
 
         internal void StopEdit()
         {
-            Debug.Log($"Stop Edit: {editing} {name}");
+            // Debug.Log($"Stop Edit: {editing} {name}");
             if (!editing) return;
             editing = false;
             Transition(false);

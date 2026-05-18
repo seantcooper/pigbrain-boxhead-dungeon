@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5198376366953749, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 202583639458643954, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,53 +52,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000061817246
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000061817246
-      objectReference: {fileID: 0}
-    - target: {fileID: 5369753085911712877, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807439712239208015, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+    - target: {fileID: 3028421095560866135, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 60e09b2539e2c48be99f55119dfd16a3, type: 2}
+      objectReference: {fileID: 2100000, guid: 3dbedc48c7b104109a6633ece4952c93, type: 2}
+    - target: {fileID: 6614689332768187931, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3dbedc48c7b104109a6633ece4952c93, type: 2}
     - target: {fileID: 7992573392226633996, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: m_Name
-      value: Door Label (Entrance)
-      objectReference: {fileID: 0}
-    - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 7465619382376499373, guid: 87928c07e4dc04cefab80845de2c9a75, type: 3}
-    - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: color.a
-      value: 0.5019608
+      value: Door Label (Exit)
       objectReference: {fileID: 0}
     - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: color.b
-      value: 1
+      value: 0.29803923
       objectReference: {fileID: 0}
     - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: color.g
-      value: 0.7490196
+      value: 0.7254902
       objectReference: {fileID: 0}
     - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: color.r
-      value: 0
+      value: 0.30588236
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

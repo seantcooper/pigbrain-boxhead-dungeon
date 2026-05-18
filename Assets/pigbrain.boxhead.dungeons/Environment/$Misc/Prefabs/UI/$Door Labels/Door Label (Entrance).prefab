@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5198376366953749, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 202583639458643954, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.81223
@@ -48,30 +52,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.000000061817246
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354497323173638325, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000061817246
-      objectReference: {fileID: 0}
+    - target: {fileID: 3028421095560866135, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 60e09b2539e2c48be99f55119dfd16a3, type: 2}
+    - target: {fileID: 6614689332768187931, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 60e09b2539e2c48be99f55119dfd16a3, type: 2}
     - target: {fileID: 7992573392226633996, guid: af086759faa37483b855035c7f09ebd9, type: 3}
       propertyPath: m_Name
-      value: Door Label (Exit)
+      value: Door Label (Entrance)
       objectReference: {fileID: 0}
     - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 7465619382376499373, guid: 87928c07e4dc04cefab80845de2c9a75, type: 3}
+      propertyPath: color.b
+      value: 0.29411763
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+      propertyPath: color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061732484104461382, guid: af086759faa37483b855035c7f09ebd9, type: 3}
+      propertyPath: color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

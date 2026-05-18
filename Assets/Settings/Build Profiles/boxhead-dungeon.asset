@@ -185,7 +185,7 @@ MonoBehaviour:
     - line: '|   loadStoreDebugModeEnabled: 0'
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
-    - line: '|   bundleVersion: 0.3.43'
+    - line: '|   bundleVersion: 0.3.45'
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: -944628639613478452, guid: daaa2d149b8a74ddf913e39d6806fc84,
         type: 3}'
@@ -886,7 +886,7 @@ MonoBehaviour:
     - line: '|   webGLWasmArithmeticExceptions: 0'
     - line: '|   webGLLinkerTarget: 1'
     - line: '|   webGLThreadsSupport: 0'
-    - line: '|   webGLDecompressionFallback: 0'
+    - line: '|   webGLDecompressionFallback: 1'
     - line: '|   webGLInitialMemorySize: 32'
     - line: '|   webGLMaximumMemorySize: 490'
     - line: '|   webGLMemoryGrowthMode: 2'

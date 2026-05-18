@@ -28,6 +28,8 @@ namespace pigbrain.game.Boxhead.UI
 
         public Stats.ControlValue money;
 
+        public void Open(string url) => Application.OpenURL(url);
+
         // void LateUpdate()
         // {
         //     float t = Time.unscaledTime;

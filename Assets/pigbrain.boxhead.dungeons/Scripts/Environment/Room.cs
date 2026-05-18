@@ -124,19 +124,13 @@ namespace pigbrain.game.Boxhead.Environment
                 roomTrackers.Remove(tracker);
                 OnTrackerLeave?.Invoke(tracker);
 
-                Debug.Log($"Tracker enter room {name} {data.roomType}");
                 if (data.roomType == Type.Loot)
                 {
                     var objects = data.GetComponentsInChildren<CellObject>().Where(c => c.geomType == GeomType.Loot);
-                    Debug.Log($"Loot: {objects.Count()} {string.Join(",", objects.Select(o => o.name))}");
                     if (objects.Count() <= 0)
-                    {
-                        Debug.Log("LOOT ROOM EMPTY: EVENT");
                         OnLootRoomEmpty?.Invoke(this);
-                    }
                 }
             }
-
             if (zone && item.TryGetComponent(out OrthoCamera ortho))
                 ortho.RemoveBounds(zone.GetFullBounds());
         }
