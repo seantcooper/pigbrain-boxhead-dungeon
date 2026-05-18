@@ -76,6 +76,9 @@ namespace pigbrain.game.Boxhead
         #endregion
 
         #region Spawn Override
+        // TODO Cache the paths
+        // static readonly Dictionary<SpawnerBurst, List<int2>> BurstPaths = new();
+
         GameObject ISpawnOverride.Spawn(SpawnerBurst burst, GameObject prefab)
         {
             if (!burst.TryGetComponentInParent(out RoomData tr)) return null;
@@ -86,6 +89,7 @@ namespace pigbrain.game.Boxhead
 
             static bool Filter(Marker m) => !m.cellType.HasFlag(Cell.Type.Enter);
             var paths = tr.boundary.WallToWallLoops(turns, 3, Filter);
+
             var path = burst.rnd.Next(paths);
 
             List<float2> npath = new() { (float2)path[0] + 0.5f };
