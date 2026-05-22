@@ -85,6 +85,7 @@ namespace pigbrain.game.Boxhead
             if (StatsCatalog.Session)
                 StatsCatalog.Session.RemoveChangeListener(Stat.Track_EnemyActive, OnEnemyActiveChange);
             OnDungeonStopped?.Invoke();
+            AudioManager.SetIntensity(0);
             base.OnDestroy();
         }
 

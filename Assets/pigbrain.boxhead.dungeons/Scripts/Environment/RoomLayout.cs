@@ -63,6 +63,10 @@ namespace pigbrain.game.Boxhead.Environment
 
             if (!levelData) throw new Exception("levelData is null!");
 
+            if (levelData.traits.HasFlag(LevelData.Traits.LootRooms))
+                settings |= Setting.LootRooms;
+            else settings &= ~Setting.LootRooms;
+
             roomSize = levelData.roomSize;
             roomCount = levelData.roomCount <= 0 ? levelData.levels.Count : levelData.roomCount;
 
@@ -105,9 +109,13 @@ namespace pigbrain.game.Boxhead.Environment
                     next.index = prev.index + 1;
                 }
 
-                AddLootRoom(lootDirections, prev);
-                while (lootDirections.Count > 2)
-                    lootDirections.RemoveAt(0);
+                if (settings.HasFlag(Setting.LootRooms))
+                {
+                    AddLootRoom(lootDirections, prev);
+                    while (lootDirections.Count > 2)
+                        lootDirections.RemoveAt(0);
+                }
+
                 prev = next;
             }
             next.roomType = Room.Type.Final;
@@ -428,6 +436,7 @@ namespace pigbrain.game.Boxhead.Environment
             Holes = 1 << 3,
             Traps = 1 << 4,
             FirstRoomPlain = 1 << 5,
+            LootRooms = 1 << 6,
             [InspectorName(" ")] Another = 1 << 10,
         }
         #endregion

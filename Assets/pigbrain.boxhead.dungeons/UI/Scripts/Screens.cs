@@ -16,6 +16,7 @@ namespace pigbrain.game.Boxhead.UI
         [Header("States")]
         [ToggleObject] public TitleScreen title;
         [ToggleObject] public MainScreen main;
+        [ToggleObject] public CreatorScreen creator;
         [ToggleObject] public LoadingScreen loading;
         [ToggleObject] public GameScreen game;
         [ToggleObject] public PauseScreen pause;

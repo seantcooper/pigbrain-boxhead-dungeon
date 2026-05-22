@@ -118,6 +118,7 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField] Button start;
         [SerializeField] Button confirm;
         [SerializeField] Button resume;
+        [SerializeField] Button creator;
         DungeonSelector selector => transform.GetComponentInChildren<DungeonSelector>(true);
 
         public Status status = Status.None;
@@ -131,6 +132,7 @@ namespace pigbrain.game.Boxhead.UI
             start.onClick.AddListener(() => status = Status.Start);
             resume.onClick.AddListener(() => status = Status.Resume);
             confirm.onClick.AddListener(() => status = Status.Reset);
+            creator.onClick.AddListener(() => fsm.Interrupt(fsm.creator));
         }
 
         void OnDungeonSelected(LevelData dungeon) =>
@@ -177,6 +179,27 @@ namespace pigbrain.game.Boxhead.UI
             SetState(fsm.loading);
         }
     }
+
+    #region Creator
+    [Serializable]
+    public sealed class CreatorScreen : Screen
+    {
+        [SerializeField] Button start;
+        [SerializeField] Button back;
+
+        public override void Start()
+        {
+            base.Start();
+            start.onClick.AddListener(() => fsm.Interrupt(fsm.loading));
+            back.onClick.AddListener(() => fsm.Interrupt(fsm.main));
+        }
+
+        // public override IEnumerator Run()
+        // {
+        //     yield break;
+        // }
+    }
+    #endregion
 
     public class WaitForButtonClick : CustomYieldInstruction
     {
@@ -277,6 +300,8 @@ namespace pigbrain.game.Boxhead.UI
         float roomStartTime;
         Player player;
 
+        Screen exitState => DungeonSelector.Instance.dungeonCreator ? fsm.creator : fsm.main;
+
         public override void Enter()
         {
             base.Enter();
@@ -291,6 +316,14 @@ namespace pigbrain.game.Boxhead.UI
             bored.onClick.AddListener(OnBoredClick);
             RegisterPlayer();
             OnRoomStarted(ActiveRoom.Instance.GetCurrentRoom());
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            // StatsCatalog.Instance.ResetRuntime();
+            fsm.pause.StopInput();
+            fsm.loading.Unload();
         }
 
         void RegisterPlayer()
@@ -319,13 +352,6 @@ namespace pigbrain.game.Boxhead.UI
                 outro = true;
         }
 
-        public override void Exit()
-        {
-            base.Exit();
-            fsm.pause.StopInput();
-            fsm.loading.Unload();
-        }
-
         void OnBoredClick() => ActiveRoom.Instance.SetLevelComplete();
 
         void ActivateBored()
@@ -346,7 +372,7 @@ namespace pigbrain.game.Boxhead.UI
             {
                 yield return new WaitForSeconds(2);
                 yield return fsm.outro.RunState();
-                SetState(fsm.main);
+                SetState(exitState);
                 yield break;
             }
 
@@ -358,7 +384,7 @@ namespace pigbrain.game.Boxhead.UI
                 if (fsm.pause.status == PauseScreen.Status.Quit)
                 {
                     yield return new WaitForSeconds(0.5f);
-                    SetState(fsm.main);
+                    SetState(exitState);
                     yield break;
                 }
             }
@@ -375,7 +401,7 @@ namespace pigbrain.game.Boxhead.UI
                 exiting = false;
                 yield return new WaitForSeconds(1);
                 yield return fsm.wasted.RunState();
-                if (fsm.wasted.status == WastedScreen.Status.Quit) SetState(fsm.main);
+                if (fsm.wasted.status == WastedScreen.Status.Quit) SetState(exitState);
                 else RespawnPlayer();
             }
         }

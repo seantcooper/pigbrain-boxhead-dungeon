@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pigbrain.Prototype.Boxhead.World
   seed: 57405012
-  settings: 27
+  settings: 91
   builder: {fileID: 1189805489}
   shuffle: 4
   roomCount: 25

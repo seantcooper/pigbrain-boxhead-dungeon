@@ -102,12 +102,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1376991383718723000, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: index
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -1376991383718723000, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: stats
       value: 
-      objectReference: {fileID: 11400000, guid: db2854e9fa30a4f1c94ab8c347cbfb25, type: 2}
+      objectReference: {fileID: 11400000, guid: 5260212e2d977420e92e85e9ba69606a, type: 2}
     - target: {fileID: -1376991383718723000, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: levels
       value: 
@@ -246,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 893699528254436753, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: m_Speed
-      value: 6
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 893699528254436753, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: m_Height
@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: exp
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: type
@@ -446,19 +446,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: timeScale
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: grow.scale
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: enrage.range
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: grow.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: rainOfFire.clip
@@ -478,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: attack.attackDamage
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: grow.activationTime
@@ -486,11 +486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: rainOfFire.maxRange
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: rainOfFire.minRange
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7256660330333315722, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: rainOfFire.attackRange
@@ -530,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7360293430001435473, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: maxHitPoints
-      value: 250
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7607933041485127511, guid: 63fb1e491301746f1ad161edd7c8f53a, type: 3}
       propertyPath: mass

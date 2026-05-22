@@ -18,17 +18,21 @@ namespace pigbrain.game.Boxhead.UI
         [SerializeField][InlineScriptableObject] DungeonCollection dungeons;
         [SerializeField][InlineScriptableObject] DungeonCollection dungeonsDynamic;
         [SerializeField][InlineScriptableObject] LevelData dungeonSelected;
+        [InlineScriptableObject] public LevelData dungeonCreator;
+
         [SerializeField] DungeonCard cardPrefab;
+        [SerializeField] RectTransform creatorButton;
 
         readonly List<DungeonCard> cards = new();
 
         public event Action<LevelData> OnSelectionChanged;
 
-        public LevelData GetSelectedDungeon() => dungeonSelected;
+        public LevelData GetSelectedDungeon() => dungeonCreator ? dungeonCreator : dungeonSelected;
+
         public static LevelData GetDungeon()
         {
             if (Instance == null) Instance = FindAnyObjectByType<DungeonSelector>(FindObjectsInactive.Include);
-            return Instance.dungeonSelected;
+            return Instance.GetSelectedDungeon();
         }
 
         void SelectDungeon(LevelData dungeon)
@@ -100,8 +104,8 @@ namespace pigbrain.game.Boxhead.UI
             Debug.Log($"Progress {progress} {levelData.name}");
             var card = DungeonCard.CreateInstance(cardPrefab, levelData, transform, (ld) => SelectDungeon(ld));
             card.SetProgress(progress);
+            if (creatorButton) creatorButton.SetAsLastSibling();
             return card;
-
         }
 
     }

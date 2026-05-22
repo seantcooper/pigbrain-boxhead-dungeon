@@ -354,6 +354,7 @@ namespace pigbrain.game.Boxhead.Environment
                     var burst = spawner.gameObject.AddComponent<SpawnerBurst>();
                     burst.prefab = catalogQuery.Get<GameObject>($"{item.type}");
                     burst.interval = item.interval;
+                    burst.minInterval = item.burstRate;
                     burst.count = item.count;
                     burst.level = item.level;
                     burst.total = item.total;

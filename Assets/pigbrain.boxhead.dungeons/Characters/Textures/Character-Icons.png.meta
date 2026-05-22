@@ -99,7 +99,7 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: 65
     textureCompression: 1
-    compressionQuality: 0
+    compressionQuality: 32
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
@@ -374,7 +374,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character-Icons_12
+      name: Army
       rect:
         serializedVersion: 2
         x: 0
@@ -396,7 +396,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character-Icons_13
+      name: Squad
       rect:
         serializedVersion: 2
         x: 256
@@ -418,7 +418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character-Icons_14
+      name: Duo
       rect:
         serializedVersion: 2
         x: 512
@@ -475,22 +475,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":true,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":254.0,"y":254.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":2.0,"y":2.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      Army: -1988505572
       Bambo: 1516404436
       Character-Icons_0: -83012472
       Character-Icons_11: 184515313
-      Character-Icons_12: -1988505572
-      Character-Icons_13: -423697995
-      Character-Icons_14: 1323255389
       Character-Icons_5: 1617399296
       Character-Icons_6: -1988203163
       Character-Icons_7: 1993879827
       Devil: -382296174
+      Duo: 1323255389
       Ghost: -390302476
       Granny: 1697398542
       Runner: -1389880452
       Soldier: -1431072529
+      Squad: -423697995
       Terror: -1762302331
       Zombie: -1770536420
   mipmapLimitGroupName: 

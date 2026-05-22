@@ -157,6 +157,10 @@ namespace pigbrain.game.Boxhead.Environment
             var name = DungeonSelector.GetDungeon().name;
             Persistence.CurrentData.SetString(name, json);
         }
+
+        public static void ClearDungeonState(LevelData dungeon) =>
+            Persistence.CurrentData.Clear(dungeon.name);
+
         internal static bool Load(out ProgressState state)
         {
             var name = DungeonSelector.GetDungeon().name;

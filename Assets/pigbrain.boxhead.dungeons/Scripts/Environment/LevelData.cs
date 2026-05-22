@@ -24,6 +24,24 @@ namespace pigbrain.game.Boxhead.Environment
         public int soldiers;
         public MinMaxInt roomSize;
         public int roomCount;
+        public Traits traits = Traits.LootRooms;
+        public Type type = Type.Curated;
+
+        [Flags]
+        public enum Traits
+        {
+            None = 0,
+            LootRooms = 1 << 0,
+            Other = 1 << 16
+        }
+
+        public enum Type
+        {
+            Curated = 0,
+            Creator = 1,
+        }
+
+
         [SerializeField] internal List<Level> levels;
 
         #region Level
@@ -46,6 +64,7 @@ namespace pigbrain.game.Boxhead.Environment
                 public Enemy.Type type;
                 public int count, total, level;
                 public float interval;
+                public float burstRate = 0.1f;
             }
         }
         #endregion

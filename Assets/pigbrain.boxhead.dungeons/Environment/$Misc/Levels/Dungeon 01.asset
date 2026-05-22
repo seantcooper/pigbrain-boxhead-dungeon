@@ -27,6 +27,7 @@ MonoBehaviour:
     min: 6
     max: 20
   roomCount: 25
+  traits: 1
   levels:
   - name: 'The Beginning [1]'
     levelid: 1
